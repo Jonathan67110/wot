@@ -1,0 +1,3 @@
+Le nom des champs spécifiques (id lié à une entitée, nom lié à une entité, etc...) sera écrit:
+caracteristique_entité
+
