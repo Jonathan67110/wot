@@ -54,7 +54,7 @@ function listeChampTank($bdd, $tableName){
 				$element = '';
 				$type = 'label';
 			
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '', $bdd);	
 			break;
 			
 			case 'type_credit':
@@ -73,7 +73,7 @@ function listeChampTank($bdd, $tableName){
 
 				$type = 'select';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '', $bdd);		
 				
 				$reqtype_credit->closeCursor();
 				
@@ -94,7 +94,7 @@ function listeChampTank($bdd, $tableName){
 					
 				$type = 'select';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  $bdd);		
 				
 				$reqtype_credit->closeCursor();
 				
@@ -106,7 +106,7 @@ function listeChampTank($bdd, $tableName){
 				$element = '';
 				$type = 'textarea';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '', $bdd);	
 
 			break;
 			
@@ -125,7 +125,7 @@ function listeChampTank($bdd, $tableName){
 					
 				$type = 'select';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  $bdd);		
 				
 				$reqtype_credit->closeCursor();
 				
@@ -146,7 +146,7 @@ function listeChampTank($bdd, $tableName){
 					
 				$type = 'select';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '',  $bdd);		
 				
 				$reqtype_credit->closeCursor();
 				
@@ -168,7 +168,7 @@ function listeChampTank($bdd, $tableName){
 					
 				$type = 'select';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, 'onchange', 'miseAJourTierChiffre(this.value);', $bdd);		
 				
 				$reqtype_credit->closeCursor();
 				
@@ -189,7 +189,7 @@ function listeChampTank($bdd, $tableName){
 					
 				$type = 'select';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  $bdd);		
 				
 				$reqtype_credit->closeCursor();
 				
@@ -202,7 +202,7 @@ function listeChampTank($bdd, $tableName){
 				$element = '';
 				$type = '';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $bdd);	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  $bdd);	
 
 				break;
 		
