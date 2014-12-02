@@ -38,7 +38,6 @@ class FormulaireChamp{
 	
 		if(!empty($this->m_methodeScript) && !empty($this->m_scriptFormulaireChamp)){
 			$script = $this->m_methodeScript.'="'.$this->m_scriptFormulaireChamp.'" ';
-			echo $script.'<br />';
 		}
 		else{
 			$script = '';
