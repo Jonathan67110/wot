@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Recherche</title>
-        <meta charset="utf-8" />
-		<link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-		<?php
-			//On insère la navigation dans la future page html :
-			include_once('calque/navigation.php');
-			
-		?>
+<?php 
+	$titre = 'Modification réussie';
+
+	/* Header */
+	include_once('view/header.php');
+	
+	/* Barre de navigation */
+	include_once('view/navigation.php');
+?>
         <h1>Gestion des chars WOT</h1>
 		
 				<section>
