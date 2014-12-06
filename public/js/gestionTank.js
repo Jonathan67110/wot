@@ -76,7 +76,7 @@ function sommeEquipage()
 	
 	var nombreEquipage = document.getElementById("rechercheNombre_equipage");
 	
-	nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio;
+	nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio + 1;
 }
 
 function stringToPositivInteger(number)
