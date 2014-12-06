@@ -278,7 +278,7 @@ function listeChampTank($bdd, $tableName){
 				$element = '';
 				$type = '';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  '');	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '', '');	
 
 				break;
 			
