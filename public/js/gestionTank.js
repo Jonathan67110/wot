@@ -62,26 +62,30 @@ function miseAJourTierChiffre(tier)
 
 function sommeEquipage()
 {
-	var nombreChargeur = document.getElementById("rechercheNombre_chargeur").value;
-	var nombreTireur = document.getElementById("rechercheNombre_tireur").value;
-	var nombrePilote = document.getElementById("rechercheNombre_pilote").value;
-	var nombreOperateurRadio = document.getElementById("rechercheNombre_operateur_radio").value;
+	var nombreChargeur = stringToPositivInteger(document.getElementById("rechercheNombre_chargeur").value);
+	document.getElementById("rechercheNombre_chargeur").value = nombreChargeur;
+	
+	var nombreTireur = stringToPositivInteger(document.getElementById("rechercheNombre_tireur").value);
+	document.getElementById("rechercheNombre_tireur").value = nombreTireur;
+	
+	var nombrePilote = stringToPositivInteger(document.getElementById("rechercheNombre_pilote").value);
+	document.getElementById("rechercheNombre_pilote").value = nombrePilote;
+	
+	var nombreOperateurRadio = stringToPositivInteger(document.getElementById("rechercheNombre_operateur_radio").value);
+	document.getElementById("rechercheNombre_operateur_radio").value = nombreOperateurRadio;
+	
 	
 	var nombreEquipage = document.getElementById("rechercheNombre_equipage");
 	
-	
-	if( ) 
-	{
-		nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio;
-		
-		return 1;
-	
-	}
-	else
-	{
-		
-	}
+	nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio;
+}
 
+function stringToPositivInteger(number)
+{
+	//Test sur le nombre pour ne conserver qu'un nombre entier positif
+	number = isNaN(parseInt(number)) ? 0 : abs(parseInt(number)) ;
+	
+	return number;
 }
 
 
