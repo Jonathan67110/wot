@@ -81,15 +81,7 @@ function sommeEquipage()
 
 function stringToPositivInteger(number)
 {
-	number = parseInt(number);
-	//Test sur le nombre pour ne conserver qu'un nombre entier positif
-	if(isNaN(number)){
-		number = 0;
-	}
-	else
-	{
-		number = Math.abs(parseInt(number)) ;
-	}
+	number = isNaN(parseInt(number)) ? 0 : Math.abs(parseInt(number));
 	
 	return number;
 }
