@@ -204,7 +204,38 @@ function listeChampTank($bdd, $tableName){
 				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()',  $bdd);	
 
 				break;
+			
+			case 'Nombre_tireur':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
 		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()',  $bdd);	
+
+				break;
+			
+			
+			case 'Nombre_pilote':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()',  $bdd);	
+
+				break;
+			
+			
+			case 'Nombre_operateur_radio':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()',  $bdd);	
+
+				break;
 			
 			case 'tier_chiffre':
 			
