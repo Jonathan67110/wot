@@ -364,18 +364,56 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 		try{
 			//Préparation de la requête
 			$req = $bdd->prepare('INSERT INTO tank	(nom, 
-																			premium, 
-																			Description,	poids_chassis,	limite_charge, monaie, vitesse_max,	Nombre_equipage,	Nombre_pilote,	
-			Nombre_tireur,	Nombre_chargeur,	Nombre_operateur_radio,	hp_base, Blindage_avant,	Blindage_flanc,	Blindage_arriere,	type_char, pays_id,	
-			prix,	type_credit,	tier_latin,	tier_chiffre) 
-			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+																	premium, 
+																	Description,	
+																	poids_chassis,	
+																	limite_charge, 
+																	monaie, 
+																	vitesse_max,	
+																	Nombre_equipage,	
+																	Nombre_pilote,	
+																	Nombre_tireur,	
+																	Nombre_chargeur,	
+																	Nombre_operateur_radio,	
+																	hp_base, 
+																	Blindage_avant,	
+																	Blindage_flanc,	
+																	Blindage_arriere,	
+																	type_char, 
+																	pays_id,	
+																	prix,	
+																	type_credit,	
+																	tier_latin,	
+																	tier_chiffre) 
+			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 			
 			//$req->execute($tablAjouter);
 				
-				$req->execute(array($tablAjouter['recherchenom'],$tablAjouter['recherchepremium'], $tablAjouter['rechercheDescription'], floatval($tablAjouter['recherchepoids_chassis']),floatval($tablAjouter['recherchelimite_charge']),$tablAjouter['recherchemonaie'],floatval($tablAjouter['recherchevitesse_max']),
-			intval($tablAjouter['rechercheNombre_equipage']), intval($tablAjouter['rechercheNombre_pilote']),intval($tablAjouter['rechercheNombre_tireur']), intval($tablAjouter['rechercheNombre_chargeur']), intval($tablAjouter['rechercheNombre_operateur_radio']),intval($tablAjouter['recherchehp_base']),
-			intval($tablAjouter['rechercheBlindage_avant']), intval($tablAjouter['rechercheBlindage_flanc']),intval($tablAjouter['rechercheBlindage_arriere']), $tablAjouter['recherchetype_char'], max(1,intval($tablAjouter['recherchepays'])),intval($tablAjouter['rechercheprix']), $tablAjouter['recherchetype_credit'], 
-			$tablAjouter['recherchetier_latin'],intval($tablAjouter['recherchetier_chiffre'])));
+				$req->execute(array(
+			$tablAjouter['recherchenom'],
+			$tablAjouter['recherchepremium'], 
+			$tablAjouter['rechercheDescription'],
+			floatval($tablAjouter['recherchepoids_chassis']),
+			floatval($tablAjouter['recherchelimite_charge']),
+			$tablAjouter['recherchemonaie'],
+			floatval($tablAjouter['recherchevitesse_max']),
+			intval($tablAjouter['rechercheNombre_equipage']),
+			intval($tablAjouter['rechercheNombre_pilote']),
+			intval($tablAjouter['rechercheNombre_tireur']),
+			intval($tablAjouter['rechercheNombre_chargeur']),
+			intval($tablAjouter['rechercheNombre_operateur_radio']),
+			intval($tablAjouter['recherchehp_base']),
+			intval($tablAjouter['rechercheBlindage_avant']), 
+			intval($tablAjouter['rechercheBlindage_flanc']),
+			intval($tablAjouter['rechercheBlindage_arriere']), 
+			$tablAjouter['recherchetype_char'], 
+			max(1,intval($tablAjouter['recherchepays'])),
+			intval($tablAjouter['rechercheprix']), 
+			$tablAjouter['recherchetype_credit'], 
+			$tablAjouter['recherchetier_latin'],
+			intval($tablAjouter['recherchetier_chiffre']))
+			);
+			
 			$req->closeCursor();
 
 			
