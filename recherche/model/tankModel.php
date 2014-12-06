@@ -194,9 +194,29 @@ function listeChampTank($bdd, $tableName){
 				$reqtype_credit->closeCursor();
 				
 			break;
+			
+			case 'Nombre_chargeur':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()',  $bdd);	
+
+				break;
+		
+			
+			case 'tier_chiffre':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'' , '',  $bdd);	
+
+				break;
 		
 			default:
-			
 			
 				$fieldNames = $field['Field'];
 				$element = '';
@@ -205,11 +225,11 @@ function listeChampTank($bdd, $tableName){
 				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  $bdd);	
 
 				break;
-		
-			$recordset->closeCursor();
 			
 		}
 				
+		
+		$recordset->closeCursor();
 		
 	}
 	return $listTankField;

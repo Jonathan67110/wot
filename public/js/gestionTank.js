@@ -63,18 +63,20 @@ function miseAJourTierChiffre(tier)
 function sommeEquipage()
 {
 	var nombreChargeur = stringToPositivInteger(document.getElementById("rechercheNombre_chargeur").value);
-	document.getElementById("rechercheNombre_chargeur").value = nombreChargeur;
+	//document.getElementById("rechercheNombre_chargeur").value = nombreChargeur;
 	
 	var nombreTireur = stringToPositivInteger(document.getElementById("rechercheNombre_tireur").value);
-	document.getElementById("rechercheNombre_tireur").value = nombreTireur;
+	//document.getElementById("rechercheNombre_tireur").value = nombreTireur;
 	
 	var nombrePilote = stringToPositivInteger(document.getElementById("rechercheNombre_pilote").value);
-	document.getElementById("rechercheNombre_pilote").value = nombrePilote;
+	//document.getElementById("rechercheNombre_pilote").value = nombrePilote;
 	
 	var nombreOperateurRadio = stringToPositivInteger(document.getElementById("rechercheNombre_operateur_radio").value);
-	document.getElementById("rechercheNombre_operateur_radio").value = nombreOperateurRadio;
+	//document.getElementById("rechercheNombre_operateur_radio").value = nombreOperateurRadio;
 	
 	var nombreEquipage = document.getElementById("rechercheNombre_equipage");
+	
+	alert(nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio);
 	
 	nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio;
 }
