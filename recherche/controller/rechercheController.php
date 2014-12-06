@@ -114,7 +114,7 @@
 					}	
 					
 					//On affiche la page d'information sur la requête:
-					include_once('/view/modificationFaite.php');
+					include_once('view/modificationFaite.php');
 				}
 				else{
 					header('location:.');

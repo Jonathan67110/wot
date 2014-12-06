@@ -20,15 +20,12 @@
 	}
 	//Recherche des informations à afficher : titre de la page, tank à afficher, liste des chars à afficher, nation à afficher, tier à afficher, type de char à afficher
 	if(isset($_POST['gestionTank'])){	
-		if(intval(str_replace('gestion','', $_POST['gestionTank'])) > 0){
-			try{
+	
+		//On récupère l'indice reçu via formulaire :
+		$indiceEnvoyeEnPost = intval(str_replace('gestion','', $_POST['gestionTank']));
+		
+		if($indiceEnvoyeEnPost > 0 && array_key_exists ($indiceEnvoyeEnPost, $tanks )) {//Double test pour vérifier que l'indice est bien dans le tableau des chars
 				$titre = 'Gestion des chars - '.$tanks[intval(str_replace('gestion','', $_POST['gestionTank']))]->getNom();
-			}
-			catch(Exception $e)
-			{
-				$titre = 'Char supprimée';
-
-			}		
 		}
 		else{
 			$titre = 'Gestion des chars - Nouveau char';		
