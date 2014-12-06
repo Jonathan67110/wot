@@ -2,7 +2,8 @@
 	INCLUDE_ONCE('recherche/model/TypeChar/ListeTypeChar.php');
 	//A mettre dans une fonction : Permet de récupérer le type de nation à afficher.
 	if(isset($_SESSION['nationGestionTank']) && intval($_SESSION['nationGestionTank'])>0 && !isset($_POST['RechercheBouton']) && !isset($_POST['RechercheSuivantBouton']) && !isset($_POST['RecherchePrecedentBouton'])){
-		if(!isset($_POST['nationGestionTank']) || (isset($_POST['nationGestionTank']) && (intval($_POST['nationGestionTank']) == intval($_SESSION['nationGestionTank'])|| intval($_POST['nationGestionTank']) == 0))){
+	
+		if(!isset($_POST['nationGestionTank']) || intval($_POST['nationGestionTank']) == 0){
 			$indiceNation = $_SESSION['nationGestionTank'];
 		}
 		else{
