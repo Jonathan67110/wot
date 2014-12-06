@@ -1,4 +1,6 @@
 <?php 
+	$titre = 'Echec Modification';
+	
 	/* Header */
 	include_once('view/header.php');
 	
