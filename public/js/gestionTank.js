@@ -59,3 +59,51 @@ function miseAJourTierChiffre(tier)
 	var texteSortie = document.getElementById("recherchetier_chiffre");
 	texteSortie.value = tier;
 }
+
+function sommeEquipage()
+{
+	var nombreChargeur = document.getElementById("rechercheNombre_chargeur").value;
+	var nombreTireur = document.getElementById("rechercheNombre_tireur").value;
+	var nombrePilote = document.getElementById("rechercheNombre_pilote").value;
+	var nombreOperateurRadio = document.getElementById("rechercheNombre_operateur_radio").value;
+	
+	var nombreEquipage = document.getElementById("rechercheNombre_equipage");
+	
+	
+	if( ) 
+	{
+		nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio;
+		
+		return 1;
+	
+	}
+	else
+	{
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
