@@ -66,7 +66,7 @@ class FormulaireChamp{
 			
 			case 'textarea':
 				
-				$htmlAfficher = '<textarea rows="9" cols="51"  id="'.$indice.$this->m_indiceFormulaire.$this->m_nomField.' " name="'.$indice.$this->m_indiceFormulaire.$this->m_nomField.'"  '.$script.'>'.$value.' '.$this->m_attribut.' </textarea> ';
+				$htmlAfficher = '<textarea rows="9" cols="51"  id="'.$indice.$this->m_indiceFormulaire.$this->m_nomField.' " name="'.$indice.$this->m_indiceFormulaire.$this->m_nomField.'"  '.$script.'  '.$this->m_attribut.' >'.$value.'</textarea> ';
 				
 			break;
 			

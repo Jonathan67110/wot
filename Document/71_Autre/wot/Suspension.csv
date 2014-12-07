@@ -1,0 +1,5 @@
+id;nom;charge_max;vitesse_rotation;poids;tier;nation;prix;expérience;compatibilité
+NULL;WZ-131-1;24;54;5500;7;Chine;;;
+NULL;WZ-132;26.5;56;5500;8;Chine;;;
+NULL;Type 97;15.9;30;5000;2;Chine;;;
+NULL;Type 97-Kai;18;32;5000;3;Chine;;;
