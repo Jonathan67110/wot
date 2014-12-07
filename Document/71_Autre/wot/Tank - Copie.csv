@@ -1,0 +1,347 @@
+nom;hp_base;poids_chassis;limite_charge;premium;prix;monaie;vitesse_max;Nombre_equipage;Nombre_pilote;Nombre_tireur;Nombre_chargeur;Nombre_operateur_radio;Blindage_avant;Blindage_flanc;Blindage_arriere;type_char;tier_latin;pays_id
+MS-1 ;90;4,69;4,89;;0;credit;32;2;1;0;0;0;18;16;16;Chars legers;I;1
+BT-2 ;140;10,26;11,5;;3500;credit;55;3;1;1;0;0;15;13;10;Chars legers;II;1
+T-26 ;150;9,3;10,2;;3700;credit;36;3;1;1;0;0;15;15;15;Chars legers;II;1
+T-60 ;150;6,12;6,3;;3300;credit;45;2;1;0;0;0;35;15;25;Chars legers;II;1
+Tetrarch ;140;7,25;7,9;premium;0;Event;64;3;1;1;0;0;16;14;10;Chars legers;II;1
+BT-7 ;210;14,11;14,2;;37000;credit;65;3;1;1;0;0;20;15;13;Chars legers;III;1
+T-46 ;220;14,09;17;;38500;credit;58;3;1;1;0;0;22;15;15;Chars legers;III;1
+T-70 ;;;;;;;;;;;;;;;;Chars legers;III;1
+M3 Light ;;;;;;;;;;;;;;;;Chars legers;III;1
+T-127 ;;;;;;;;;;;;;;;;Chars legers;III;1
+LTP ;;;;;;;;;;;;;;;;Chars legers;III;1
+A-20 ;;;;;;;;;;;;;;;;Chars legers;IV;1
+T-50 ;;;;;;;;;;;;;;;;Chars legers;IV;1
+T-80 ;;;;;;;;;;;;;;;;Chars legers;IV;1
+Valentine II ;;;;;;;;;;;;;;;;Chars legers;IV;1
+MT-25 ;;;;;;;;;;;;;;;;Chars legers;V;1
+T-28 ;;;;;;;;;;;;;;;;Chars moyens;IV;1
+A-32 ;;;;;;;;;;;;;;;;Chars moyens;IV;1
+T-34 ;;;;;;;;;;;;;;;;Chars moyens;V;1
+Matilda IV ;;;;;;;;;;;;;;;;Chars moyens;V;1
+T-34-85 ;;;;;;;;;;;;;;;;Chars moyens;VI;1
+A-43 ;;;;;;;;;;;;;;;;Chars moyens;VI;1
+T-43 ;;;;;;;;;;;;;;;;Chars moyens;VII;1
+KV-13 ;;;;;;;;;;;;;;;;Chars moyens;VII;1
+A-44 ;;;;;;;;;;;;;;;;Chars moyens;VII;1
+T-44 ;;;;;;;;;;;;;;;;Chars moyens;VIII;1
+Object 416 ;;;;;;;;;;;;;;;;Chars moyens;VIII;1
+T-54 ;;;;;;;;;;;;;;;;Chars moyens;VIII;1
+Object 430 Version II ;;;;;;;;;;;;;;;;Chars moyens;IX;1
+T-62A ;;;;;;;;;;;;;;;;Chars moyens;IX;1
+Object 140 ;;;;;;;;;;;;;;;;Chars moyens;X;1
+Object 430 ;;;;;;;;;;;;;;;;Chars moyens;X;1
+KV-1 ;;;;;;;;;;;;;;;;Chars lourds;V;1
+Churchill III ;;;;premium;;;;;;;;;;;;Chars lourds;V;1
+KV-220 ;;;;premium;;;;;;;;;;;;Chars lourds;V;1
+KV-1S ;;;;;;;;;;;;;;;;Chars lourds;VI;1
+KV-2 ;;;;;;;;;;;;;;;;Chars lourds;VI;1
+T-150 ;;;;;;;;;;;;;;;;Chars lourds;VI;1
+IS ;;;;;;;;;;;;;;;;Chars lourds;VII;1
+KV-3 ;;;;;;;;;;;;;;;;Chars lourds;VII;1
+IS-3 ;;;;;;;;;;;;;;;;Chars lourds;VIII;1
+IS-6 ;;;;;;;;;;;;;;;;Chars lourds;VIII;1
+KV-4 ;;;;;;;;;;;;;;;;Chars lourds;VIII;1
+KV-5 ;;;;;;;;;;;;;;;;Chars lourds;IX;1
+ST-I ;;;;;;;;;;;;;;;;Chars lourds;IX;1
+IS-8 ;;;;;;;;;;;;;;;;Chars lourds;X;1
+IS-4 ;;;;;;;;;;;;;;;;Chars lourds;X;1
+IS-7 ;;;;;;;;;;;;;;;;Chars lourds;X;1
+AT-1 ;;;;;;;;;;;;;;;;Chasseurs de chars;II;1
+SU-76 ;;;;;;;;;;;;;;;;Chasseurs de chars;III;1
+SU-85B ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;1
+SU-85 ;;;;;;;;;;;;;;;;Chasseurs de chars;V;1
+SU-100 ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;1
+SU-100Y ;;;;premium;;;;;;;;;;;;Chasseurs de chars;VI;1
+SU-152 ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;1
+SU-100M1 ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;1
+SU-122-44 ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;1
+ISU-152 ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;1
+SU-101 ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;1
+Object 704 ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;1
+SU-122-54 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;1
+Object 268 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;1
+Object 263 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;1
+SU-18 ;;;;;;;;;;;;;;;;Canons automoteurs;II;1
+SU-26 ;;;;;;;;;;;;;;;;Canons automoteurs;III;1
+SU-5 ;;;;;;;;;;;;;;;;Canons automoteurs;IV;1
+SU-122A ;;;;;;;;;;;;;;;;Canons automoteurs;V;1
+SU-8 ;;;;;;;;;;;;;;;;Canons automoteurs;V;1
+S-51 ;;;;;;;;;;;;;;;;Canons automoteurs;VI;1
+SU-14-1 ;;;;;;;;;;;;;;;;Canons automoteurs;VII;1
+SU-14-2 ;;;;;;;;;;;;;;;;Canons automoteurs;VIII;1
+212A ;;;;;;;;;;;;;;;;Canons automoteurs;IX;1
+Object 261;;;;;;;;;;;;;;;;Canons automoteurs;X;1
+Leichttraktor ;;;;;;;;;;;;;;;;Chars legers;I;2
+Pz.Kpfw. 35 (t) ;;;;;;;;;;;;;;;;Chars legers;II;2
+Pz.Kpfw. II ;;;;;;;;;;;;;;;;Chars legers;II;2
+Pz.Kpfw. I ;;;;;;;;;;;;;;;;Chars legers;II;2
+Pz.Kpfw. 38H 735 (f) ;;;;;;;;;;;;;;;;Chars legers;II;2
+Pz.Kpfw. 38 (t) ;;;;;;;;;;;;;;;;Chars legers;III;2
+Pz.Kpfw. III Ausf. A ;;;;;;;;;;;;;;;;Chars legers;III;2
+Pz.Kpfw. I Ausf. C ;;;;;;;;;;;;;;;;Chars legers;III;2
+Pz.Kpfw. II Ausf. G ;;;;;;;;;;;;;;;;Chars legers;III;2
+Pz.Kpfw. II Ausf. J ;;;;;;;;;;;;;;;;Chars legers;III;2
+T-15 ;;;;;;;;;;;;;;;;Chars legers;III;2
+Pz.Kpfw. II Luchs ;;;;;;;;;;;;;;;;Chars legers;IV;2
+Pz.Kpfw. 38 (t) n.A. ;;;;;;;;;;;;;;;;Chars legers;IV;2
+VK 16.02 Leopard ;;;;;;;;;;;;;;;;Chars legers;V;2
+VK 28.01 ;;;;;;;;;;;;;;;;Chars legers;VI;2
+Aufklarungspanzer Panther ;;;;;;;;;;;;;;;;Chars legers;VII;2
+Pz.Kpfw. S35 739 (f) ;;;;;;;;;;;;;;;;Chars moyens;III;2
+Pz.Kpfw. III ;;;;;;;;;;;;;;;;Chars moyens;IV;2
+VK 20.01 (D) ;;;;;;;;;;;;;;;;Chars moyens;IV;2
+Pz.Kpfw. IV ;;;;;;;;;;;;;;;;Chars moyens;V;2
+Pz.Kpfw. III/IV ;;;;;;;;;;;;;;;;Chars moyens;V;2
+T-25 ;;;;;;;;;;;;;;;;Chars moyens;V;2
+VK 30.01 (P) ;;;;;;;;;;;;;;;;Chars moyens;VI;2
+VK 30.01 (D) ;;;;;;;;;;;;;;;;Chars moyens;VI;2
+VK 30.02 (M) ;;;;;;;;;;;;;;;;Chars moyens;VI;2
+Pz.Kpfw. V/IV ;;;;;;;;;;;;;;;;Chars moyens;VI;2
+Pz.Kpfw. V/IV Alpha ;;;;;;;;;;;;;;;;Chars moyens;VI;2
+Pz.Kpfw. IV Schmalturm ;;;;;;;;;;;;;;;;Chars moyens;VI;2
+Pz.Kpfw. V Panther ;;;;;;;;;;;;;;;;Chars moyens;VII;2
+VK 30.02 (D) ;;;;;;;;;;;;;;;;Chars moyens;VII;2
+Panther/M10 ;;;;;;;;;;;;;;;;Chars moyens;VII;2
+Panther II ;;;;;;;;;;;;;;;;Chars moyens;VIII;2
+Indien-Panzer ;;;;;;;;;;;;;;;;Chars moyens;VIII;2
+E-50 ;;;;;;;;;;;;;;;;Chars moyens;IX;2
+Leopard Prototyp A ;;;;;;;;;;;;;;;;Chars moyens;IX;2
+E-50 Ausf. M ;;;;;;;;;;;;;;;;Chars moyens;X;2
+Leopard 1 ;;;;;;;;;;;;;;;;Chars moyens;X;2
+Durchbruchswagen 2 ;;;;;;;;;;;;;;;;Chars moyens;IV;2
+Pz.Kpfw. B2 740 (f) ;;;;;;;;;;;;;;;;Chars lourds;IV;2
+VK 30.01 (H) ;;;;;;;;;;;;;;;;Chars lourds;V;2
+VK 36.01 (H) ;;;;;;;;;;;;;;;;Chars lourds;VI;2
+Pz.Kpfw. VI Tiger ;;;;;;;;;;;;;;;;Chars lourds;VII;2
+Pz.Kpfw. VI Tiger (P);;;;;;;;;;;;;;;;Chars lourds;VII;2
+Pz.Kpfw. Tiger II ;;;;;;;;;;;;;;;;Chars lourds;VIII;2
+VK 45.02 (P) Ausf. A ;;;;;;;;;;;;;;;;Chars lourds;VIII;2
+Lowe ;;;;;;;;;;;;;;;;Chars lourds;VIII;2
+VK 45.02 (P) Ausf. B ;;;;;;;;;;;;;;;;Chars lourds;IX;2
+E-75 ;;;;;;;;;;;;;;;;Chars lourds;IX;2
+Maus ;;;;;;;;;;;;;;;;Chars lourds;X;2
+E-100 ;;;;;;;;;;;;;;;;Chars lourds;X;2
+VK 72.01 (K) ;;;;;;;;;;;;;;;;Chars lourds;X;2
+Panzerjager I ;;;;;;;;;;;;;;;;Chasseurs de chars;II;2
+Marder II ;;;;;;;;;;;;;;;;Chasseurs de chars;III;2
+Hetzer ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;2
+Marder 38T ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;2
+StuG III ;;;;;;;;;;;;;;;;Chasseurs de chars;V;2
+Pz.Sfl. IVc ;;;;;;;;;;;;;;;;Chasseurs de chars;V;2
+JagdPz IV ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;2
+Nashorn ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;2
+Dicker MaX;;;;premium;;;;;;;;;;;;Chasseurs de chars;VI;2
+Jagdpanther ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;2
+Pz.Sfl. V ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;2
+E-25 ;;;;premium;;;;;;;;;;;;Chasseurs de chars;VII;2
+Ferdinand ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;2
+Jagdpanther II ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;2
+Rhm.-Borsig Waffentrager ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;2
+8,8 cm Pak 43 Jagdtiger ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;2
+Jagdtiger ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;2
+Waffentrager auf Pz. IV ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;2
+JagdPz E-100 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;2
+Waffentrager auf E 100 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;2
+G.Pz. Mk. VI (e) ;;;;;;;;;;;;;;;;Canons automoteurs;II;2
+Sturmpanzer I Bison ;;;;;;;;;;;;;;;;Canons automoteurs;III;2
+Wespe ;;;;;;;;;;;;;;;;Canons automoteurs;III;2
+Sturmpanzer II ;;;;;;;;;;;;;;;;Canons automoteurs;IV;2
+Pz.Sfl. IVb ;;;;;;;;;;;;;;;;Canons automoteurs;IV;2
+Grille ;;;;;;;;;;;;;;;;Canons automoteurs;V;2
+Hummel ;;;;;;;;;;;;;;;;Canons automoteurs;VI;2
+G.W. Panther ;;;;;;;;;;;;;;;;Canons automoteurs;VII;2
+G.W. Tiger (P) ;;;;;;;;;;;;;;;;Canons automoteurs;VIII;2
+G.W. Tiger ;;;;;;;;;;;;;;;;Canons automoteurs;IX;2
+G.W. E 100;;;;;;;;;;;;;;;;Canons automoteurs;X;2
+Renault FT ;;;;;;;;;;;;;16;16;16;Chars legers;I;6
+Hotchkiss H35 ;;;;;;;;;;;;;;;;Chars legers;II;6
+D1 ;;;;;;;;;;;;;;;;Chars legers;II;6
+AMX 38 ;;;;;;;;;;;;;;;;Chars legers;III;6
+AMX 40 ;;;;;;;;;;;;;;;;Chars legers;IV;6
+ELC AMX;;;;;;;;;;;;;;;;Chars legers;V;6
+amx 12t ;;;;;;;;;;;;;;;;Chars legers;VI;6
+AMX 13 75 ;;;;;;;;;;;;;;;;Chars legers;VII;6
+AMX 13 90 ;;;;;;;;;;;;;;;;Chars legers;VIII;6
+D2 ;;;;;;;;;;;;;;;;Chars moyens;III;6
+Lorraine 40 t ;;;;;;;;;;;;;;;;Chars moyens;IX;6
+Bat.-Châtillon 25 t ;;;;;;;;;;;;;;;;Chars moyens;X;6
+B1 ;;;;;;;;;;;;;;;;Chars lourds;IV;6
+BDR G1B ;;;;;;;;;;;;;;;;Chars lourds;V;6
+ARL 44 ;;;;;;;;;;;;;;;;Chars lourds;VI;6
+AMX M4 mle. 45 ;;;;;;;;;;;;;;;;Chars lourds;VII;6
+AMX 50 100 ;;;;;;;;;;;;;;;;Chars lourds;VIII;6
+FCM 50 t ;;;;;;;;;;;;;;;;Chars lourds;VIII;6
+AMX 50 120 ;;;;;;;;;;;;;;;;Chars lourds;IX;6
+AMX 50B ;;;;;;;;;;;;;;;;Chars lourds;X;6
+Renault FT AC ;;;;;;;;;;;;;;;;Chasseurs de chars;II;6
+FCM 36 Pak 40 ;;;;premium;;;;;;;;;;;;Chasseurs de chars;III;6
+Renault UE 57 ;;;;;;;;;;;;;;;;Chasseurs de chars;III;6
+Somua SAu 40 ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;6
+S 35 CA ;;;;;;;;;;;;;;;;Chasseurs de chars;V;6
+ARL V39 ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;6
+AMX AC Mle. 1946 ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;6
+AMX AC Mle. 1948 ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;6
+AMX 50 Foch ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;6
+AMX 50 Foch (155) ;;;;;;;;;;;;;;;;Chasseurs de chars;X;6
+Renault FT 75 BS ;;;;;;;;;;;;;;;;Canons automoteurs;II;6
+Lorraine 39L AM ;;;;;;;;;;;;;;;;Canons automoteurs;III;6
+AMX 105 AM mle. 47 ;;;;;;;;;;;;;;;;Canons automoteurs;IV;6
+105 leFH18B2 ;;;;premium;;;;;;;;;;;;Canons automoteurs;V;6
+AMX 13 105 AM mle. 50 ;;;;;;;;;;;;;;;;Canons automoteurs;V;6
+AMX 13 F3 AM ;;;;;;;;;;;;;;;;Canons automoteurs;VI;6
+Lorraine 155 mle. 50 ;;;;;;;;;;;;;;;;Canons automoteurs;VII;6
+Lorraine 155 mle. 51 ;;;;;;;;;;;;;;;;Canons automoteurs;VIII;6
+Bat.-Châtillon 155 55 ;;;;;;;;;;;;;;;;Canons automoteurs;IX;6
+Bat.-Châtillon 155 58;;;;;;;;;;;;;;;;Canons automoteurs;X;6
+Renault Otsu ;;;;;;;;;;;;;;;;Chars legers;I;3
+Type 95 Ha-Go ;;;;;;;;;;;;;;;;Chars legers;II;3
+Type 98 Ke-Ni ;;;;;;;;;;;;;;;;Chars legers;III;3
+Type 5 Ke-Ho ;;;;;;;;;;;;;;;;Chars legers;IV;3
+Chi-Ni ;;;;;;;;;;;;;;;;Chars moyens;II;3
+Type 97 Chi-Ha ;;;;;;;;;;;;;;;;Chars moyens;III;3
+Type 1 Chi-He ;;;;;;;;;;;;;;;;Chars moyens;IV;3
+Type 3 Chi-Nu ;;;;;;;;;;;;;;;;Chars moyens;V;3
+Type 3 Chi-Nu Kai ;;;;premium;;;;;;;;;;;;Chars moyens;V;3
+Type 4 Chi-To ;;;;;;;;;;;;;;;;Chars moyens;VI;3
+Type 5 Chi-Ri ;;;;;;;;;;;;;;;;Chars moyens;VII;3
+STA-1 ;;;;;;;;;;;;;;;;Chars moyens;VIII;3
+Type 61 ;;;;;;;;;;;;;;;;Chars moyens;IX;3
+STB-1;;;;;;;;;;;;;;;;Chars moyens;X;3
+Renault NC-31 ;;;;;;;;;;;;;;;;Chars legers;I;4
+Vickers Mk. E Type B ;;;;;;;;;;;;;;;;Chars legers;II;4
+Type 2597 Chi-Ha ;;;;;;;;;;;;;;;;Chars legers;III;4
+M5A1 Stuart ;;;;;;;;;;;;;;;;Chars legers;IV;4
+59-16 ;;;;;;;;;;;;;;;;Chars legers;VI;4
+Type 64 ;;;;;;;;;;;;;;;;Chars legers;VI;4
+Type 62 ;;;;;;;;;;;;;;;;Chars legers;VII;4
+WZ-131 ;;;;;;;;;;;;;;;;Chars legers;VII;4
+WZ-132 ;;;;;;;;;;;;;;;;Chars legers;VIII;4
+Type T-34 ;;;;;;;;;;;;;;;;Chars moyens;V;4
+Type 58 ;;;;;;;;;;;;;;;;Chars moyens;VI;4
+T-34-1 ;;;;;;;;;;;;;;;;Chars moyens;VII;4
+Type 59 ;;;;;;;;;;;;;;;;Chars moyens;VIII;4
+T-34-2 ;;;;premium;;;;;;;;;;;;Chars moyens;VIII;4
+T-34-3 ;;;;premium;;;;;;;;;;;;Chars moyens;VIII;4
+WZ-120 ;;;;;;;;;;;;;;;;Chars moyens;IX;4
+121;;;;;;;;;;;;;;;;Chars moyens;X;4
+IS-2 ;;;;;;;;;;;;;;;;Chars lourds;VII;4
+110;;;;;;;;;;;;;;;;Chars lourds;VIII;4
+112;;;;;;;;;;;;;;;;Chars lourds;VIII;4
+WZ-111 1-4 ;;;;;;;;;;;;;;;;Chars lourds;IX;4
+113;;;;;;;;;;;;;;;;Chars lourds;X;4
+Cruiser Mk. I ;;;;;;;;;;;;;;;;Chars legers;II;5
+Cruiser Mk. III ;;;;;;;;;;;;;;;;Chars legers;II;5
+Light Mk. VIC ;;;;;;;;;;;;;;;;Chars legers;II;5
+Cruiser Mk. II ;;;;;;;;;;;;;;;;Chars legers;III;5
+Cruiser Mk. IV ;;;;;;;;;;;;;;;;Chars legers;III;5
+Valentine ;;;;;;;;;;;;;;;;Chars legers;IV;5
+Covenanter ;;;;;;;;;;;;;;;;Chars legers;IV;5
+Crusader ;;;;;;;;;;;;;;;;Chars legers;V;5
+Vickers Medium Mk. I ;;;;;;;;;;;;;;;;Chars moyens;I;5
+Vickers Medium Mk. II ;;;;;;;;;;;;;;;;Chars moyens;II;5
+Vickers Medium Mk. III ;;;;;;;;;;;;;;;;Chars moyens;III;5
+Matilda ;;;;;;;;;;;;;;;;Chars moyens;IV;5
+Matilda Black Prince ;;;;;;;;;;;;;;;;Chars moyens;V;5
+Cromwell ;;;;;;;;;;;;;;;;Chars moyens;VI;5
+Comet ;;;;;;;;;;;;;;;;Chars moyens;VII;5
+Centurion Mk. I ;;;;;;;;;;;;;;;;Chars moyens;VIII;5
+Centurion Mk. 7/1 ;;;;;;;;;;;;;;;;Chars moyens;IX;5
+FV4202 ;;;;;;;;;;;;;;;;Chars moyens;X;5
+Churchill I ;;;;;;;;;;;;;;;;Chars lourds;V;5
+Excelsior ;;;;;;;;;;;;;;;;Chars lourds;V;5
+Churchill VII ;;;;;;;;;;;;;;;;Chars lourds;VI;5
+TOG II* ;;;;;;;;;;;;;;;;Chars lourds;VI;5
+Black Prince ;;;;;;;;;;;;;;;;Chars lourds;VII;5
+Caernarvon ;;;;;;;;;;;;;;;;Chars lourds;VIII;5
+Conqueror ;;;;;;;;;;;;;;;;Chars lourds;IX;5
+FV215b ;;;;;;;;;;;;;;;;Chars lourds;X;5
+Universal Carrier 2-pdr ;;;;;;;;;;;;;;;;Chasseurs de chars;II;5
+Valentine AT ;;;;;;;;;;;;;;;;Chasseurs de chars;III;5
+Alecto ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;5
+AT 2 ;;;;;;;;;;;;;;;;Chasseurs de chars;V;5
+AT 8 ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;5
+Churchill Gun Carrier ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;5
+AT 7 ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;5
+AT 15A ;;;;premium;;;;;;;;;;;;Chasseurs de chars;VII;5
+AT 15 ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;5
+Tortoise ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;5
+FV215b (183) ;;;;;;;;;;;;;;;;Chasseurs de chars;X;5
+Loyd Gun Carriage ;;;;;;;;;;;;;;;;Canons automoteurs;II;5
+Sexton II ;;;;;;;;;;;;;;;;Canons automoteurs;III;5
+Sexton I ;;;;;;;;;;;;;;;;Canons automoteurs;III;5
+Birch Gun ;;;;;;;;;;;;;;;;Canons automoteurs;IV;5
+Bishop ;;;;;;;;;;;;;;;;Canons automoteurs;V;5
+FV304 ;;;;;;;;;;;;;;;;Canons automoteurs;VI;5
+Crusader 5.5-in. SP ;;;;;;;;;;;;;;;;Canons automoteurs;VII;5
+FV207 ;;;;;;;;;;;;;;;;Canons automoteurs;VIII;5
+FV3805 ;;;;;;;;;;;;;;;;Canons automoteurs;IX;5
+Conqueror Gun Carriage;;;;;;;;;;;;;;;;Canons automoteurs;X;5
+T1 Cunningham ;;;;;;;;;;;;;;;;Chars legers;I;7
+M2 Light Tank ;;;;;;;;;;;;;;;;Chars legers;II;7
+T2 Light Tank ;;;;premium;;;;;;;;;;;;Chars legers;II;7
+T1E6 ;;;;;;;;;;;;;;;;Chars legers;II;7
+T7 Combat Car ;;;;;;;;;;;;;;;;Chars legers;II;7
+M3 Stuart ;;;;;;;;;;;;;;;;Chars legers;III;7
+M22 Locust ;;;;premium;;;;;;;;;;;;Chars legers;III;7
+M5 Stuart ;;;;;;;;;;;;;;;;Chars legers;IV;7
+M24 Chaffee ;;;;;;;;;;;;;;;;Chars legers;V;7
+T21 ;;;;;;;;;;;;;;;;Chars legers;VI;7
+T71 ;;;;;;;;;;;;;;;;Chars legers;VII;7
+T2 Medium Tank ;;;;;;;;;;;;;;;;Chars moyens;II;7
+M2 Medium Tank ;;;;;;;;;;;;;;;;Chars moyens;III;7
+M3 Lee ;;;;;;;;;;;;;;;;Chars moyens;IV;7
+M4 Sherman ;;;;;;;;;;;;;;;;Chars moyens;V;7
+M7 ;;;;;;;;;;;;;;;;Chars moyens;V;7
+Ram II ;;;;premium;;;;;;;;;;;;Chars moyens;V;7
+M4A2E4 Sherman ;;;;;;;;;;;;;;;;Chars moyens;V;7
+M4A3E8 Sherman ;;;;;;;;;;;;;;;;Chars moyens;VI;7
+M4A3E2 Sherman Jumbo ;;;;;;;;;;;;;;;;Chars moyens;VI;7
+T20 ;;;;;;;;;;;;;;;;Chars moyens;VII;7
+M26 Pershing ;;;;;;;;;;;;;;;;Chars moyens;VIII;7
+T26E4 Super Pershing ;;;;;;;;;;;;;;;;Chars moyens;VIII;7
+T69 ;;;;;;;;;;;;;;;;Chars moyens;VIII;7
+M46 Patton ;;;;;;;;;;;;;;;;Chars moyens;IX;7
+T54E1 ;;;;;;;;;;;;;;;;Chars moyens;IX;7
+M48A1 Patton ;;;;;;;;;;;;;;;;Chars moyens;X;7
+M60 ;;;;;;;;;;;;;;;;Chars moyens;X;7
+T14 ;;;;premium;;;;;;;;;;;;Chars lourds;V;7
+T1 Heavy Tank ;;;;;;;;;;;;;;;;Chars lourds;V;7
+M6 ;;;;;;;;;;;;;;;;Chars lourds;VI;7
+T29 ;;;;;;;;;;;;;;;;Chars lourds;VII;7
+T34 ;;;;;;;;;;;;;;;;Chars lourds;VIII;7
+T32 ;;;;;;;;;;;;;;;;Chars lourds;VIII;7
+M6A2E1 ;;;;;;;;;;;;;;;;Chars lourds;VIII;7
+M103 ;;;;;;;;;;;;;;;;Chars lourds;IX;7
+T110E5 ;;;;;;;;;;;;;;;;Chars lourds;X;7
+T57 Heavy Tank ;;;;;;;;;;;;;;;;Chars lourds;X;7
+T18 ;;;;;;;;;;;;;;;;Chasseurs de chars;II;7
+T82 ;;;;;;;;;;;;;;;;Chasseurs de chars;III;7
+T40 ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;7
+M8A1 ;;;;;;;;;;;;;;;;Chasseurs de chars;IV;7
+M10 Wolverine ;;;;;;;;;;;;;;;;Chasseurs de chars;V;7
+T49 ;;;;;;;;;;;;;;;;Chasseurs de chars;V;7
+M36 Jackson ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;7
+M18 Hellcat ;;;;;;;;;;;;;;;;Chasseurs de chars;VI;7
+T25 AT ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;7
+T25/2 ;;;;;;;;;;;;;;;;Chasseurs de chars;VII;7
+T28 ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;7
+T28 Prototype ;;;;;;;;;;;;;;;;Chasseurs de chars;VIII;7
+T30 ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;7
+T95 ;;;;;;;;;;;;;;;;Chasseurs de chars;IX;7
+T110E4 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;7
+T110E3 ;;;;;;;;;;;;;;;;Chasseurs de chars;X;7
+T57 ;;;;;;;;;;;;;;;;Canons automoteurs;II;7
+M7 Priest ;;;;;;;;;;;;;;;;Canons automoteurs;III;7
+M37 ;;;;;;;;;;;;;;;;Canons automoteurs;IV;7
+M41 ;;;;;;;;;;;;;;;;Canons automoteurs;V;7
+M44 ;;;;;;;;;;;;;;;;Canons automoteurs;VI;7
+M12 ;;;;;;;;;;;;;;;;Canons automoteurs;VII;7
+M40/M43 ;;;;;;;;;;;;;;;;Canons automoteurs;VIII;7
+M53/M55 ;;;;;;;;;;;;;;;;Canons automoteurs;IX;7
+T92;;;;;;;;;;;;;;;;Canons automoteurs;X;7
+BT-SV;;;;;;;;;;;;;;;;;;1
+KV-220 Beta-Test;;;;;;;;;;;;;;;;;;1
+MTLS-1G14;;;;;;;;;;;;;;;;;;7
+Pz.Kpfw. IV Hydraulic;;;;;;;;;;;;;;;;;;2
+SU-85I;;;;;;;;;;;;;;;;;;1
