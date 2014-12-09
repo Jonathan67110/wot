@@ -400,11 +400,11 @@ id;nom;calibre;nombre_total_obus_min;nombre_total_obus_max;nombre_total_obus_moy
 400;15 cm Pak L/29.5;150;NULL;NULL;NULL;NULL;NULL;3.53;NULL;3.53;NULL;750;750;950;215;334;85;NULL;NULL;NULL;NULL;NULL;NULL;NULL;X;10;Waffenträger auf Pz. IV ;330000;credit;NULL;2
 401;12,8 cm Pak L/66;128;NULL;NULL;NULL;NULL;NULL;5.26;NULL;5.26;NULL;560;560;700;246;311;65;NULL;NULL;NULL;NULL;NULL;NULL;NULL;X;10;Jagdtiger;339000;credit;NULL;2
 402;13 mm Autocannon Type Ho;13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;37 mm Sogekihou;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;37 mm Infantry Gun Type 11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;37 mm Gun Type 94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;37 mm Gun Type 98;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;5.7 cm Gun Type 97;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;37 mm Gun Type 100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;37 mm Gun Type 1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-402;Experimental 57 mm Tank Gun Shin;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+403;37 mm Sogekihou;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+404;37 mm Infantry Gun Type 11;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+405;37 mm Gun Type 94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+406;37 mm Gun Type 98;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+407;5.7 cm Gun Type 97;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+408;37 mm Gun Type 100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+409;37 mm Gun Type 1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+410;Experimental 57 mm Tank Gun Shin;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
