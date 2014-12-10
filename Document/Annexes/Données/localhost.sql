@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mer 10 Décembre 2014 à 00:02
+-- Généré le: Mer 10 Décembre 2014 à 22:17
 -- Version du serveur: 5.5.40
 -- Version de PHP: 5.4.35-0+deb7u2
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_canon_pays_id` (`pays_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=413 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=416 ;
 
 --
 -- Contenu de la table `canon`
@@ -507,7 +507,10 @@ INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_to
 (409, '7.5 cm Autoloading Tank Gun Type ', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (410, '90 mm Gun M3A1', '90', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (411, '90 mm Rifled Gun', '90', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(412, '105 mm Rifled Gun', '105', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(412, '105 mm Rifled Gun', '105', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(413, ' Experimental 57 mm Tank Gun Shin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(414, '37 mm Gun Type 100', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(415, '37 mm Gun Type 1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1210,10 +1213,10 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (211, '2014-10-02 23:22:00', 'Lorraine 155 mle. 51', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, 'credit', 'VIII', 8, 6),
 (212, '2014-10-02 23:19:55', 'Bat.-Châtillon 155 55', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, 'credit', 'IX', 9, 6),
 (213, '2014-10-02 23:20:31', 'Bat.-Châtillon 155 58', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, 'credit', 'X', 10, 6),
-(214, '2014-12-08 23:09:38', 'Renault Otsu', 'Développé de 1925 à 1928 en France comme une version améliorée du Renault FT. Le projet de modernisation a été achevé et le véhicule a été produit en série. En 1929, un total de 10 véhicules ont été achetés par le Japon et furent désignés Otsu-Gata Sensha (modèle de char B) Les véhicules japonais étaient légèrement modernisés et ont été largement utilisés à la fois pour des interventions et pour les formations.', 'Normal', 8.010, 8.500, 'credit', 23, 2, 1, 0, 0, 0, 100, 30, 30, 22, '1', 0, 'credit', 'I', 1, 3),
-(215, '2014-12-08 23:24:21', 'Type 95 Ha-Go', 'Un char léger japonais également connu sous le nom de Type 95. Développé de 1933 à 1935. Un total de 2 378 véhicules ont été produit en série de 1936 à 1943.', 'Normal', 7.340, 7.400, 'credit', 40, 3, 1, 0, 0, 1, 160, 1, 1, 1, '1', 3000, 'credit', 'II', 2, 3),
-(216, '2014-12-08 23:33:06', 'Type 98 Ke-Ni', 'Une autre modification du Ha-Go développé par Hino Jidosha Kogyo. Malgré les caractéristiques dynamiques améliorées, le char n''a pas remplacé le Ha-Go. Un total de 100 chars ont été fabriqués par Mitsubishi et Hino.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'III', 3, 3),
-(217, '2014-10-02 23:11:31', 'Type 5 Ke-Ho', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'IV', 4, 3),
+(214, '2014-12-10 06:50:21', 'Renault Otsu', 'Développé de 1925 à 1928 en France comme une version améliorée du Renault FT. Le projet de modernisation a été achevé et le véhicule a été produit en série. En 1929, un total de 10 véhicules ont été achetés par le Japon et furent désignés Otsu-Gata Sensha (modèle de char B) Les véhicules japonais étaient légèrement modernisés et ont été largement utilisés à la fois pour des interventions et pour les formations.', 'Normal', 8.010, 8.500, 'credit', 23, 2, 1, 0, 0, 0, 100, 30, 30, 22, '1', 0, 'credit', 'I', 1, 3),
+(215, '2014-12-10 22:13:37', 'Type 95 Ha-Go', 'Un char léger japonais également connu sous le nom de Type 95. Développé de 1933 à 1935. Un total de 2 378 véhicules ont été produit en série de 1936 à 1943.', 'Normal', 7.340, 7.400, 'credit', 40, 3, 1, 0, 0, 1, 160, 1, 1, 1, '1', 3000, 'credit', 'II', 2, 3),
+(216, '2014-12-10 22:10:02', 'Type 98 Ke-Ni', 'Une autre modification du Ha-Go développé par Hino Jidosha Kogyo. Malgré les caractéristiques dynamiques améliorées, le char n''a pas remplacé le Ha-Go. Un total de 100 chars ont été fabriqués par Mitsubishi et Hino.', 'Normal', 7.200, 7.200, 'credit', 50, 3, 1, 1, 0, 0, 220, 16, 12, 10, '1', 43500, 'credit', 'III', 3, 3),
+(217, '2014-12-10 22:11:22', 'Type 5 Ke-Ho', 'En 1945, la conception du Type 95 Ha-Go était déjà obsolète. En 1942, la compagnie Hino Jodosha a lancé le développement d''un nouveau char. Un prototype appelé Type 5 Ke-Ho a été construit en 1944. La conception du char était similaire à celle du LT vz.38 tchèque et du japonais Chi-Ha. Cependant, le véhicule n''a pas été produit en série.', 'Normal', 9.960, 10.000, 'credit', 50, 4, 1, 1, 0, 1, 340, 20, 16, 12, '1', 140000, 'credit', 'IV', 4, 3),
 (218, '2014-12-10 00:02:07', 'Chi-Ni', 'Développé par l''Arsenal d''artillerie d''Osaka comme remplacement du Type 2589. Le Chi-Ni et le Chi-Ha ont passé des essais combinés en 1937. Le Chi-Ha a été jugé plus efficace. Un prototype a été fabriqué.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'II', 2, 3),
 (219, '2014-12-10 00:01:10', 'Type 97 Chi-Ha', 'Développé par Mitsubishi de 1935 à 1937. Le char a été produit en série de 1938 à 1942, parrallèlement à une remise à niveau de Shinhoto Chi-Ha, avec un total de 2880 véhicules de ces deux types fabriqués. Les chars Chi-Ha et Shinhoto Chi-Ha ont largement été utilisés par les forces japonaises en Chine et après la capitulation du Japon, ces chars furent utilisés à la fois par les forces de l''ALP et de Kuomintang lors de la Guerre Civile de 1946.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'III', 3, 3),
 (220, '2014-12-10 00:01:42', 'Type 1 Chi-He', 'Le char moyen Type 1 Chi-He a été développé en 1941. Le char était un nouveau développement du Type 97 Chi-Ha. Cependant, en raison du manque d''acier, un total de 170 véhicules ont été fabriqués. La plupart d''entre eux ont été gardés pour la défense du Japon et n''ont jamais vu le combat.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'IV', 4, 3),
@@ -1365,7 +1368,7 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (368, '2014-11-28 23:41:06', 'Pz.Kpfw. IV Ausf. D ', 'Cette modification du Pz. IV a été développée en octobre 1939. Le véhicule comportait un blindage et un mantelet extérieur du canon améliorés. Le char a été produit en série jusqu''en mai 1940, avec un total de 229 véhicules fabriqués.', 'Normal', 19.620, 20.500, 'credit', 42, 5, 1, 1, 1, 1, 310, 30, 20, 20, '2', 150000, 'credit', 'IV', 4, 2),
 (369, '2014-11-29 00:32:56', 'Pz.Kpfw. V/IV Alpha ', 'Un seul prototype exista. La tourelle du PzKpfw IV a été montée comme un élément fixe sur la caisse du Panther pour des essais.', 'Event', 40.600, 44.800, 'or', 55, 5, 1, 1, 1, 1, 820, 85, 40, 40, '2', 0, 'or', 'VI', 6, 2),
 (374, '2014-12-07 01:00:44', 'StuG III Ausf. B', 'En 1935, Erich von Manstein de l''état-major général de l''armée allemande décrivit dans une lettre au général Ludwig Beck l''idée de construire une artillerie d''assaut pour soutenir l''attaque des unités d''infanterie. Cinq prototypes de la série "zéro" ont été fabriqués en 1937. Les premières modifications de l''Ausf. A à l''Ausf. F/8 ont été produites jusqu''en décembre 1942.', 'Normal', 21.940, 24.000, 'credit', 40, 4, 1, 1, 1, 0, 260, 50, 30, 30, '4', 130000, 'credit', 'IV', 4, 2),
-(375, '2014-12-08 23:29:06', 'Type 97 Te-Ke', 'Le Te-Ke a été développé par Tokyo Gasu Denki pour remplacer le char léger Type 94 devenu obsolète. Fabriqué de 1937 à 1942, ce véhicule a été utilisé pour la reconnaissance, la communication, les patrouilles et le soutien d''infanterie. Il a servi de tracteur blindé. Un total d''environ 600 véhicules ont été fabriqués.', 'Event', 4.760, 5.800, 'credit', 42, 2, 1, 0, 0, 0, 160, 12, 10, 8, '1', 0, 'or', 'II', 2, 3);
+(375, '2014-12-10 22:12:03', 'Type 97 Te-Ke', 'Le Te-Ke a été développé par Tokyo Gasu Denki pour remplacer le char léger Type 94 devenu obsolète. Fabriqué de 1937 à 1942, ce véhicule a été utilisé pour la reconnaissance, la communication, les patrouilles et le soutien d''infanterie. Il a servi de tracteur blindé. Un total d''environ 600 véhicules ont été fabriqués.', 'Event', 4.760, 5.800, 'credit', 42, 2, 1, 0, 0, 0, 160, 12, 10, 8, '1', 0, 'or', 'II', 2, 3);
 
 -- --------------------------------------------------------
 
@@ -1798,6 +1801,17 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (184, 191),
 (184, 192),
 (184, 193),
+(214, 156),
+(214, 402),
+(214, 403),
+(214, 404),
+(215, 405),
+(215, 406),
+(215, 407),
+(216, 414),
+(216, 415),
+(217, 195),
+(217, 413),
 (227, 412),
 (229, 184),
 (229, 195),
@@ -1833,7 +1847,8 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (374, 14),
 (374, 217),
 (374, 219),
-(374, 387);
+(374, 387),
+(375, 406);
 
 -- --------------------------------------------------------
 
