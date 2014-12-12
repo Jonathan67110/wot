@@ -293,6 +293,19 @@ function listeChampTank($bdd, $tableName){
 				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
 				break;
+			
+			case 'hp_base':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+				$triggerScript = 'onchange';
+				$scriptFonction = 'suppressionBlanc(this.id)';
+				$attribut = '';
+		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
+
+				break;
 		
 			default:
 			
