@@ -90,7 +90,8 @@ function stringToPositivInteger(number)
 /* Fonction permettant de supprimer automatiquement des blancs dans une chaîne de caractères  */
 function suppressionBlanc(idBalise)
 {
-	document.getElementById(idBalise).value = document.getElementById(idBalise).value.replace(' ', '');
+	document.getElementById(idBalise).value = document.getElementById(idBalise).value.replace(/ /g, "");
+	
 }
 
 
