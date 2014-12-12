@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mer 10 Décembre 2014 à 22:17
+-- Généré le: Ven 12 Décembre 2014 à 10:15
 -- Version du serveur: 5.5.40
 -- Version de PHP: 5.4.35-0+deb7u2
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_canon_pays_id` (`pays_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=416 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=419 ;
 
 --
 -- Contenu de la table `canon`
@@ -510,7 +510,10 @@ INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_to
 (412, '105 mm Rifled Gun', '105', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (413, ' Experimental 57 mm Tank Gun Shin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (414, '37 mm Gun Type 100', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(415, '37 mm Gun Type 1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(415, '37 mm Gun Type 1', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(416, '7.5 cm Tank Gun Type 99', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(417, '7.5 cm Tank Gun Type 3', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(418, '7.5 cm Tank Gun Type 5', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1018,7 +1021,7 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (8, '2014-11-07 19:10:44', 'T1E6', 'Les véhicules expérimentaux T1E4 jusqu''à T1E6 ont été fortement influencés par le britannique Vickers E. Le premier prototype a été fabriqué par la corporation Cunningham en 1931. Après des essais en 1932, une variante améliorée a été produite. Cependant, un autre char expérimental, le T2, a été préféré.', 'Event', 9.030, 11.000, 'or', 48, 3, 1, 0, 1, 0, 160, 15, 6, 6, '1', 0, 'or', 'II', 2, 7),
 (9, '2014-10-09 22:04:38', 'WZ-132', '', 'Normal', 1.000, 1.000, 'credit', 64, 1, 1, 1, 1, 1, 1, 50, 25, 20, '1', 1, 'credit', 'VIII', 8, 4),
 (10, NULL, 'M40/M43', 'Pas de paramètre', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 0, 'credit', 'III', 3, 7),
-(11, '2014-12-10 00:00:22', 'Chi-nu', 'Le char moyen Type 1 Chi-He a été développé en 1941. Le char était un nouveau développement du Type 97 Chi-Ha. Cependant, en raison du manque d''acier, un total de 170 véhicules ont été fabriqués. La plupart d''entre eux ont été gardés pour la défense du Japon et n''ont jamais vu le combat.', 'Normal', 11.000, 19.000, 'credit', 39, 1, 1, 1, 1, 1, 440, 50, 25, 20, '2', 410000, 'credit', 'V', 5, 3),
+(11, '2014-12-12 10:14:37', 'Chi-nu', 'Le char moyen Type 1 Chi-He a été développé en 1941. Le char était un nouveau développement du Type 97 Chi-Ha. Cependant, en raison du manque d''acier, un total de 170 véhicules ont été fabriqués. La plupart d''entre eux ont été gardés pour la défense du Japon et n''ont jamais vu le combat.', 'Normal', 11.000, 19.000, 'credit', 39, 1, 1, 1, 1, 1, 440, 50, 25, 20, '2', 410000, 'credit', 'V', 5, 3),
 (13, '2014-11-24 20:49:19', 'Pz.Kpfw. II', 'Les modèles A, B, C et F furent produits de mars 1937 à avril 1940, et de mars 1941 à décembre 1942, avec un total de 1 637 chars construits.', 'Normal', 9.200, 9.500, 'credit', 40, 3, 1, 0, 1, 0, 145, 30, 20, 15, '1', 3000, 'credit', 'II', 2, 2),
 (14, NULL, 'T14', '', 'premium', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 0, 'credit', 'V', 5, 7),
 (15, '2014-10-02 23:15:41', 'Type T-34', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'V', 5, 4),
@@ -1217,9 +1220,9 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (215, '2014-12-10 22:13:37', 'Type 95 Ha-Go', 'Un char léger japonais également connu sous le nom de Type 95. Développé de 1933 à 1935. Un total de 2 378 véhicules ont été produit en série de 1936 à 1943.', 'Normal', 7.340, 7.400, 'credit', 40, 3, 1, 0, 0, 1, 160, 1, 1, 1, '1', 3000, 'credit', 'II', 2, 3),
 (216, '2014-12-10 22:10:02', 'Type 98 Ke-Ni', 'Une autre modification du Ha-Go développé par Hino Jidosha Kogyo. Malgré les caractéristiques dynamiques améliorées, le char n''a pas remplacé le Ha-Go. Un total de 100 chars ont été fabriqués par Mitsubishi et Hino.', 'Normal', 7.200, 7.200, 'credit', 50, 3, 1, 1, 0, 0, 220, 16, 12, 10, '1', 43500, 'credit', 'III', 3, 3),
 (217, '2014-12-10 22:11:22', 'Type 5 Ke-Ho', 'En 1945, la conception du Type 95 Ha-Go était déjà obsolète. En 1942, la compagnie Hino Jodosha a lancé le développement d''un nouveau char. Un prototype appelé Type 5 Ke-Ho a été construit en 1944. La conception du char était similaire à celle du LT vz.38 tchèque et du japonais Chi-Ha. Cependant, le véhicule n''a pas été produit en série.', 'Normal', 9.960, 10.000, 'credit', 50, 4, 1, 1, 0, 1, 340, 20, 16, 12, '1', 140000, 'credit', 'IV', 4, 3),
-(218, '2014-12-10 00:02:07', 'Chi-Ni', 'Développé par l''Arsenal d''artillerie d''Osaka comme remplacement du Type 2589. Le Chi-Ni et le Chi-Ha ont passé des essais combinés en 1937. Le Chi-Ha a été jugé plus efficace. Un prototype a été fabriqué.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'II', 2, 3),
-(219, '2014-12-10 00:01:10', 'Type 97 Chi-Ha', 'Développé par Mitsubishi de 1935 à 1937. Le char a été produit en série de 1938 à 1942, parrallèlement à une remise à niveau de Shinhoto Chi-Ha, avec un total de 2880 véhicules de ces deux types fabriqués. Les chars Chi-Ha et Shinhoto Chi-Ha ont largement été utilisés par les forces japonaises en Chine et après la capitulation du Japon, ces chars furent utilisés à la fois par les forces de l''ALP et de Kuomintang lors de la Guerre Civile de 1946.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'III', 3, 3),
-(220, '2014-12-10 00:01:42', 'Type 1 Chi-He', 'Le char moyen Type 1 Chi-He a été développé en 1941. Le char était un nouveau développement du Type 97 Chi-Ha. Cependant, en raison du manque d''acier, un total de 170 véhicules ont été fabriqués. La plupart d''entre eux ont été gardés pour la défense du Japon et n''ont jamais vu le combat.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'IV', 4, 3),
+(218, '2014-12-11 20:46:59', 'Chi-Ni', 'Développé par l''Arsenal d''artillerie d''Osaka comme remplacement du Type 2589. Le Chi-Ni et le Chi-Ha ont passé des essais combinés en 1937. Le Chi-Ha a été jugé plus efficace. Un prototype a été fabriqué.', 'Normal', 9.640, 9.800, 'credit', 30, 3, 1, 0, 0, 1, 190, 25, 12, 10, '2', 3900, 'credit', 'II', 2, 3),
+(219, '2014-12-11 20:50:06', 'Type 97 Chi-Ha', 'Développé par Mitsubishi de 1935 à 1937. Le char a été produit en série de 1938 à 1942, parrallèlement à une remise à niveau de Shinhoto Chi-Ha, avec un total de 2880 véhicules de ces deux types fabriqués. Les chars Chi-Ha et Shinhoto Chi-Ha ont largement été utilisés par les forces japonaises en Chine et après la capitulation du Japon, ces chars furent utilisés à la fois par les forces de l''ALP et de Kuomintang lors de la Guerre Civile de 1946.', 'Normal', 15.040, 15.900, 'credit', 40, 4, 1, 1, 0, 1, 220, 25, 25, 20, '2', 45000, 'credit', 'III', 3, 3),
+(220, '2014-12-12 10:10:37', 'Type 1 Chi-He', 'Le char moyen Type 1 Chi-He a été développé en 1941. Le char était un nouveau développement du Type 97 Chi-Ha. Cependant, en raison du manque d''acier, un total de 170 véhicules ont été fabriqués. La plupart d''entre eux ont été gardés pour la défense du Japon et n''ont jamais vu le combat.', 'Normal', 17.240, 17.250, 'credit', 44, 5, 1, 1, 1, 1, 320, 50, 25, 20, '2', 136000, 'credit', 'IV', 4, 3),
 (221, '2014-12-09 23:59:50', 'Type 3 Chi-Nu', 'Le char moyen Type 3 Chi-Nu est une modification du Type 1 Chi-He avec une nouvelle tourelle et un nouveau canon. Le char était le véhicule japonais produit en série le plus puissant pendant la guerre. Cependant, seul un total de 60 véhicules ont été fabriqués en raison des pénuries de composants et de matériaux.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'V', 5, 3),
 (222, '2014-12-09 23:58:54', 'Type 3 Chi-Nu Kai', 'Le char moyen Type 3 Chi-Nu Kai est une combinaison de la suspension et de la tourelle du Type 3 Chi Nu et du canon du Type 4 Chi-To. Seul un prototype a été construit. Il était prêt pour les essais en mars 1945.', 'Normal', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'V', 5, 3),
 (223, '2014-12-09 23:58:27', 'Type 4 Chi-To', 'Le char moyen Type 4 Chi-To a été développé en 1943 sur le châssis du Chi-Nu. Le char a été conçu pour remplacer le Chi-Ha. Cependant, la production en série n''a pas été lancée en raison du manque de matériaux et de composants. Un total de six châssis ont été produit, et seulement deux chars ont été fabriqués sur cette base.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VI', 6, 3),
@@ -1400,6 +1403,10 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (9, 17),
 (9, 281),
 (9, 282),
+(11, 413),
+(11, 416),
+(11, 417),
+(11, 418),
 (13, 370),
 (13, 371),
 (13, 372),
@@ -1812,6 +1819,14 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (216, 415),
 (217, 195),
 (217, 413),
+(218, 402),
+(219, 195),
+(219, 407),
+(219, 414),
+(219, 415),
+(220, 195),
+(220, 413),
+(220, 416),
 (227, 412),
 (229, 184),
 (229, 195),
