@@ -219,8 +219,11 @@ function listeChampTank($bdd, $tableName){
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
+				$triggerScript = 'onchange';
+				$scriptFonction = 'sommeEquipage()';
+				$attribut = '';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()', '');	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
 				break;
 			
@@ -229,8 +232,11 @@ function listeChampTank($bdd, $tableName){
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
+				$triggerScript = 'onchange';
+				$scriptFonction = 'sommeEquipage()';
+				$attribut = '';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()', '');	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
 				break;
 			
@@ -240,8 +246,11 @@ function listeChampTank($bdd, $tableName){
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
+				$triggerScript = 'onchange';
+				$scriptFonction = 'sommeEquipage()';
+				$attribut = '';
 		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'onchange' , 'sommeEquipage()', '');	
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
 				break;
 			
@@ -267,6 +276,19 @@ function listeChampTank($bdd, $tableName){
 				$triggerScript = '';
 				$scriptFonction = '';
 				$attribut = 'readonly';
+		
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
+
+				break;
+			
+			case 'prix':
+			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+				$triggerScript = 'onchange';
+				$scriptFonction = 'suppressionBlanc(this.id)';
+				$attribut = '';
 		
 				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 

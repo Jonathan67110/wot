@@ -79,6 +79,7 @@ function sommeEquipage()
 	nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio + 1;
 }
 
+/* Convertit une chaîne de caractères en nombre entier positif ou nul */
 function stringToPositivInteger(number)
 {
 	number = isNaN(parseInt(number)) ? 0 : Math.abs(parseInt(number));
@@ -86,7 +87,11 @@ function stringToPositivInteger(number)
 	return number;
 }
 
-
+/* Fonction permettant de supprimer automatiquement des blancs dans une chaîne de caractères  */
+function suppressionBlanc(idBalise)
+{
+	document.getElementById(idBalise).value = document.getElementById(idBalise).value.replace(' ', '');
+}
 
 
 
