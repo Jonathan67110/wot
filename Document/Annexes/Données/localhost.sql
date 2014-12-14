@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Sam 13 Décembre 2014 à 13:58
+-- Généré le: Dim 14 Décembre 2014 à 22:51
 -- Version du serveur: 5.5.40
 -- Version de PHP: 5.4.35-0+deb7u2
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_canon_pays_id` (`pays_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=420 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=421 ;
 
 --
 -- Contenu de la table `canon`
@@ -513,7 +513,8 @@ INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_to
 (416, '7.5 cm Tank Gun Type 99', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (417, '7.5 cm Tank Gun Type 3', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (418, '7.5 cm Tank Gun Type 5', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(419, '90 mm Gun Type 61', '90', 90, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(419, '90 mm Gun Type 61', '90', 90, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(420, '85 mm Type 62', '85', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'VII', 7, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1019,12 +1020,12 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (6, '2014-12-12 20:48:19', 'Renault NC-31', 'Le projet NC-2 (nom commercial NC-31) était une modification du char Renault FT-17 proposant une suspension souple à roulement et des chenilles à crocs en caoutchouc Kegresse-Hinstin. Ces caractéristiques, ajoutées à un moteur amélioré, apportèrent une augmentation de la vitesse maximale de 16 km/h. Un total de 15 véhicules de ce type furent exportés en Chine.', 'Normal', 5.000, 7.000, 'credit', 25, 2, 1, 0, 0, 0, 100, 16, 16, 16, '1', 0, 'credit', 'I', 1, 4),
 (7, '2014-10-02 23:22:54', 'AMX 13 75', '', 'Normal', 8.310, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VII', 7, 6),
 (8, '2014-11-07 19:10:44', 'T1E6', 'Les véhicules expérimentaux T1E4 jusqu''à T1E6 ont été fortement influencés par le britannique Vickers E. Le premier prototype a été fabriqué par la corporation Cunningham en 1931. Après des essais en 1932, une variante améliorée a été produite. Cependant, un autre char expérimental, le T2, a été préféré.', 'Event', 9.030, 11.000, 'or', 48, 3, 1, 0, 1, 0, 160, 15, 6, 6, '1', 0, 'or', 'II', 2, 7),
-(9, '2014-12-13 13:57:44', 'WZ-132', 'La commande pour le WZ-132 a été réalisée en 1964. Le design était basé sur le WZ-131, mais avec pour but d''améliorer la puissance de feu et le blindage de protection. Quelques prototypes ont été fabriqué avant l''abandon du projet fin des années 1960. Tous les prototypes ont été détruits lors des tests de l''arme nucléaire par les chinois.', 'Normal', 1.000, 1.000, 'credit', 64, 1, 1, 1, 1, 1, 1, 50, 25, 20, '1', 1, 'credit', 'VIII', 8, 4),
+(9, '2014-12-14 22:07:52', 'WZ-132', 'La commande pour le WZ-132 a été réalisée en 1964. Le design était basé sur le WZ-131, mais avec pour but d''améliorer la puissance de feu et le blindage de protection. Quelques prototypes ont été fabriqué avant l''abandon du projet fin des années 1960. Tous les prototypes ont été détruits lors des tests de l''arme nucléaire par les chinois.', 'Normal', 23.520, 24.000, 'credit', 64, 4, 1, 1, 1, 0, 950, 50, 25, 20, '1', 2400000, 'credit', 'VIII', 8, 4),
 (10, NULL, 'M40/M43', 'Pas de paramètre', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 0, 'credit', 'III', 3, 7),
 (11, '2014-12-12 12:11:45', 'Type 3 Chi-Nu ', 'Le char moyen Type 3 Chi-Nu est une modification du Type 1 Chi-He avec une nouvelle tourelle et un nouveau canon. Le char était le véhicule japonais produit en série le plus puissant pendant la guerre. Cependant, seul un total de 60 véhicules ont été fabriqués en raison des pénuries de composants et de matériaux.', 'Normal', 17.640, 18.800, 'credit', 38, 1, 1, 1, 1, 1, 440, 50, 25, 20, '2', 410000, 'credit', 'V', 5, 3),
 (13, '2014-11-24 20:49:19', 'Pz.Kpfw. II', 'Les modèles A, B, C et F furent produits de mars 1937 à avril 1940, et de mars 1941 à décembre 1942, avec un total de 1 637 chars construits.', 'Normal', 9.200, 9.500, 'credit', 40, 3, 1, 0, 1, 0, 145, 30, 20, 15, '1', 3000, 'credit', 'II', 2, 2),
 (14, NULL, 'T14', '', 'premium', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 0, 'credit', 'V', 5, 7),
-(15, '2014-10-02 23:15:41', 'Type T-34', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'V', 5, 4),
+(15, '2014-12-14 22:15:56', 'Type T-34', 'Plusieurs centaines de T-34-76 ont été exportés depuis l''URSS vers la Chine au début des années 1950. L''utilité de ces chars a été augmentée par des améliorions d''origine chinoise, incluant un nouveau moteur et une nouvelle suspension.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'V', 5, 4),
 (23, '2014-10-02 00:00:00', 'MS-1', 'Le premier char soviétique adopté pour la production en série, avec 959 véhicules produits de 1928 à 1931.', 'Normal', 4.690, 4.890, 'credit', 32, 2, 1, 0, 0, 0, 90, 18, 16, 16, '1', 0, 'credit', 'I', 1, 1),
 (24, '2014-10-02 00:00:00', 'BT-2', 'Conçu sur la base du char Christie M1931 et produit à l''usine de Kharkov Komintern Locomotive Plant (KhPZ), avec 650 BT-2 et 1884 BT-5 produits de 1932 à 1935.', 'Normal', 10.260, 11.500, 'credit', 55, 3, 1, 1, 0, 0, 140, 15, 13, 10, '1', 3500, 'credit', 'II', 2, 1),
 (25, '2014-10-02 00:00:00', 'T-26', 'Produit en plus grand nombre que tout autre char de l''Armée rouge pendant la période d''avant-guerre, avec 11 218 véhicules en quatre principales variantes fabriquées de 1931 à 1941.', 'Normal', 9.300, 10.200, 'credit', 36, 3, 1, 1, 0, 0, 150, 15, 15, 15, '1', 3700, 'credit', 'II', 2, 1),
@@ -1141,9 +1142,9 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (137, '2014-11-29 23:48:50', 'Pz.Kpfw. Tiger II', 'Aussi connu sous le nom de Tigre Royal. Il a été produit de janvier 1944 jusqu''à mars 1945, avec un total de 489 véhicules construits.', 'Normal', 68.050, 69.700, 'credit', 38, 5, 1, 1, 1, 1, 1500, 150, 150, 80, '3', 2450000, 'credit', 'VIII', 8, 2),
 (138, '2014-12-01 20:17:24', 'VK 45.02 (P) Ausf. A', 'Le développement de ce véhicule a commencé en avril 1942. La compagnie Krupp a reçu une commande pour la construction des tourelles. Cependant, le prototype n''a jamais été fabriqué. Les tourelles ont été montées sur les premiers Tigre II.', 'Normal', 53.570, 54.180, 'credit', 38, 5, 1, 1, 1, 1, 1470, 120, 80, 80, '3', 2435000, 'credit', 'VIII', 8, 2),
 (139, '2014-12-01 20:14:22', 'Löwe', 'Un projet de char super lourd développé par la société Krupp. Plusieurs prototypes de configuration et d''armement divers ont été conçu, mais aucun prototype d''essai n''a jamais été construit. Le véhicule n''a jamais été mis à l''essai.', 'Boutique', 90.000, 99.850, 'credit', 35, 5, 1, 1, 1, 1, 1650, 120, 100, 80, '3', 12500, 'credit', 'VIII', 8, 2),
-(140, '2014-12-01 20:20:12', 'VK 45.02 (P) Ausf. B', 'Deux prototypes de ce véhicule (l''un avec une tourelle montée à l''avant, l''autre à l''arrière) furent conçus par Ferdinand Porsche, mais il n''entra jamais en production.', 'Normal', 72.500, 75.500, 'credit', 30, 5, 1, 1, 1, 1, 1850, 200, 100, 100, '3', 3598000, 'credit', 'IX', 9, 2),
-(141, '2014-12-01 20:22:39', 'E-75', 'En 1945, le E-75 a été conçu pour devenir le char lourd standard pour la Panzerwaffe afin de remplacer le Tigre II. N''a jamais dépassé le stade de la planche à dessin.', 'Normal', 85.000, 88.000, 'credit', 401, 5, 1, 1, 1, 1, 1820, 160, 120, 120, '3', 3480000, 'credit', 'IX', 9, 2);
+(140, '2014-12-01 20:20:12', 'VK 45.02 (P) Ausf. B', 'Deux prototypes de ce véhicule (l''un avec une tourelle montée à l''avant, l''autre à l''arrière) furent conçus par Ferdinand Porsche, mais il n''entra jamais en production.', 'Normal', 72.500, 75.500, 'credit', 30, 5, 1, 1, 1, 1, 1850, 200, 100, 100, '3', 3598000, 'credit', 'IX', 9, 2);
 INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poids_chassis`, `limite_charge`, `monaie`, `vitesse_max`, `Nombre_equipage`, `Nombre_pilote`, `Nombre_tireur`, `Nombre_chargeur`, `Nombre_operateur_radio`, `hp_base`, `Blindage_avant`, `Blindage_flanc`, `Blindage_arriere`, `type_char`, `prix`, `type_credit`, `tier_latin`, `tier_chiffre`, `pays_id`) VALUES
+(141, '2014-12-01 20:22:39', 'E-75', 'En 1945, le E-75 a été conçu pour devenir le char lourd standard pour la Panzerwaffe afin de remplacer le Tigre II. N''a jamais dépassé le stade de la planche à dessin.', 'Normal', 85.000, 88.000, 'credit', 401, 5, 1, 1, 1, 1, 1820, 160, 120, 120, '3', 3480000, 'credit', 'IX', 9, 2),
 (142, '2014-12-01 21:39:06', 'Maus', 'Développé de juin 1942 à juillet 1944, deux prototypes furent réalisés, mais un seul reçu une tourelle et un armement.', 'Normal', 188.980, 192.900, 'credit', 20, 6, 1, 1, 2, 1, 3000, 200, 185, 160, '3', 6100000, 'credit', 'X', 10, 2),
 (143, '2014-12-01 21:48:37', 'E-100', 'En juin 1943, la compagnie Adlerwerke reçoit une commande pour le développement de la série E-100. Cependant, en 1944, le développement des chars lourds a été interrompu. À la fin de la guerre, seul le châssis avait été achevé, lequel a été capturé par l''armée anglaise plus tard.', 'Normal', 192.900, 150.000, 'credit', 30, 6, 1, 1, 1, 2, 2700, 200, 120, 150, '3', 6100000, 'credit', 'X', 10, 2),
 (144, '2014-12-01 21:50:20', 'VK 72.01 (K)', 'Un char super lourd avec un placement à l''arrière de la tourelle. Développé par la compagnie Krupp. Un nouveau véhicule devait avoir un meilleur armement et un blindage amélioré comparé au VK70.01. N''a jamais passé le stade de la planche à dessin.', 'Event', 120.000, 130.000, 'or', 431, 5, 1, 1, 1, 1, 2500, 200, 160, 120, '3', 0, 'or', 'X', 10, 2),
@@ -1230,23 +1231,23 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (226, '2014-12-12 20:01:08', 'Type 61', 'Le premier char développé par le Japon après la fin de la Seconde Guerre mondiale. Développé de 1954 à 1961 sur la base du char américain M47. Les dimensions du véhicule ont été diminuées et le blindage a été réduit. En conséquence, le poids du char était plus léger, et le char était conforme aux exigences des forces armées japonaises.', 'Normal', 34.620, 34.700, 'credit', 47, 4, 1, 1, 1, 0, 1600, 55, 35, 25, '2', 3600000, 'credit', 'IX', 9, 3),
 (227, '2014-12-09 23:53:57', 'STB-1', 'Au début des années 1960, Mitsubishi commença le développement d''un nouveau char conforme aux exigences du gouvernement pour l''armement et la défense. Les deux prototypes du STB-1 ont été fabriqués en septembre 1969 pour des essais. En 1970, les prototypes ont été présentés aux journalistes et ont participé à un défilé militaire.', 'Normal', 37.400, 40.000, 'credit', 53, 4, 1, 1, 1, 0, 1950, 110, 35, 25, '2', 6100000, 'credit', 'X', 10, 3),
 (228, '2014-12-12 21:06:31', 'Vickers Mk. E Type B', 'Développé en 1928 par J.V. Charden et V. Loyd. le véhicule n''est jamais entré en service en Grande Bretagne. Cependant, il a été exporté dans d''autres pays, dont la Chine. En 1937, vingt véhicules de ce type affrontèrent les troupes japonaises à Shanghai. les chars soviétiques T-26 furent également exportés en Chine, et 82 véhicules de ce type furent déployés en Chine du Sud et en Birmanie en 1941 à 1942.', 'Normal', 7.110, 7.500, 'credit', 35, 3, 1, 1, 0, 0, 1, 12, 12, 12, '1', 3900, 'credit', 'II', 2, 4),
-(229, '2014-12-13 13:55:29', 'Type 2597 Chi-Ha', 'Développé par Mitsubishi de 1935 à 1937. Le char a été produit en série de 1938 à 1942, parrallèlement à une remise à niveau de Shinhoto Chi-Ha, avec un total de 2880 véhicules de ces deux types fabriqués. Les chars Chi-Ha et Shinhoto Chi-Ha ont largement été utilisés par les forces japonaises en Chine et après la capitulation du Japon, ces chars furent utilisés à la fois par les forces de l''ALP et de Kuomintang lors de la Guerre Civile de 1946.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'III', 3, 4),
-(230, '2014-12-13 13:56:09', 'M5A1 Stuart', 'Les premiers chars de la série M5 ont été produits en 1942, et une nouvelle modification, le M5A1, a été préféré aux autres versions. Après que le M24 Chaffee fut développé, les chars M5A1 devinrent obsolètes et furent exportés dans d''autres pays, incluant la Chine. Un total de 100 chars de ce type furent donnés au Kuomintang. Lors de la Guerre Civile (1946 à 1949), nombreux de ces véhicules furent capturés par l''ALP.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'IV', 4, 4),
-(231, '2014-12-13 13:56:20', '59-16', 'En 1957, un projet de nouveau char léger a été lancé par le gouvernement chinois. Le développement s''est terminé en 1959. Le nouveau véhicule, pesant 16 tonnes, était équipé d''une suspension à barre de torsion à 4 roues et le placement à l''arrière de la roue principale. Il comportait un canon de 57 mm, plus tard remplacé par un 76 mm.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VI', 6, 4),
-(232, '2014-12-13 13:56:41', 'Type 64', 'Plus de 50 de ces véhicules ont été produits à Taïwan. Tous les composants de base du véhicules étaient basés sur ceux de véhicules Américains. La tourelle du Hellcat était installée sur le châssis d''un véhicule anti-aérien M42, et l''armement était le canon M1A1 ayant fait ses preuves. Seul un prototype de Type 64 survit à ce jour.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VI', 6, 4),
-(233, '2014-12-13 13:57:04', 'Type 62', 'Le char léger Type 62 fut le premier char conçu à l''origine par la Chine. En développement depuis 1958, le char était destiné aux régions du sud de la Chine. En 1962, après des tests approfondis, le véhicule est entré en service. En 1989, un total de 1500 véhicules avaient été produits. Le Type 62 a été exporté vers l''Albanie, le Congo, le Mali, le Soudan, le Vietnam et le Zaïre.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VII', 7, 4),
-(234, '2014-12-13 13:57:23', 'WZ-131', 'En 1957, le développement d''une version allégée du char Type 59 a débuté. Le nouveau char a été conçu pour combattre sur le terrain montagneux et marécageux du sud de la Chine. Le premier prototype a été construit en 1962. Le véhicule a par la suite subi une modernisation.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VII', 7, 4),
-(235, '2014-10-02 23:15:44', 'Type 58', '', 'Normal', 1.000, 1.000, 'credit', 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VI', 6, 4),
-(236, '2014-10-02 23:14:19', 'T-34-1', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VII', 7, 4),
-(237, '2014-10-02 23:15:08', 'Type 59', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VIII', 8, 4),
-(238, '2014-10-02 23:14:34', 'T-34-2', '', 'Normal', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VIII', 8, 4),
-(239, '2014-10-02 23:14:48', 'T-34-3', '', 'Normal', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VIII', 8, 4),
-(240, '2014-10-02 23:15:18', 'WZ-120', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'IX', 9, 4),
-(241, '2014-10-02 23:14:02', '121', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'X', 10, 4),
+(229, '2014-12-14 20:50:37', 'Type 2597 Chi-Ha', 'Développé par Mitsubishi de 1935 à 1937. Le char a été produit en série de 1938 à 1942, parrallèlement à une remise à niveau de Shinhoto Chi-Ha, avec un total de 2880 véhicules de ces deux types fabriqués. Les chars Chi-Ha et Shinhoto Chi-Ha ont largement été utilisés par les forces japonaises en Chine et après la capitulation du Japon, ces chars furent utilisés à la fois par les forces de l''ALP et de Kuomintang lors de la Guerre Civile de 1946.', 'Normal', 15.040, 15.900, 'credit', 40, 4, 1, 1, 0, 1, 220, 25, 25, 20, '1', 42000, 'credit', 'III', 3, 4),
+(230, '2014-12-14 20:55:01', 'M5A1 Stuart', 'Les premiers chars de la série M5 ont été produits en 1942, et une nouvelle modification, le M5A1, a été préféré aux autres versions. Après que le M24 Chaffee fut développé, les chars M5A1 devinrent obsolètes et furent exportés dans d''autres pays, incluant la Chine. Un total de 100 chars de ce type furent donnés au Kuomintang. Lors de la Guerre Civile (1946 à 1949), nombreux de ces véhicules furent capturés par l''ALP.', 'Normal', 15.560, 15.750, 'credit', 64, 4, 1, 1, 0, 1, 310, 28, 28, 25, '1', 143000, 'credit', 'IV', 4, 4),
+(231, '2014-12-14 21:17:28', '59-16', 'En 1957, un projet de nouveau char léger a été lancé par le gouvernement chinois. Le développement s''est terminé en 1959. Le nouveau véhicule, pesant 16 tonnes, était équipé d''une suspension à barre de torsion à 4 roues et le placement à l''arrière de la roue principale. Il comportait un canon de 57 mm, plus tard remplacé par un 76 mm.', 'Normal', 16.060, 16.500, 'credit', 60, 4, 1, 1, 1, 0, 530, 30, 20, 20, '1', 900000, 'credit', 'VI', 6, 4),
+(232, '2014-12-14 21:19:14', 'Type 64', 'Plus de 50 de ces véhicules ont été produits à Taïwan. Tous les composants de base du véhicules étaient basés sur ceux de véhicules Américains. La tourelle du Hellcat était installée sur le châssis d''un véhicule anti-aérien M42, et l''armement était le canon M1A1 ayant fait ses preuves. Seul un prototype de Type 64 survit à ce jour.', 'Boutique', 23.000, 25.000, 'credit', 72, 5, 1, 1, 1, 1, 580, 25, 12, 9, '1', 3500, 'credit', 'VI', 6, 4),
+(233, '2014-12-14 21:27:43', 'Type 62', 'Le char léger Type 62 fut le premier char conçu à l''origine par la Chine. En développement depuis 1958, le char était destiné aux régions du sud de la Chine. En 1962, après des tests approfondis, le véhicule est entré en service. En 1989, un total de 1500 véhicules avaient été produits. Le Type 62 a été exporté vers l''Albanie, le Congo, le Mali, le Soudan, le Vietnam et le Zaïre.', 'Event', 21.000, 24.000, 'or', 60, 4, 1, 1, 1, 0, 880, 35, 20, 20, '1', 0, 'or', 'VII', 7, 4),
+(234, '2014-12-14 21:59:04', 'WZ-131', 'En 1957, le développement d''une version allégée du char Type 59 a débuté. Le nouveau char a été conçu pour combattre sur le terrain montagneux et marécageux du sud de la Chine. Le premier prototype a été construit en 1962. Le véhicule a par la suite subi une modernisation.', 'Normal', 20.100, 21.500, 'credit', 60, 4, 1, 1, 1, 0, 800, 35, 20, 20, '1', 1350000, 'credit', 'VII', 7, 4),
+(235, '2014-12-14 22:25:38', 'Type 58', 'Au début des années 1950, l''URSS a exporté un total de 1800 chars T-34-76 et T-34-85 en Chine. En 1954, le gouvernement chinois a décidé de commencer la production domestique du T-34-85 en 1958, avec un nouveau véhicule nommé Type 58. Cependant; la production n''a jamais été lancée, et l''armée chinoise a préféré apporter des modifications aux T-34.', 'Normal', 1.000, 1.000, 'credit', 1, 5, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VI', 6, 4),
+(236, '2014-12-14 22:25:51', 'T-34-1', 'En 1954, le gouvernement chinois songea à la possibilité de lancer la production du T-34-85 en Chine. À ce même moment, les ingénieurs chinois proposèrent une projet alternatif : le T-34-1. Bien que basé sur le T-34-85, Le compartiment de transmission du T-34-1 et sa suspension devaient être réarrangées, réduisant le poids global et offrant un châssis inférieur. En 1954, plusieurs projets de conception du véhicule furent développés, avec un armement et une tourelles différents. Cependant, aucun protoype n''a jamais été consturit.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VII', 7, 4),
+(237, '2014-12-14 22:26:16', 'Type 59', 'Ce véhicule est entré en production en série en 1957 à l''usine de chars Baotou, en Mongolie intérieure ; un total de 6 000 véhicules avait été fabriqué en 1987.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VIII', 8, 4),
+(238, '2014-12-14 22:33:34', 'T-34-2', 'Le T-34-2 n''était pas une amélioration du char soviétique T-34, mais bien un char totalement différent. Les ingénieurs chinois conçurent le T-34-2 en analogie avec le char soviétique T-54. Plus tard, l''URSS passa la technologie de production du T-54 à la Chine, et le projet T-34-2 fut interrompu.', 'Normal', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VIII', 8, 4),
+(239, '2014-12-14 22:33:51', 'T-34-3', 'Le char moyen T-34-3 devait être une modification du T-34-2. Contrairement au Type 59, le T-34-3 présentait un blindage réduit et un canon de 122 mm. Le concept a été développé en 1957. Cependant, la production en série du Type 59 a débuté en 1958, et le projet du T-34-3 a été interrompu.', 'Normal', 1.000, 1.000, 'or', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'VIII', 8, 4),
+(240, '2014-12-14 22:34:06', 'WZ-120', 'À la base, le char WZ-120 (Type 59) était une copie du char moyen soviétique T-54A. Le char a été amélioré lors de modifications ultérieures. Entre 6000 et 9500 véhicules dans différentes variantes ont été produits de 1958 à 1987.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'IX', 9, 4),
+(241, '2014-12-14 22:34:21', '121', 'Le développement a débuté en 1962 d''un nouveau char moyen basé sur le Type 59. Le nouveau char devait posséder des améliorations en puissance de feu et blindage de protection. Cependant, le projet a rapidement été abandonné. Certaines innovations techniques ont été appliquées plus tard, lors du développement du char Type 69. Tous les 121 chars prototypes ont été détruits lors des tests de l''arme nucléaire par les chinois.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '2', 1, 'credit', 'X', 10, 4),
 (242, '2014-12-12 21:16:12', 'IS-2', 'Des chars soviétiques IS-2 ont été exportés en Chine au début des années 1950, et ont été utilisés lors de la Guerre de Corée jusqu''en 1953. Selon les données de reconnaissance américaines, au moins quatre des compagnies de chars chinoises déployées en Corée avaient des chars IS-2, avec cinq chars dans chaque compagnie. Le char IS-2 a été en service jusqu''à la fin des années 1950. La production a été interrompue en raison du manque de pièces restantes, et du lancement du projet Type 59. Quelques chars IS-2 au Vietnam, qui combattirent à la fin de la Guerre d''Indochine de 1946 à 1954.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 1, 'credit', 'VII', 7, 4),
 (243, '2014-12-12 21:15:46', '110', 'Du milieu des années 1940 à 1950, les ingénieurs soviétiques ont tenté de moderniser le char IS-2. La variante IS-2U, développée en novembre 1944, a été conçue avoir un châssis frontal renforcé par une configuration en plaque semblable à celle de l''IS-3. En 1953, le projet de conception a été transmis à la Chine et devint la base du développement des chars chinois.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 1, 'credit', 'VIII', 8, 4),
 (244, '2014-12-12 21:15:20', '112', 'Le développement du char 112 a débuté en 1962. Le projet proposait des éléments de chars moyens et lourds. Il n''a pas dépassé le stade de la planche à dessin. Le char 113 fut un développement ultérieur du 112.', 'Boutique', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 1, 'credit', 'VIII', 8, 4),
-(245, '2014-12-12 21:14:44', 'WZ-111 1-4', 'Prototype d''un char lourd développé au début des années 1960. Le Projet 111 a été développé sur la base des chars IS-3 et T-10. En 1964, le développement a été interrompu en faveur des nouveaux types de chars moyens.', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 1, 'credit', 'IX', 9, 4),
+(245, '2014-12-14 22:44:22', 'WZ-111 1-4', 'Prototype d''un char lourd développé au début des années 1960. Le Projet 111 a été développé sur la base des chars IS-3 et T-10. En 1964, le développement a été interrompu en faveur des nouveaux types de chars moyens.', 'Normal', 44.000, 44.700, 'credit', 50, 4, 1, 1, 1, 0, 1750, 120, 80, 60, '3', 3500000, 'credit', 'IX', 9, 4),
 (246, '2014-12-12 21:13:04', '113', 'Le développement du modèle 113 a débuté en 1963. Le véhicule a été conçu en alternative au WZ-111, et utilisant des éléments et composants de chars moyens. Cependant, le prochain a été annulé en raison du développement de chars de combat principaux.', 'Normal', 45.000, 48.000, 'credit', 50, 4, 1, 1, 1, 0, 2300, 120, 90, 70, '3', 6100000, 'credit', 'X', 10, 4),
 (247, NULL, 'Cruiser Mk. I', '', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'II', 2, 5),
 (248, NULL, 'Cruiser Mk. III', '', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'II', 2, 5),
@@ -1352,7 +1353,8 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (348, NULL, 'M53/M55', '', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'IX', NULL, 7),
 (349, NULL, 'T92', '', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'X', NULL, 7),
 (350, '2014-12-01 19:50:04', 'BT-SV', 'Un char expérimental développé par le groupe Tsyganov de 1936 à 1938 qui passa les essais sur le terrain mais ne fut pas adopté pour le service.', 'Event', 13.100, 14.500, 'or', 62, 4, 1, 1, 0, 1, 240, 25, 20, 16, '1', 0, 'or', 'III', 3, 1),
-(351, '2014-10-02 14:31:07', 'KV-220 Beta-Test', 'Char expérimental au printemps-été de 1940. Le seul prototype a été retiré de la production du fait d''une panne de moteur.', 'Event', 62.230, 70.400, 'credit', 33, 5, 1, 1, 1, 1, 690, 100, 100, 80, '3', 0, 'credit', 'V', 5, 1),
+(351, '2014-10-02 14:31:07', 'KV-220 Beta-Test', 'Char expérimental au printemps-été de 1940. Le seul prototype a été retiré de la production du fait d''une panne de moteur.', 'Event', 62.230, 70.400, 'credit', 33, 5, 1, 1, 1, 1, 690, 100, 100, 80, '3', 0, 'credit', 'V', 5, 1);
+INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poids_chassis`, `limite_charge`, `monaie`, `vitesse_max`, `Nombre_equipage`, `Nombre_pilote`, `Nombre_tireur`, `Nombre_chargeur`, `Nombre_operateur_radio`, `hp_base`, `Blindage_avant`, `Blindage_flanc`, `Blindage_arriere`, `type_char`, `prix`, `type_credit`, `tier_latin`, `tier_chiffre`, `pays_id`) VALUES
 (352, '2014-10-12 16:49:13', 'MTLS-1G14', 'Developed at the request of the Dutch East Indies, with a total of 125 vehicles manufactured from 1941 through 1942. Only 20 of them were ordered, and they never saw action.', 'Event', 15.470, 17.350, 'or', 42, 4, 1, 1, 0, 1, 250, 38, 25, 25, '1', 0, 'credit', 'III', 3, 7),
 (353, '2014-11-28 23:56:55', 'Pz.Kpfw. IV hydrostat. ', 'Char expérimental PzKpfw IV Ausf. G avec une transmission hydrostatique développé en 1944. Les essais ont été interrompus à cause d''un dysfonctionnement de la transmission et un manque de pièces disponibles.', 'Event', 23.980, 27.000, 'or', 48, 5, 1, 1, 1, 1, 550, 50, 30, 20, '2', 1, 'or', 'V', 5, 2),
 (354, '2014-10-09 21:55:18', 'SU-85I', 'Développé sur la base du char allemand capturé PzKpfw III avec un canon de 85 mm. N''a jamais été produit en masse, ni vu en service.', 'Boutique', 22.380, 24.380, 'or', 50, 4, 1, 1, 1, 0, 380, 60, 30, 50, '4', 2300, 'or', 'V', 5, 1),
@@ -1361,8 +1363,7 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (357, NULL, 'M41 Walker Bulldog', '', 'normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VII', 7, 7),
 (358, NULL, 'T49', '', 'Normal', 1.000, 1.000, 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'VIII', 8, 7),
 (359, NULL, 'LTTB', 'Le développement du projet de ce char léger a débuté début 1944 à l''usine No. 174. Le projet a été annulé pendant la phase de conception et la phase de définition des exigences des paramètres tactiques et techniques.', 'Normal', 22.000, 22.500, 'credit', 68, 4, 1, 1, 1, 0, 950, 90, 45, 40, '1', 1380000, 'credit', 'VII', 7, 1),
-(360, NULL, 'T-54 allégé', 'La proposition d''une version allégée du char moyen T-54. Le développement a débuté en mai 1949. Comparé au prédécesseur de sa série de production, le char possédait de meilleures performances et maniabilité. Par conséquent, le char devait remplacer le T-54 dans l''accomplissement de missions complexes. Cependant, le char T-54 de 1949 fut amélioré et produit en masse, et la version allégée fut annuler pendant sa phase de conception.', 'Normal', 30.860, 33.000, 'credit', 69, 4, 1, 1, 1, 0, 1200, 80, 60, 45, '1', 12410000, 'credit', 'VIII', 8, 1);
-INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poids_chassis`, `limite_charge`, `monaie`, `vitesse_max`, `Nombre_equipage`, `Nombre_pilote`, `Nombre_tireur`, `Nombre_chargeur`, `Nombre_operateur_radio`, `hp_base`, `Blindage_avant`, `Blindage_flanc`, `Blindage_arriere`, `type_char`, `prix`, `type_credit`, `tier_latin`, `tier_chiffre`, `pays_id`) VALUES
+(360, NULL, 'T-54 allégé', 'La proposition d''une version allégée du char moyen T-54. Le développement a débuté en mai 1949. Comparé au prédécesseur de sa série de production, le char possédait de meilleures performances et maniabilité. Par conséquent, le char devait remplacer le T-54 dans l''accomplissement de missions complexes. Cependant, le char T-54 de 1949 fut amélioré et produit en masse, et la version allégée fut annuler pendant sa phase de conception.', 'Normal', 30.860, 33.000, 'credit', 69, 4, 1, 1, 1, 0, 1200, 80, 60, 45, '1', 12410000, 'credit', 'VIII', 8, 1),
 (361, '2014-11-27 21:50:00', 'Spahpanzer Ru 251', 'Le véhicule a été développé sur la base du chasseur de chars Kanonenjagdpanzer 4-5 par la compagnie Henschel en 1964. Le char devait remplacer les véhicules obsolètes M41 Walker Bulldog utilisés par les bataillons de reconnaissance dans les divisions blindées de l''armée allemande. Le char n''a jamais été produit en série, mais certaines innovations techniques ont ensuite été appliquées au développement d''autres véhicules. La quantité totale de prototypes fabriqués est inconnue.', 'Normal', 25.460, 25.700, 'credit', 80, 4, 1, 1, 1, 0, 1200, 25, 20, 8, '1', 2440000, 'credit', 'VIII', 8, 2),
 (362, '2014-10-02 14:40:51', 'KV-85', 'Un développement ultérieur du char KV-1S. Contrairement à la modification précédente, le KV-85 possédait un armement amélioré. Le véhicule a été développé au printemps 1943 à l''usine Kirov de Tcheliabinsk. Le char est entré en service le 8 août 1943 et a été produit en masse jusqu''en septembre, avec un total de 148 véhicules fabriqués. Le KV-85 était utilisé par les régiments blindés de percée de l''Armée Rouge.', 'Normal', 45.980, 46.800, 'credit', 34, 4, 1, 1, 1, 0, 820, 75, 60, 60, '3', 900000, 'credit', 'VI', 6, 1),
 (363, NULL, 'T-34-85M', 'Une modification du char T-34-85, produite à l''usine No. 183. Contrairement au véhicule original, il comportant un blindage frontal amélioré et un blindage arrière réduit. Les réservoirs à carburant ont été transférés du compartiment de combat à l''arrière. Lorsque la suspension s''est révélée être défaillante, la production a été suspendue après la fabrication d''un seul prototype.', 'Boutique', 32.230, 35.000, 'or', 53, 5, 1, 1, 1, 1, 720, 75, 45, 45, '1', 3750, 'or', 'VI', 6, 1),
@@ -1372,6 +1373,51 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (369, '2014-11-29 00:32:56', 'Pz.Kpfw. V/IV Alpha ', 'Un seul prototype exista. La tourelle du PzKpfw IV a été montée comme un élément fixe sur la caisse du Panther pour des essais.', 'Event', 40.600, 44.800, 'or', 55, 5, 1, 1, 1, 1, 820, 85, 40, 40, '2', 0, 'or', 'VI', 6, 2),
 (374, '2014-12-07 01:00:44', 'StuG III Ausf. B', 'En 1935, Erich von Manstein de l''état-major général de l''armée allemande décrivit dans une lettre au général Ludwig Beck l''idée de construire une artillerie d''assaut pour soutenir l''attaque des unités d''infanterie. Cinq prototypes de la série "zéro" ont été fabriqués en 1937. Les premières modifications de l''Ausf. A à l''Ausf. F/8 ont été produites jusqu''en décembre 1942.', 'Normal', 21.940, 24.000, 'credit', 40, 4, 1, 1, 1, 0, 260, 50, 30, 30, '4', 130000, 'credit', 'IV', 4, 2),
 (375, '2014-12-10 22:12:03', 'Type 97 Te-Ke', 'Le Te-Ke a été développé par Tokyo Gasu Denki pour remplacer le char léger Type 94 devenu obsolète. Fabriqué de 1937 à 1942, ce véhicule a été utilisé pour la reconnaissance, la communication, les patrouilles et le soutien d''infanterie. Il a servi de tracteur blindé. Un total d''environ 600 véhicules ont été fabriqués.', 'Event', 4.760, 5.800, 'credit', 42, 2, 1, 0, 0, 0, 160, 12, 10, 8, '1', 0, 'or', 'II', 2, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tanktourelleliaison`
+--
+
+DROP TABLE IF EXISTS `tanktourelleliaison`;
+CREATE TABLE IF NOT EXISTS `tanktourelleliaison` (
+  `id_Tank` smallint(5) unsigned NOT NULL,
+  `id_Tourelle` smallint(5) unsigned NOT NULL,
+  UNIQUE KEY `unique_link_tank_canon` (`id_Tourelle`,`id_Tank`),
+  KEY `id_Tank` (`id_Tank`),
+  KEY `id_Tourelle` (`id_Tourelle`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tanksuspensionliaison`
+--
+
+DROP TABLE IF EXISTS `tanksuspensionliaison`;
+CREATE TABLE IF NOT EXISTS `tanksuspensionliaison` (
+  `id_Tank` smallint(5) unsigned NOT NULL,
+  `id_Suspension` smallint(5) unsigned NOT NULL,
+  UNIQUE KEY `unique_link_tank_canon` (`id_Suspension`,`id_Tank`),
+  KEY `id_Tank` (`id_Tank`),
+  KEY `id_Suspension` (`id_Suspension`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `tankradioliaison`
+--
+
+DROP TABLE IF EXISTS `tankradioliaison`;
+CREATE TABLE IF NOT EXISTS `tankradioliaison` (
+  `id_Tank` smallint(5) unsigned NOT NULL,
+  `id_Radio` smallint(5) unsigned NOT NULL,
+  UNIQUE KEY `unique_link_tank_canon` (`id_Radio`,`id_Tank`),
+  KEY `id_Tank` (`id_Tank`),
+  KEY `id_Radio` (`id_Radio`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1849,6 +1895,21 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (229, 184),
 (229, 195),
 (229, 206),
+(230, 169),
+(230, 195),
+(231, 199),
+(231, 245),
+(231, 246),
+(232, 254),
+(233, 420),
+(234, 16),
+(234, 246),
+(234, 279),
+(234, 280),
+(234, 281),
+(245, 18),
+(245, 81),
+(245, 96),
 (246, 72),
 (338, 35),
 (338, 64),
