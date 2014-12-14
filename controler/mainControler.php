@@ -24,7 +24,7 @@
 	}
 	
 	
-	include_once('recherche/controller/fonctionRechercheControler/testValeur.php');
+	include_once('controler/fonctionRechercheControler/testValeur.php');
 
 	include_once('recherche/model/infoBddModel.php');
 	include_once('recherche/model/requeteModel.php');
