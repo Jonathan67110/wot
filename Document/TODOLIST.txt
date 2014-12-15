@@ -3,5 +3,6 @@
 	# Ne conserver que les chiffres quand on copie colle un poids/chassis ( vérifier csi c'est déjà le cas, sinon, l'implémenter)
 - Faire que le tier est saisie automatique (clé étrangère qui redirige vers les tiers) => on n'affiche plus du tout de tier chiffre dans la gestion des tanks
 - Mettre un label à la place d'un input sur le textbox du nombre d'équipage
-- Faire une section canon dans un sous-menu à gauche : aside
+- Faire une section canon dans un sous-menu => voir le menu de navigation d'Alain
 - Mettre à jour les canons japonais ( tant que c'est frais)
+- N'afficher la page recherche wot que lorsqu'on clique sur recherche. Mettre sur la page d'accueil les essages du site = la to do list par exemple + Les évolutions.
