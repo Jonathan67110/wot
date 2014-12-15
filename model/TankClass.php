@@ -1,7 +1,5 @@
 <?php
-
-
-include_once('recherche/model/TierFonction/TierToFunction.php');//Contient des fonctions permettant de ne pas requêter la base. Les données sont en durs, mais, elles ont peu de chance de changer, d'où son emploi.
+include_once('model/TierFonction/TierToFunction.php');//Contient des fonctions permettant de ne pas requêter la base. Les données sont en durs, mais, elles ont peu de chance de changer, d'où son emploi.
 
 class Tank{
 	//Détermine l'id du tank:

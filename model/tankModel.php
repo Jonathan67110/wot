@@ -1,7 +1,7 @@
 <?php
 
-include_once('recherche/model/TankClass.php');
-include_once('recherche/model/FormulaireChampClass.php');
+include_once('model/TankClass.php');
+include_once('model/FormulaireChampClass.php');
 
 //Permet de renvoyer la liste complète de tous les chars existants:
 function listeTank($bdd){

@@ -1,5 +1,5 @@
 <?php
-	INCLUDE_ONCE('recherche/model/TypeChar/ListeTypeChar.php');
+	INCLUDE_ONCE('model/TypeChar/ListeTypeChar.php');
 	//A mettre dans une fonction : Permet de récupérer le type de nation à afficher.
 	if(isset($_SESSION['nationGestionTank']) && intval($_SESSION['nationGestionTank'])>0 && !isset($_POST['RechercheBouton']) && !isset($_POST['RechercheSuivantBouton']) && !isset($_POST['RecherchePrecedentBouton'])){
 	
@@ -60,7 +60,7 @@
 					<h3><!-- nom du char choisi --></h3>
 						<article>
 							<p>
-							<?php include_once('view/recherche/formulairegestion/FormulaireGestion.php'); ?>
+							<?php include_once('view/gestionTank/formulairegestion/FormulaireGestion.php'); ?>
 							</p>
 							
 						</article>					
