@@ -53,6 +53,20 @@
 	
 	if(isset($_GET['page'])){
 		switch($_GET['page']){
+			case 'connexion':
+				
+				$tankADetailler = renvoiIdValide($bddWoT, $tanks);
+				include_once('view/connexion/connexion.php');
+				
+			break;
+			
+			case 'rechercheWoT':
+				
+				$tankADetailler = renvoiIdValide($bddWoT, $tanks);
+				include_once('view/recherche/recherche.php');
+				
+			break;
+			
 			case 'gestionTank':
 				
 				//Pour modifier proprement un tank, on va récupérer son id dans une variable de session, cela, uniquement si on a choisi de modifier un tank:
@@ -127,11 +141,11 @@
 		}
 	}
 	else{
-		/**************************************************************************************************/
-		/*Si aucune info n'est envoyé à l'index et à ce contrôleur, on lance la page par défaut, à savoir, la page de recherche*/
-		/**************************************************************************************************/
+		/**********************************************************************************************************************/
+		/* Si aucune info n'est envoyé à l'index et à ce contrôleur, on lance la page par défaut, à savoir, la page d'accueil */
+		/**********************************************************************************************************************/
 		$tankADetailler = renvoiIdValide($bddWoT, $tanks);
-		include_once('view/recherche.php');
+		include_once('view/Accueil/Accueil.php');
 	}
 	
 	

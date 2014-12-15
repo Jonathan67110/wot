@@ -1,5 +1,5 @@
 <?php 
-	$titre = 'Gestion des chars - Nouveau char';
+	$titre = 'Recherche';
 
 	/* Header */
 	include_once('view/header.php');
