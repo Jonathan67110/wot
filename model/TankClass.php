@@ -68,7 +68,7 @@ class Tank{
 	private $idExistante;//Paramètre de développement, inutile pour la suite a priori
 	
 	public function __construct($nouvId, $bdd){
-		//Initialisation des variables de l'instance:
+		//Initialisation des variables de l'instance (Valeur par défaut) : 
 		$this->id = $nouvId;
 		$this->m_DateMiseAJour = 'N/A';
 		$this->nom = 'N/A';
@@ -91,8 +91,8 @@ class Tank{
 		$this->pays = 'N/A';
 		$this->prix = 'N/A';
 		$this->type_credit = 'N/A';
-		$this->tier_latin = 'N/A';
-		$this->tier_chiffre = 'N/A';
+		$this->tier_latin = 'I';
+		$this->tier_chiffre = 1;
 		$this->idExistante = 0;
 		
 		$RequeteTankCorrespondantANouvId = $bdd->prepare('SELECT * FROM tank WHERE id=?');
@@ -123,10 +123,10 @@ class Tank{
 			$this->type_credit = $tableauReponse['type_credit'];
 			
 			
-			/* La base de données n'étant pas fiable, il arrive que le tier en chiffre soit absent, ou les tier latin.
+			/* La base de données n'étant pas fiable, il arrive que le tier en chiffre soit absent, ou le tier latin.
 			En effet, les données collectées et insérer dans la base contiennent essentiellement 'tier' en chiffre latin.
 			Aussi, on est obligé de le récupérer dans cerains cas, d'où la condition suivante :*/
-			
+			//=> Cette remarque devra être modifiées, car, on envisage de faire un contrôle sur le tier : on ne prendra en entrée qu'un chiffre, correspondant à l'id du tier. Lors de la modification et l'ajout, on fera un contrôle sur cet id... tout simplement.
 			if(intval($tableauReponse['tier_chiffre']) > 0 && $tableauReponse['tier_latin'] != ""){
 				//Les deux tier sont présents.	
 				
@@ -141,6 +141,7 @@ class Tank{
 					$this->tier_chiffre = $tableauReponse['tier_chiffre'];
 				}
 			}
+			//Utilisation de la fonction TierLatinToTierNumber pour ne pas requêter la base de données sans cesse:
 			elseif(intval($tableauReponse['tier_chiffre']) > 0 && $tableauReponse['tier_latin'] == ""){
 				$this->tier_chiffre = $tableauReponse['tier_chiffre'];
 				$this->tier_latin = TierNumberToTierLatin($tableauReponse['tier_chiffre']);
@@ -150,11 +151,10 @@ class Tank{
 				$this->tier_chiffre = TierLatinToTierNumber($tableauReponse['tier_latin']);
 			}
 			else{
-			//Utilisation de la fonction TierLatinToTierNumber pour ne pas requêter la base de données sans cesse:
 				$this->tier_chiffre = 1;
 				$this->tier_latin = 'I';
 			}
-			$this->idExistante = 1;
+			//$this->idExistante = 1;
 		}
 		
 		//Fermeture de la requête:
@@ -173,92 +173,92 @@ class Tank{
 		return $this->id;
 	}
 	
-	public function getDateMiseAJour(){//Renvoie de l'id du tank
+	public function getDateMiseAJour(){//Renvoie 
 		return $this->m_DateMiseAJour;
 	}
 	
-	public function getDescription(){//Renvoie de l'id du tank
+	public function getDescription(){//Renvoie 
 		return $this->Description;
 	}
 	
-	public function getPremium(){//Renvoie de l'id du tank
+	public function getPremium(){//Renvoie 
 		return $this->premium;
 	}
 	
-	public function getPoids_chassis(){//Renvoie de l'id du tank
+	public function getPoids_chassis(){//Renvoie 
 		return $this->poids_chassis;
 	}
 	
-	public function getMonaie(){//Renvoie de l'id du tank
+	public function getMonaie(){//Renvoie 
 		return $this->monaie;
 	}
 	
-	public function getLimite_charge(){//Renvoie de l'id du tank
+	public function getLimite_charge(){//Renvoie 
 		return $this->limite_charge;
 	}
 	
-	public function getPrix(){//Renvoie de l'id du tank
+	public function getPrix(){//Renvoie 
 		return $this->prix;
 	}	
 	
-	public function getType_credit(){//Renvoie de l'id du tank
+	public function getType_credit(){//Renvoie 
 		return $this->type_credit;
 	}
 	
-	public function getHp_base(){//Renvoie de l'id du tank
+	public function getHp_base(){//Renvoie 
 		return $this->hp_base;
 	}
 	
-	public function getType_char(){//Renvoie de l'id du tank
+	public function getType_char(){//Renvoie 
 		return $this->type_char;
 	}
 	
-	public function getPays(){//Renvoie de l'id du tank
+	public function getPays(){//Renvoie 
 		return $this->pays;
 	}
 	
-	public function getTier_latin(){//Renvoie de l'id du tank
+	public function getTier_latin(){//Renvoie 
 		return $this->tier_latin;
 	}
 	
-	public function getNombre_equipage(){//Renvoie de l'id du tank
+	public function getNombre_equipage(){//Renvoie 
 		return $this->Nombre_equipage;
 	}
 	
-	public function getNombre_pilote(){//Renvoie de l'id du tank
+	public function getNombre_pilote(){//Renvoie 
 		return $this->Nombre_pilote;
 	}
 	
-	public function getNombre_tireur(){//Renvoie de l'id du tank
+	public function getNombre_tireur(){//Renvoie 
 		return $this->Nombre_tireur;
 	}
 	
-	public function getNombre_chargeur(){//Renvoie de l'id du tank
+	public function getNombre_chargeur(){//Renvoie 
 		return $this->Nombre_chargeur;
 	}
 	
-	public function getNombre_operateur_radio(){//Renvoie de l'id du tank
+	public function getNombre_operateur_radio(){//Renvoie 
 		return $this->Nombre_operateur_radio;
 	}
 	
-	public function getBlindage_avant(){//Renvoie de l'id du tank
+	public function getBlindage_avant(){//Renvoie le blindage avant
 		return $this->Blindage_avant;
 	}
 	
-	public function getBlindage_flanc(){//Renvoie de l'id du tank
+	public function getBlindage_flanc(){//Renvoie le blindage de flanc
 		return $this->Blindage_flanc;
 	}
 	
-	public function getBlindage_arriere(){//Renvoie de l'id du tank
+	public function getBlindage_arriere(){//Renvoie le blindage arrière
 		return $this->Blindage_arriere;
 	}
 	
-	public function getVitesse_max(){//Renvoie de l'id du tank
+	public function getVitesse_max(){//Renvoie la vitesse
 		return $this->vitesse_max;
 	}
 	
-	public function getTier_chiffre(){//Renvoie de l'id du tank
-		return $this->tier_chiffre;
+	public function getTier_chiffre(){//Renvoie l'id du tier d'un tank
+		return max(1,$this->tier_chiffre);
 	}
 	
 	public function getIdExistante(){
