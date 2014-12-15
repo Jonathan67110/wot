@@ -15,14 +15,15 @@
 											$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
 									}
 									else{
-											$valeurDeCharAAfficher = '';
+											$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
 									}
-									
+
+									//Affichage normal des éléments :
 									echo '
 									<tr>
 										<td><label for="recherche'.$champ->getNomField().'">'.$champ->getNomField().'</label></td>
 										<td>'.$champ->getFormulaireHtml('recherche', $valeurDeCharAAfficher).'</td>										
-									</tr>';			
+									</tr>';							
 								}
 								
 								//Recherche de la liste des canons du tank :
