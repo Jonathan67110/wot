@@ -1,8 +1,8 @@
 		<nav>
 			<a href=".">Accueil</a>
-			<a href=".">Recherche</a>
+			<a href=".?page=rechercheWoT">Recherche</a>
 			<a href=".?page=gestionTank">Gestion</a>
-			<a href=".">Connection</a>
+			<a href=".?page=connexion">Connexion</a>
 			<?php
 				//Redirection de l'adresse vers phpmyadmin, en fonction de la machine qui héberge l'application:
 				if(isset($_SERVER['SERVER_ADDR']) && strstr($_SERVER['SERVER_ADDR'], '192.168.'))

@@ -25,10 +25,10 @@
 		$indiceEnvoyeEnPost = intval(str_replace('gestion','', $_POST['gestionTank']));
 		
 		if($indiceEnvoyeEnPost > 0 && array_key_exists ($indiceEnvoyeEnPost, $tanks )) {//Double test pour vérifier que l'indice est bien dans le tableau des chars
-				$titre = 'Gestion des chars - '.$tanks[intval(str_replace('gestion','', $_POST['gestionTank']))]->getNom();
+				$titre = $tanks[intval(str_replace('gestion','', $_POST['gestionTank']))]->getNom().' - Gestion des chars';
 		}
 		else{
-			$titre = 'Gestion des chars - Nouveau char';		
+			$titre = 'Nouveau char - Gestion des chars -';
 		}
 		if(isset($_POST['tierGestionTank']) && intval($_POST['tierGestionTank'])>= 0){
 			$tierSelection = intval($_POST['tierGestionTank']);
@@ -42,7 +42,7 @@
 		}
 	}
 	else{
-		$titre = 'Gestion des chars - Nouveau char';
+		$titre = 'Nouveau char - Gestion des chars -';
 		$tierSelection = 0;
 	}
 ?>
