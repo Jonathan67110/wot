@@ -22,8 +22,7 @@
 									<tr>
 										<td><label for="recherche'.$champ->getNomField().'">'.$champ->getNomField().'</label></td>
 										<td>'.$champ->getFormulaireHtml('recherche', $valeurDeCharAAfficher).'</td>										
-									</tr>';
-									//<td><input type="text"  id="recherche'.$champ->getNomField().'" name="recherche'.$champ->getNomField().'" value="'.$valeurDeCharAAfficher.'" /></td>								
+									</tr>';			
 								}
 								
 								//Recherche de la liste des canons du tank :
