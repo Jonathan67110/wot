@@ -477,10 +477,41 @@ function suppressionChar($bdd, $tablAjouter, $indiceTankSupprimer){//$bdd est la
 	
 	$indiceTankSupprimer = intval($indiceTankSupprimer);
 
-	try{
-		$req = $bdd->prepare('DELETE FROM tank WHERE id = ?');
+	try{		
+		/* Suppression des liaisons du char */
 		
-		//$req->execute($tablAjouter);
+		//Suppression des canons:
+		$req = $bdd->prepare('DELETE FROM tankcanonliaison WHERE id_Tank = ?');
+			
+		$req->execute(array($indiceTankSupprimer));
+		$req->closeCursor();
+		
+		//Suppression des radios :
+		$req = $bdd->prepare('DELETE FROM tankradioliaison WHERE id_Tank = ?');
+			
+		$req->execute(array($indiceTankSupprimer));
+		$req->closeCursor();
+		
+		//Suppression des tourelles:
+		$req = $bdd->prepare('DELETE FROM tanktourelleliaison WHERE id_Tank = ?');
+			
+		$req->execute(array($indiceTankSupprimer));
+		$req->closeCursor();
+		
+		//Suppression des moteurs:
+		$req = $bdd->prepare('DELETE FROM tankmoteurliaison WHERE id_Tank = ?');
+			
+		$req->execute(array($indiceTankSupprimer));
+		$req->closeCursor();
+		
+		//Suppression des suspensions:
+		$req = $bdd->prepare('DELETE FROM tanksuspensionliaison WHERE id_Tank = ?');
+			
+		$req->execute(array($indiceTankSupprimer));
+		$req->closeCursor();
+		
+		//Suppression du char:
+		$req = $bdd->prepare('DELETE FROM tank WHERE id = ?');
 			
 		$req->execute(array($indiceTankSupprimer));
 		$req->closeCursor();
@@ -494,7 +525,6 @@ function suppressionChar($bdd, $tablAjouter, $indiceTankSupprimer){//$bdd est la
 		die('Erreur : ' . $e->getMessage());
 				
 	}
-	
 	
 	return $message;
 }

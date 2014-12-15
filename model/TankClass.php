@@ -78,7 +78,7 @@ class Tank{
 		$this->limite_charge = 'N/A';
 		$this->monaie = 'N/A';
 		$this->vitesse_max = 'N/A';
-		$this->Nombre_equipage = 'N/A';
+		$this->Nombre_equipage = 1;
 		$this->Nombre_pilote = 'N/A';
 		$this->Nombre_tireur = 'N/A';
 		$this->Nombre_chargeur = 'N/A';
@@ -108,11 +108,11 @@ class Tank{
 			$this->limite_charge = $tableauReponse['limite_charge'];
 			$this->monaie = $tableauReponse['monaie'];
 			$this->vitesse_max = $tableauReponse['vitesse_max'];
-			$this->Nombre_equipage = $tableauReponse['Nombre_equipage'];
 			$this->Nombre_pilote = $tableauReponse['Nombre_pilote'];
 			$this->Nombre_tireur =$tableauReponse['Nombre_tireur'];
 			$this->Nombre_chargeur = $tableauReponse['Nombre_chargeur'];
 			$this->Nombre_operateur_radio = $tableauReponse['Nombre_operateur_radio'];
+			$this->Nombre_equipage = $this->Nombre_pilote + $this->Nombre_tireur + $this->Nombre_chargeur + $this->Nombre_operateur_radio +1;
 			$this->hp_base = $tableauReponse['hp_base'];
 			$this->Blindage_avant = $tableauReponse['Blindage_avant'];
 			$this->Blindage_flanc = $tableauReponse['Blindage_flanc'];
