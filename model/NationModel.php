@@ -1,6 +1,6 @@
 <?php
 
-include_once('recherche/model/NationClass.php');
+include_once('model/NationClass.php');
 
 //Permet la liste des nations dans un tableau:
 function listeNation($bdd){

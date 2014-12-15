@@ -45,7 +45,7 @@
 		
 			<h2 id="ResultatRequete">Données recherchées:</h2>
 					<?php 
-						include_once('recherche/vue/FonctionTank/fonctionTankRecherche.php') ;
+						include_once('view/recherche/FonctionTank/fonctionTankRecherche.php') ;
 					?>
 			
     </body>

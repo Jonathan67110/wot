@@ -24,22 +24,22 @@
 	}
 	
 	
-	include_once('recherche/controller/fonctionRechercheControler/testValeur.php');
+	include_once('controller/gestionTank/fonctionRechercheControler/testValeur.php');
 
-	include_once('recherche/model/infoBddModel.php');
-	include_once('recherche/model/requeteModel.php');
+	include_once('model/infoBddModel.php');
+	include_once('model/requeteModel.php');
 	
 	//Charge les éléments pour gérer les données sur les tanks :
-	include_once('recherche/model/tankModel.php');
+	include_once('model/tankModel.php');
 	
 	//Fonctions permettant de charger la liste des canons de la base de données :
-	include_once('recherche/model/CanonModel.php');
+	include_once('model/CanonModel.php');
 	
 	//Fonctions permettant de charger la liste des nations de la base de données :
-	include_once('recherche/model/NationModel.php');
+	include_once('model/NationModel.php');
 	
 	//Class sur les listes de canon d'un char :
-	include_once('recherche/model/LiaisonTankElement/ListeDeCanonParTankClass.php');
+	include_once('model/LiaisonTankElement/ListeDeCanonParTankClass.php');
 	
 	$nations = listeNation($bddWoT);
 	
@@ -78,7 +78,7 @@
 					$_POST['gestionTank'] = 'gestion'.$_SESSION['indiceCharAModifier'];
 				}
 				
-				include_once('view/recherche/gestionTank.php');
+				include_once('view/gestionTank/gestionTank.php');
 				
 			break;
 			
