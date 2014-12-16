@@ -54,21 +54,17 @@
 	if(isset($_GET['page'])){
 		switch($_GET['page']){
 			case 'connexion':
-				
-				$tankADetailler = renvoiIdValide($bddWoT, $tanks);
-				include_once('view/connexion/connexion.php');
+				include_once('controller/connexion/connexionController.php');
 				
 			break;
 			
 			case 'rechercheWoT':
-				
 				$tankADetailler = renvoiIdValide($bddWoT, $tanks);
 				include_once('view/recherche/recherche.php');
 				
 			break;
 			
 			case 'gestionTank':
-				
 				include_once('controller/gestionTank/gestionTankController.php');
 				
 			break;

@@ -9,14 +9,14 @@
 ?>
         <h1>Connexion</h1>
 				<section>
-							<p>
-								
-							</p>	
-							<form action = '#' method = 'post'>
-								<input type = "text" name = "loginConnexion" value = "" id = "" Placeholder = "Pseudo"><br />
-								<input type = "text" name = "mdpConnexion" value = "" id = "" Placeholder = "Mdp"><br />
-								<input type ="button" name = "bouton" value = "Sign in"/><br />
-							</form>
+					<p>
+						Connectez-vous pour accéder à la gestion des chars!
+					</p>	
+					<form action = '.?page=connexion' method = 'post'>
+						<input type = "text" name = "loginConnexion" value = "" id = "loginConnexion" Placeholder = "Pseudo" /><br />
+						<input type = "text" name = "mdpConnexion" value = "" id = "mdpConnexion" Placeholder = "Mdp"/><br />
+						<input type ="submit" name = "boutonConnexion" id = "boutonConnexion" value = "Sign in"/><br />
+					</form>
 				</section>
 <?php 
 	/* footer */

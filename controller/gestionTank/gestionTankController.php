@@ -3,9 +3,7 @@
 	 * Avant d'accéder à la page de modification, il faut s'être identifé avant
 	 */
 	
-	if(!isset($_SESSION['connexion']))
-		header('location:.?page=connexion');
-	
+	if(!isset($_SESSION['connexion']) || !$_SESSION['connexion']) header('location:.?page=connexion');
 	/*
 	 * Accessible uniquement si connecté :
 	 */

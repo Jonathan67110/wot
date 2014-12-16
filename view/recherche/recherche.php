@@ -22,7 +22,7 @@
 						<article>
 							
 							<p>
-								<form method="post" action=".#ResultatRequete">
+								<form method="post" action=".?page=rechercheWoT#ResultatRequete">
 									<!-- Données du char -->
 									<select name="choixTank">
 										<?php
