@@ -14,7 +14,7 @@
 					</p>	
 					<form action = '.?page=connexion' method = 'post'>
 						<input type = "text" name = "loginConnexion" value = "" id = "loginConnexion" Placeholder = "Pseudo" /><br />
-						<input type = "text" name = "mdpConnexion" value = "" id = "mdpConnexion" Placeholder = "Mdp"/><br />
+						<input type = "password" name = "mdpConnexion" value = "" id = "mdpConnexion" Placeholder = "Mdp"/><br />
 						<input type ="submit" name = "boutonConnexion" id = "boutonConnexion" value = "Sign in"/><br />
 					</form>
 				</section>
