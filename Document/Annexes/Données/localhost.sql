@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 16 Décembre 2014 à 11:41
+-- Généré le :  Mar 16 Décembre 2014 à 17:23
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_canon_pays_id` (`pays_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=421 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=422 ;
 
 --
 -- Contenu de la table `canon`
@@ -514,7 +514,8 @@ INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_to
 (417, '7.5 cm Tank Gun Type 3', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (418, '7.5 cm Tank Gun Type 5', '75', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (419, '90 mm Gun Type 61', '90', 90, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(420, '85 mm Type 62', '85', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'VII', 7, NULL, NULL, NULL, NULL, NULL);
+(420, '85 mm Type 62', '85', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'VII', 7, NULL, NULL, NULL, NULL, NULL),
+(421, '100 mm D-54TS', '100', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '10', 10, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1005,7 +1006,7 @@ CREATE TABLE IF NOT EXISTS `tank` (
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tank_pays_id` (`pays_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=379 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=381 ;
 
 --
 -- Contenu de la table `tank`
@@ -1054,7 +1055,7 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (48, '2014-10-02 14:25:46', 'Object 416', 'Le char moyen Object 416 a été développé au Bureau de Construction de l''Usine n° 75, à l''automne 1949. Le plan a été développé en mars 1950. En raison de problèmes techniques avec la tourelle, un prototype fonctionnel n''a pas vu le jour avant avril 1952. Des améliorations ont été réalisées et un autre prototype a été fabriqué en été 1953, mais le véhicule n''a jamais été produit en masse.', 'Normal', '24.330', '24.350', 'credit', 50, 4, 1, 1, 1, 0, 1, 75, 45, 45, '2', 2500000, 'credit', 'VIII', 8, 1),
 (49, '2014-10-02 14:25:50', 'T-54', 'Avec un premier prototype construit vers la fin de 1944, et après des tests réalisés entre 1945 et 1947, il fut accepté pour le service dans sa version 1947. 713 véhicules furent construits. Fin 1949, la production d''un nouveau modèle démarra (2.513 véhicules produits au total).', 'Normal', '34.000', '38.700', 'credit', 56, 4, 1, 1, 1, 0, 1550, 120, 80, 45, '2', 3450000, 'credit', 'VIII', 8, 1),
 (50, '2014-10-02 14:25:52', 'Object 430 Version II', 'Développé au Bureau de la Construction de l''usine n° 73 début 1953. Du 8 mars au 10 mars 1953, le ministère des transports et de l''industrie lourde a examiné le projet, ainsi qu''une version alternative du char avec une configuration plus conventionnelle. Cependant, le développement a été arrêté par la suite.', 'Normal', '35.460', '36.500', 'credit', 55, 4, 1, 1, 1, 0, 1600, 120, 80, 40, '2', 3450000, 'credit', 'IX', 9, 1),
-(51, '2014-10-02 14:25:55', 'T-62A', 'Le développement du premier char moyen soviétique de la période d''après-guerre a débuté en 1951. En 1961, le char T-62 a été déployé, équipé d''un canon lisse. Dans le même temps, une variante avec un canon rayé, le T-62A, a été abandonnée. Le T-62 a été produit en masse de 1961 à 1975, avec un total de vingt mille véhicules fabriqués. Des modifications ultérieures du véhicules sont toujours en service.', 'Normal', '37.000', '39.800', 'credit', 50, 4, 1, 1, 1, 0, 1950, 102, 75, 45, '2', 6100000, 'credit', 'IX', 9, 1),
+(51, '2014-12-16 17:05:21', 'T-62A', 'Le développement du premier char moyen soviétique de la période d''après-guerre a débuté en 1951. En 1961, le char T-62 a été déployé, équipé d''un canon lisse. Dans le même temps, une variante avec un canon rayé, le T-62A, a été abandonnée. Le T-62 a été produit en masse de 1961 à 1975, avec un total de vingt mille véhicules fabriqués. Des modifications ultérieures du véhicules sont toujours en service.', 'Normal', '37.000', '39.800', 'credit', 50, 4, 1, 1, 1, 0, 1950, 102, 75, 45, '2', 6100000, 'credit', 'X', 10, 1),
 (52, '2014-10-02 14:25:57', 'Object 140', 'Un char moyen expérimental. Développé entre 1953 et 1958 à Nizhny Tagil pour remplacer le T-54. Deux prototypes ont été fabriqué, mais le projet a été annulé en 1958 à la faveur de l''Object 430.', 'Normal', '36.000', '39.000', 'credit', 55, 4, 1, 1, 1, 0, 1900, 100, 80, 55, '2', 6100000, 'credit', 'X', 10, 1),
 (53, '2014-10-02 14:26:00', 'Object 430', 'Un prototype de ce char moyen a été développé de 1953 à 1957 pour remplacer le T-54. Plusieurs prototypes ont été fabriqués. Plus tard, les autorités soviétiques ont exigé un char avec une grande capacité de survie nucléaire et une grande puissance de feu. En conséquence, en 1961, le projet a été abandonné, et la décision fut prise de développer l''Object 432.', 'Normal', '35.300', '39.000', 'credit', 55, 4, 1, 1, 1, 0, 1900, 120, 80, 40, '2', 6100000, 'credit', 'X', 10, 1),
 (54, '2014-10-02 14:26:04', 'KV-1', 'Le développement a débuté fin 1938. Un prototype a été réalisé en août 1939. Vu en action pour la première fois en Décembre 1939 sur la ligne Mannerheim. Le véhicule a été produit en masse de mars 1940 à août 1942, avec un total de 2769 véhicules fabriqués.', 'Normal', '47.410', '47.800', 'credit', 34, 5, 1, 1, 1, 1, 590, 75, 75, 70, '3', 390000, 'credit', 'V', 5, 1),
@@ -1245,8 +1246,8 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (240, '2014-12-16 11:35:51', 'WZ-120', 'À la base, le char WZ-120 (Type 59) était une copie du char moyen soviétique T-54A. Le char a été amélioré lors de modifications ultérieures. Entre 6000 et 9500 véhicules dans différentes variantes ont été produits de 1958 à 1987.', 'Normal', '36.000', '36.700', 'credit', 56, 4, 1, 1, 1, 0, 1550, 100, 80, 45, '2', 3520000, 'credit', 'IX', 9, 4),
 (241, '2014-12-16 11:38:01', '121', 'Le développement a débuté en 1962 d''un nouveau char moyen basé sur le Type 59. Le nouveau char devait posséder des améliorations en puissance de feu et blindage de protection. Cependant, le projet a rapidement été abandonné. Certaines innovations techniques ont été appliquées plus tard, lors du développement du char Type 69. Tous les 121 chars prototypes ont été détruits lors des tests de l''arme nucléaire par les chinois.', 'Normal', '39.000', '42.000', 'credit', 56, 4, 1, 1, 1, 0, 1950, 120, 80, 60, '2', 6100000, 'credit', 'X', 10, 4),
 (242, '2014-12-16 11:40:12', 'IS-2', 'Des chars soviétiques IS-2 ont été exportés en Chine au début des années 1950, et ont été utilisés lors de la Guerre de Corée jusqu''en 1953. Selon les données de reconnaissance américaines, au moins quatre des compagnies de chars chinoises déployées en Corée avaient des chars IS-2, avec cinq chars dans chaque compagnie. Le char IS-2 a été en service jusqu''à la fin des années 1950. La production a été interrompue en raison du manque de pièces restantes, et du lancement du projet Type 59. Quelques chars IS-2 au Vietnam, qui combattirent à la fin de la Guerre d''Indochine de 1946 à 1954.', 'Normal', '45.750', '46.100', 'credit', 37, 4, 1, 1, 1, 0, 1230, 90, 90, 60, '3', 1450000, 'credit', 'VII', 7, 4),
-(243, '2014-12-12 21:15:46', '110', 'Du milieu des années 1940 à 1950, les ingénieurs soviétiques ont tenté de moderniser le char IS-2. La variante IS-2U, développée en novembre 1944, a été conçue avoir un châssis frontal renforcé par une configuration en plaque semblable à celle de l''IS-3. En 1953, le projet de conception a été transmis à la Chine et devint la base du développement des chars chinois.', 'Normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 1, 'credit', 'VIII', 8, 4),
-(244, '2014-12-12 21:15:20', '112', 'Le développement du char 112 a débuté en 1962. Le projet proposait des éléments de chars moyens et lourds. Il n''a pas dépassé le stade de la planche à dessin. Le char 113 fut un développement ultérieur du 112.', 'Boutique', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '3', 1, 'credit', 'VIII', 8, 4),
+(243, '2014-12-16 12:13:13', '110', 'Du milieu des années 1940 à 1950, les ingénieurs soviétiques ont tenté de moderniser le char IS-2. La variante IS-2U, développée en novembre 1944, a été conçue avoir un châssis frontal renforcé par une configuration en plaque semblable à celle de l''IS-3. En 1953, le projet de conception a été transmis à la Chine et devint la base du développement des chars chinois.', 'Normal', '46.350', '47.000', 'credit', 40, 4, 1, 1, 1, 0, 1450, 120, 90, 60, '3', 2600000, 'credit', 'VIII', 8, 4),
+(244, '2014-12-16 14:21:11', '112', 'Le développement du char 112 a débuté en 1962. Le projet proposait des éléments de chars moyens et lourds. Il n''a pas dépassé le stade de la planche à dessin. Le char 113 fut un développement ultérieur du 112.', 'Boutique', '46.000', '49.000', 'credit', 45, 4, 1, 1, 1, 0, 1500, 120, 80, 60, '3', 12250, 'credit', 'VIII', 8, 4),
 (245, '2014-12-14 22:44:22', 'WZ-111 1-4', 'Prototype d''un char lourd développé au début des années 1960. Le Projet 111 a été développé sur la base des chars IS-3 et T-10. En 1964, le développement a été interrompu en faveur des nouveaux types de chars moyens.', 'Normal', '44.000', '44.700', 'credit', 50, 4, 1, 1, 1, 0, 1750, 120, 80, 60, '3', 3500000, 'credit', 'IX', 9, 4),
 (246, '2014-12-12 21:13:04', '113', 'Le développement du modèle 113 a débuté en 1963. Le véhicule a été conçu en alternative au WZ-111, et utilisant des éléments et composants de chars moyens. Cependant, le prochain a été annulé en raison du développement de chars de combat principaux.', 'Normal', '45.000', '48.000', 'credit', 50, 4, 1, 1, 1, 0, 2300, 120, 90, 70, '3', 6100000, 'credit', 'X', 10, 4),
 (247, NULL, 'Cruiser Mk. I', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '1', 1, 'credit', 'II', 2, 5),
@@ -1346,9 +1347,9 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (341, NULL, 'T110E3', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '4', 1, NULL, 'X', NULL, 7),
 (342, NULL, 'T57', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'II', NULL, 7),
 (343, NULL, 'M7 Priest', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'III', NULL, 7),
-(344, NULL, 'M37', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'IV', NULL, 7),
-(345, NULL, 'M41', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'V', NULL, 7);
+(344, NULL, 'M37', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'IV', NULL, 7);
 INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poids_chassis`, `limite_charge`, `monaie`, `vitesse_max`, `Nombre_equipage`, `Nombre_pilote`, `Nombre_tireur`, `Nombre_chargeur`, `Nombre_operateur_radio`, `hp_base`, `Blindage_avant`, `Blindage_flanc`, `Blindage_arriere`, `type_char`, `prix`, `type_credit`, `tier_latin`, `tier_chiffre`, `pays_id`) VALUES
+(345, NULL, 'M41', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'V', NULL, 7),
 (346, NULL, 'M44', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'VI', NULL, 7),
 (347, NULL, 'M12', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'VII', NULL, 7),
 (348, NULL, 'M53/M55', '', 'normal', '1.000', '1.000', 'credit', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, '5', 1, NULL, 'IX', NULL, 7),
@@ -1372,7 +1373,9 @@ INSERT INTO `tank` (`id`, `datemiseajour`, `nom`, `Description`, `premium`, `poi
 (368, '2014-11-28 23:41:06', 'Pz.Kpfw. IV Ausf. D ', 'Cette modification du Pz. IV a été développée en octobre 1939. Le véhicule comportait un blindage et un mantelet extérieur du canon améliorés. Le char a été produit en série jusqu''en mai 1940, avec un total de 229 véhicules fabriqués.', 'Normal', '19.620', '20.500', 'credit', 42, 5, 1, 1, 1, 1, 310, 30, 20, 20, '2', 150000, 'credit', 'IV', 4, 2),
 (369, '2014-11-29 00:32:56', 'Pz.Kpfw. V/IV Alpha ', 'Un seul prototype exista. La tourelle du PzKpfw IV a été montée comme un élément fixe sur la caisse du Panther pour des essais.', 'Event', '40.600', '44.800', 'or', 55, 5, 1, 1, 1, 1, 820, 85, 40, 40, '2', 0, 'or', 'VI', 6, 2),
 (374, '2014-12-07 01:00:44', 'StuG III Ausf. B', 'En 1935, Erich von Manstein de l''état-major général de l''armée allemande décrivit dans une lettre au général Ludwig Beck l''idée de construire une artillerie d''assaut pour soutenir l''attaque des unités d''infanterie. Cinq prototypes de la série "zéro" ont été fabriqués en 1937. Les premières modifications de l''Ausf. A à l''Ausf. F/8 ont été produites jusqu''en décembre 1942.', 'Normal', '21.940', '24.000', 'credit', 40, 4, 1, 1, 1, 0, 260, 50, 30, 30, '4', 130000, 'credit', 'IV', 4, 2),
-(375, '2014-12-10 22:12:03', 'Type 97 Te-Ke', 'Le Te-Ke a été développé par Tokyo Gasu Denki pour remplacer le char léger Type 94 devenu obsolète. Fabriqué de 1937 à 1942, ce véhicule a été utilisé pour la reconnaissance, la communication, les patrouilles et le soutien d''infanterie. Il a servi de tracteur blindé. Un total d''environ 600 véhicules ont été fabriqués.', 'Event', '4.760', '5.800', 'credit', 42, 2, 1, 0, 0, 0, 160, 12, 10, 8, '1', 0, 'or', 'II', 2, 3);
+(375, '2014-12-10 22:12:03', 'Type 97 Te-Ke', 'Le Te-Ke a été développé par Tokyo Gasu Denki pour remplacer le char léger Type 94 devenu obsolète. Fabriqué de 1937 à 1942, ce véhicule a été utilisé pour la reconnaissance, la communication, les patrouilles et le soutien d''infanterie. Il a servi de tracteur blindé. Un total d''environ 600 véhicules ont été fabriqués.', 'Event', '4.760', '5.800', 'credit', 42, 2, 1, 0, 0, 0, 160, 12, 10, 8, '1', 0, 'or', 'II', 2, 3),
+(379, '2014-12-16 12:08:23', 'WZ-111', 'Influencé par le char soviétique T-10, ce char lourd a été prototypé au début des années 1960, sur la base de l''IS-2 et IS-3. Les essais ont révélé de multiples défauts, et le développement du véhicule a été abandonné en 1964.', 'Event', '44.500', '48.000', 'or', 50, 4, 1, 1, 1, 0, 1550, 120, 80, 60, '3', 0, 'or', 'VIII', 8, 4),
+(380, '2014-12-16 17:10:44', 'Object 907', 'La décision de commencer le développement de nouveaux chars moyens de nouvelle génération fut prise le 13 juillet 1953. Le développé a été mené par l''Institut de Recherche n° 100. Le projet fut envoyé en mars 1954, et la résistance aux obus du châssis du nouveau véhicule fut tester en 1955. Cependant, le projet fut abandonné par la suite.', 'Event', '36.000', '39.000', 'or', 55, 4, 1, 1, 1, 0, 2000, 100, 85, 45, '2', 0, 'or', 'X', 10, 1);
 
 -- --------------------------------------------------------
 
@@ -1884,6 +1887,10 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (242, 15),
 (242, 71),
 (242, 81),
+(243, 18),
+(243, 71),
+(243, 81),
+(244, 84),
 (245, 18),
 (245, 81),
 (245, 96),
@@ -1920,7 +1927,9 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 (374, 217),
 (374, 219),
 (374, 387),
-(375, 406);
+(375, 406),
+(379, 84),
+(380, 421);
 
 -- --------------------------------------------------------
 
