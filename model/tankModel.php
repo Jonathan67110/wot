@@ -37,7 +37,15 @@ function listeChampTank($bdd, $tableName){
 	$fieldNames = '';//Initialisation du tableau
 	
 	foreach ($fields as $field) {
+		//Initialisation des variables :
+		$fieldNames = '';
+		$element = '';
+		$type = '';
+		$triggerScript = '';
+		$scriptFonction = '';
+		$attribut = '';
 		$ajoutField = true;
+		
 		switch($field['Field']){
 			case 'id':
 				$ajoutField = false;//Ne rien faire, on ne veut pas récupérer l'id.
@@ -425,8 +433,8 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 			intval($tablAjouter['rechercheprix']), 
 			$tablAjouter['recherchetype_credit'], 
 			$tablAjouter['recherchetier_latin'],
-			intval($tablAjouter['recherchetier_chiffre']))
-			);
+			conversionLatinToArabe($tablAjouter['recherchetier_latin'])
+			));
 			
 			$req->closeCursor();
 
