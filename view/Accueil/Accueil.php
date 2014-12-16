@@ -18,7 +18,7 @@
 								<ul>	
 									<li>Amélioration de la page gestion de tank: ajout de js pour remettre en forme, de mofi du phpp, etc...</li>
 									<li>Ajout d'un pied de page</li>
-									
+									<li>Ajout de la page de connection</li>
 								</ul>
 							</p>
 						</article>				
@@ -26,16 +26,15 @@
 						<article>
 							<p>
 								<ul>	
-								Ajouter un test pour voir si on s'est connecté pour accéder à la bdd + gestion
-									<li>Ajouter le n° de version de la version du char affiché</li>
-									<li>Reste à faire les lourds chinois chez les chinois</li>
+									<li>Ajouter le n° de version de la version du char affiché, voir, la date de première apparition</li>
+									<li>Faire qu'on puisse supprimer un canon / élément directement dans la page de gestion d'un char</li>
 									<li>Faire que le tier est saisie automatique (clé étrangère qui redirige vers les tiers) => on n'affiche plus du tout de tier chiffre dans la gestion des tanks. Il faudra également veiller à supprimer les fonctions de conversion, superflues(chasse-les, elles seront éparpillées, mouhahahaha)</li>
 									<li>Ajouter un textarea qui traitera un copié collé automatiquement pour insérer des éléments en avance, histoire de gagner du temps</li>
-									<li>Faire une section canon dans un sous-menu => voir le menu de navigation d'Alain</li>
+									<li>Faire une section canon dans un sous-menu => voir le menu de navigation d'Alain : voir à faire quelque chose de réutilisable pour chaque élément</li>
 									<li>Mettre à jour les canons japonais ( tant que c'est frais)</li>
 									<li>N'afficher la page recherche wot que lorsqu'on clique sur recherche. Mettre sur la page d'accueil les essages du site = la to do list par exemple + Les évolutions.</li>
 									<li>N'afficher la page recherche wot que lorsqu'on clique sur recherche. Mettre sur la page d'accueil les essages du site = la to do list par exemple + Les évolutions.</li>
-								</ul>
+									<li>Améliorer la connexion</li></ul>
 							</p>
 						</article>						
 				</section>
