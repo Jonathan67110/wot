@@ -44,9 +44,9 @@
 				</section>
 		
 			<h2 id="ResultatRequete">Données recherchées:</h2>
-					<?php 
-						include_once('view/recherche/FonctionTank/fonctionTankRecherche.php') ;
-					?>
-			
-    </body>
-</html>
+<?php 
+	/* Inclut la partie "données recherchées" */
+	include_once('view/recherche/FonctionTank/fonctionTankRecherche.php') ;
+	
+	/* footer */
+	include_once('view/footer.php');
