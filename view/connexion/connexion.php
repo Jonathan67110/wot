@@ -12,11 +12,12 @@
 							<p>
 								
 							</p>	
-							<form>
+							<form action = '#' method = 'post'>
 								<input type = "text" name = "loginConnexion" value = "" id = "" Placeholder = "Pseudo"><br />
 								<input type = "text" name = "mdpConnexion" value = "" id = "" Placeholder = "Mdp"><br />
 								<input type ="button" name = "bouton" value = "Sign in"/><br />
 							</form>
 				</section>
-    </body>
-</html>
+<?php 
+	/* footer */
+	include_once('view/footer.php');

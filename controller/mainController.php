@@ -69,30 +69,7 @@
 			
 			case 'gestionTank':
 				
-				//Pour modifier proprement un tank, on va récupérer son id dans une variable de session, cela, uniquement si on a choisi de modifier un tank:
-				if(isset($_POST['gestionTank'])){
-					if(isset($_POST['RecherchePrecedentBouton'])){
-						$_SESSION['indiceCharAModifier'] = idPrecedent($bddWoT, $tanks, intval(str_replace('gestion','', $_POST['gestionTank'])));
-						$_POST['gestionTank'] = 'gestion'.$_SESSION['indiceCharAModifier'] ;
-					}
-					elseif(isset($_POST['RechercheSuivantBouton'])){
-						if(isset($_SESSION['nationGestionTank'])){
-							$_SESSION['indiceCharAModifier'] = idSuivantMemeNation($bddWoT, $tanks, intval(str_replace('gestion','', $_POST['gestionTank'])), $_SESSION['nationGestionTank']);
-						}
-						else{
-							$_SESSION['indiceCharAModifier'] = idSuivant($bddWoT, $tanks, intval(str_replace('gestion','', $_POST['gestionTank'])));
-						}
-						$_POST['gestionTank'] = 'gestion'.$_SESSION['indiceCharAModifier'] ;
-					}
-					elseif(isset($_POST['RechercheBouton'])){
-						$_SESSION['indiceCharAModifier'] = intval(str_replace('gestion','', $_POST['gestionTank']));
-					}
-				}
-				elseif(isset($_SESSION['indiceCharAModifier'])){
-					$_POST['gestionTank'] = 'gestion'.$_SESSION['indiceCharAModifier'];
-				}
-				
-				include_once('view/gestionTank/gestionTank.php');
+				include_once('controller/gestionTank/gestionTankController.php');
 				
 			break;
 			
