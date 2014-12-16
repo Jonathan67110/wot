@@ -208,10 +208,10 @@ function listeChampTank($bdd, $tableName){
 			case 'Nombre_equipage':
 				$fieldNames = $field['Field'];
 				$element = '';
-				$type = '';
+				$type = 'label';
 				$triggerScript = '';
 				$scriptFonction = '';
-				$attribut = 'readonly';
+				$attribut = '';
 				
 			break;
 				
@@ -260,10 +260,10 @@ function listeChampTank($bdd, $tableName){
 			
 				$fieldNames = $field['Field'];
 				$element = '';
-				$type = '';
+				$type = 'label';
 				$triggerScript = '';
 				$scriptFonction = '';
-				$attribut = 'readonly';
+				$attribut = '';
 
 			break;
 			
@@ -411,7 +411,7 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 			floatval($tablAjouter['recherchelimite_charge']),
 			$tablAjouter['recherchemonaie'],
 			floatval($tablAjouter['recherchevitesse_max']),
-			intval($tablAjouter['rechercheNombre_equipage']),
+			intval($tablAjouter['rechercheNombre_tireur']) + intval($tablAjouter['rechercheNombre_chargeur']) + intval($tablAjouter['rechercheNombre_operateur_radio']) + intval($tablAjouter['rechercheNombre_pilote']) + 1,
 			intval($tablAjouter['rechercheNombre_pilote']),
 			intval($tablAjouter['rechercheNombre_tireur']),
 			intval($tablAjouter['rechercheNombre_chargeur']),
@@ -559,11 +559,11 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 		$tablAjouter['recherchelimite_charge'],
 		$tablAjouter['recherchemonaie'],
 		$tablAjouter['recherchevitesse_max'],
-		max(1, $tablAjouter['rechercheNombre_equipage']), 
-		$tablAjouter['rechercheNombre_pilote'],
-		$tablAjouter['rechercheNombre_tireur'], 
-		$tablAjouter['rechercheNombre_chargeur'], 
-		$tablAjouter['rechercheNombre_operateur_radio'],
+		intval($tablAjouter['rechercheNombre_tireur']) + intval($tablAjouter['rechercheNombre_chargeur']) + intval($tablAjouter['rechercheNombre_operateur_radio']) + intval($tablAjouter['rechercheNombre_pilote']) + 1,
+		intval($tablAjouter['rechercheNombre_pilote']),
+		intval($tablAjouter['rechercheNombre_tireur']),
+		intval($tablAjouter['rechercheNombre_chargeur']),
+		intval($tablAjouter['rechercheNombre_operateur_radio']),
 		$tablAjouter['recherchehp_base'],
 		$tablAjouter['rechercheBlindage_avant'], 
 		$tablAjouter['rechercheBlindage_flanc'],
@@ -573,7 +573,7 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 		$tablAjouter['rechercheprix'], 
 		$tablAjouter['recherchetype_credit'], 
 		$tablAjouter['recherchetier_latin'],
-		$tablAjouter['recherchetier_chiffre'], 
+		conversionLatinToArabe($tablAjouter['recherchetier_latin']),
 		date("Y-m-d H:i:s"),
 		$indiceTankModifier));
 		$req->closeCursor();
@@ -601,5 +601,64 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 	
 	return $message;
 
+}
 
+function conversionLatinToArabe($Chiffre)
+{
+	switch($Chiffre)
+	{		
+		case 'I':
+			return 1;
+		break;
+		
+		case 'II':
+			return 2;
+		
+		break;
+		
+		case 'III':
+			return 3;
+		
+		break;
+		
+		case 'IV':
+			return 4;
+		
+		break;
+		
+		case 'V':
+			return 5;
+		
+		break;
+		
+		case 'VI':
+			return 6;
+		
+		break;
+		
+		case 'VII':
+			return 7;
+		
+		break;
+		
+		case 'VIII':
+			return 8;
+		
+		break;
+		
+		case 'IX':
+			return 9;
+		
+		break;
+		
+		case 'X':
+			return 10;
+		
+		break;
+		
+		default:
+			return 0;
+		
+		break;
+	}
 }

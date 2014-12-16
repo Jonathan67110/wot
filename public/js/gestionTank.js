@@ -57,7 +57,7 @@ function miseAJourTierChiffre(tier)
 	}
 	
 	var texteSortie = document.getElementById("recherchetier_chiffre");
-	texteSortie.value = tier;
+	texteSortie.innerHTML = tier;
 }
 
 function sommeEquipage()
@@ -76,7 +76,7 @@ function sommeEquipage()
 	
 	var nombreEquipage = document.getElementById("rechercheNombre_equipage");
 	
-	nombreEquipage.value = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio + 1;
+	nombreEquipage.innerHTML  = nombreChargeur + nombreTireur + nombrePilote + nombreOperateurRadio + 1;
 }
 
 /* Convertit une chaîne de caractères en nombre entier positif ou nul */
