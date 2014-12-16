@@ -31,51 +31,63 @@ function listeChampTank($bdd, $tableName){
 	//Récupération des résultats:
 	$fields = $recordset->fetchAll(PDO::FETCH_ASSOC);
 	
-	$fieldNames = '';
-	
+	//Fermeture de la requête :
+	$recordset->closeCursor();
+		
+	$fieldNames = '';//Initialisation du tableau
 	
 	foreach ($fields as $field) {
-		//Initialisation des variables :
-		
-		//
-		$element = '';
-		
-		//Correspond au type d'élément du formulaire final : textbox, button, listbox, ....
-		$type = '';
-
+		$ajoutField = true;
 		switch($field['Field']){
 			case 'id':
-				//Ne rien faire, on ne veut pas récupérer l'id.
+				$ajoutField = false;//Ne rien faire, on ne veut pas récupérer l'id.
 			break;
 			
 			case 'datemiseajour':
-			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = 'label';
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';
+			break;
 			
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '', '');	
+			case 'poids_chassis':
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';//input par défaut
+				$triggerScript = 'onchange';
+				$scriptFonction = 'remplacementVirguleParPoint(this.id)';
+				$attribut = '';	
+				
+			break;
+			
+			case 'limite_charge':
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';//input par défaut
+				$triggerScript = 'onchange';
+				$scriptFonction = 'remplacementVirguleParPoint(this.id)';
+				$attribut = '';
+				
 			break;
 			
 			case 'type_credit':
 				$fieldNames = 'type_credit';
-				
 				$reqtype_credit = $bdd->query('SELECT * FROM monnaie ORDER BY id');
 				$typeCredit = $reqtype_credit->fetchAll();
-				
-				
+				$reqtype_credit->closeCursor();
 				$idTab = '';
 				$paysTab = '';
+				
 				foreach($typeCredit as $type){
 					$element[$type['type']] = $type['type'];
 				}
 				
-
 				$type = 'select';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '', '');		
-				
-				$reqtype_credit->closeCursor();
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';
 				
 			break;
 			
@@ -91,182 +103,148 @@ function listeChampTank($bdd, $tableName){
 				}
 					
 				$type = 'select';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '', '');		
-				
-				$reqtype_credit->closeCursor();
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';
 				
 			break;
 			
-			case 'Description':
-			
+			case 'Description':			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = 'textarea';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '', '');	
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';
 
 			break;
 			
 			case 'premium':
-				$fieldNames = 'premium';
-				
+				$fieldNames = 'premium';				
 				$reqtype_credit = $bdd->query('SELECT * FROM acces_char ORDER BY id');
 				$typeCredit = $reqtype_credit->fetchAll();
-				
-				
+				$reqtype_credit->closeCursor();
 				$idTab = '';
 				$paysTab = '';
+				
 				foreach($typeCredit as $type){
 					$element[$type['type']] = $type['type'];
 				}
 					
 				$type = 'select';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '',  '');		
-				
-				$reqtype_credit->closeCursor();
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';
 				
 			break;
 			
 			case 'type_char':
-				$fieldNames = 'type_char';
-				
+				$fieldNames = 'type_char';				
 				$reqtype_credit = $bdd->query('SELECT * FROM type_char ORDER BY id');
 				$typeCredit = $reqtype_credit->fetchAll();
-				
-				
+				$reqtype_credit->closeCursor();			
 				$idTab = '';
 				$paysTab = '';
+				
 				foreach($typeCredit as $type){
 					$element[$type['id']] = $type['type'];
 				}
 					
 				$type = 'select';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, '', '',  '');		
-				
-				$reqtype_credit->closeCursor();
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';				
 				
 			break;
 			
-			
 			case 'tier_latin':
 				$fieldNames = 'tier_latin';
-				
 				$reqtype_credit = $bdd->query('SELECT * FROM tier ORDER BY id');
-				$typeCredit = $reqtype_credit->fetchAll();
-				
-				
+				$typeCredit = $reqtype_credit->fetchAll();	
+				$reqtype_credit->closeCursor();
 				$idTab = '';
 				$paysTab = '';
+				
 				foreach($typeCredit as $type){
 					$element[$type['tier_latin']] = $type['tier_latin'];
 				}
-					
+				
 				$type = 'select';
-		
 				$triggerScript = 'onchange';
 				$scriptFonction = 'miseAJourTierChiffre(this.value)';
-				$attribut = '';
-				
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
-				
-				$reqtype_credit->closeCursor();
+				$attribut = '';			
 				
 			break;
 			
 			case 'pays_id':
 				$fieldNames = 'pays';
-				
 				$reqNation = $bdd->query('SELECT * FROM nation ORDER BY id');
-				$nations = $reqNation->fetchAll();
-				
-				
+				$nations = $reqNation->fetchAll();				
+				$reqtype_credit->closeCursor();
 				$idTab = '';
 				$paysTab = '';
+				
 				foreach($nations as $nation){
 					$element[$nation['id']] = $nation['pays'];
 				}
-					
+				
 				$type = 'select';
-		
 				$triggerScript = '';
 				$scriptFonction = '';
 				$attribut = '';
 				
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
-				
-				$reqtype_credit->closeCursor();
-				
 			break;
 			
 			case 'Nombre_equipage':
-			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = '';
 				$scriptFonction = '';
 				$attribut = 'readonly';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
-
-				break;
+				
+			break;
 				
 			case 'Nombre_chargeur':
-			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = 'onchange';
 				$scriptFonction = 'sommeEquipage()';
 				$attribut = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
-
-				break;
 			
-			case 'Nombre_tireur':
+			break;
 			
+			case 'Nombre_tireur':			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = 'onchange';
 				$scriptFonction = 'sommeEquipage()';
 				$attribut = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
-				break;
+			break;
 			
-			
-			case 'Nombre_pilote':
-			
+			case 'Nombre_pilote':			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = 'onchange';
 				$scriptFonction = 'sommeEquipage()';
 				$attribut = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
-				break;
+			break;
 			
 			
-			case 'Nombre_operateur_radio':
-			
+			case 'Nombre_operateur_radio':			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = 'onchange';
 				$scriptFonction = 'sommeEquipage()';
 				$attribut = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
-				break;
+			break;
 			
 			case 'tier_chiffre':
 			
@@ -276,52 +254,43 @@ function listeChampTank($bdd, $tableName){
 				$triggerScript = '';
 				$scriptFonction = '';
 				$attribut = 'readonly';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
-				break;
+			break;
 			
-			case 'prix':
-			
+			case 'prix':			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = 'onchange';
 				$scriptFonction = 'suppressionBlanc(this.id)';
 				$attribut = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
-				break;
+			break;
 			
-			case 'hp_base':
-			
+			case 'hp_base':			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
 				$triggerScript = 'onchange';
 				$scriptFonction = 'suppressionBlanc(this.id)';
 				$attribut = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 
-				break;
+			break;
 		
 			default:
 			
 				$fieldNames = $field['Field'];
 				$element = '';
 				$type = '';
-		
-				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element,'', '', '');	
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';
 
-				break;
+			break;
 			
-		}
-				
-		
-		$recordset->closeCursor();
-		
+		}	
+			if($ajoutField)
+				$listTankField[] = new FormulaireChamp($fieldNames, $type, $element, $triggerScript, $scriptFonction, $attribut);	
 	}
 	return $listTankField;
 }

@@ -94,6 +94,13 @@ function suppressionBlanc(idBalise)
 	
 }
 
+/* Fonction pour remplacer les ',' par des '.' */
+function remplacementVirguleParPoint(idBalise)
+{
+	document.getElementById(idBalise).value = document.getElementById(idBalise).value.replace(/,/g, ".");
+	
+}
+
 
 
 
