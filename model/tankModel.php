@@ -195,6 +195,16 @@ function listeChampTank($bdd, $tableName){
 				
 			break;
 			
+			case 'vitesse_max':			
+				$fieldNames = $field['Field'];
+				$element = '';
+				$type = '';
+				$triggerScript = 'onchange';
+				$scriptFonction = 'remplacementVirguleParPoint(this.id)';
+				$attribut = '';
+
+			break;
+			
 			case 'Nombre_equipage':
 				$fieldNames = $field['Field'];
 				$element = '';
