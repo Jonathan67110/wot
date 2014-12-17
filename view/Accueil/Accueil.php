@@ -33,6 +33,7 @@
 							<p>
 								<ul>	
 									<li>Mettre à jour les canons et les membres d'équipage des chars français</li>
+									<li>Idem légers britannique</li>
 									<li>Ajouter le n° de version de la version du char affiché, voir, la date de première apparition</li>
 									<li>Ajouter un élément pour ne modifier qu'un élément sur un char au lieu de tout le char : permettra de revenir à cet élément dans la page html (#idelement) </li>
 									<li>Faire qu'on puisse supprimer un canon / élément directement dans la page de gestion d'un char</li>
