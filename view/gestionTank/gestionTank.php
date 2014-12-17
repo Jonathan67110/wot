@@ -127,23 +127,23 @@ function retourneTypeChar($text)
 {
 			if(strstr($text,'Char léger:'))
 			{
-				return 'Char léger';
+				return '1';
 			}
 			elseif(strstr($text,'Char moyen:'))
 			{
-				return 'Char moyen';
+				return '2';
 			}
 			elseif(strstr($text,'Char lourd:'))
 			{
-				return 'Char lourd';
+				return '3';
 			}
 			elseif(strstr($text,'Ch. de chars:'))
 			{
-				return 'Chasseur de char';
+				return '4';
 			}
 			elseif(strstr($text,'CAM:'))
 			{
-				return 'Artillerie';
+				return '5';
 			}
 			else
 			{
@@ -189,7 +189,7 @@ function retournePositionTypeChar($text)
 }
 
 function renvoieNomChar($text){
-	$variable = ' ';
+	$variable = CHR(13).CHR(10);
 	$debutBlanc = stripos($text,$variable);
 	
 	$nomCharEnPartie = substr ($text, 0, $debutBlanc);
@@ -267,7 +267,7 @@ function renvoiePoids($text){
 								<textarea rows="20" cols="50" name ="textWoT"><?php 
 								if(!empty($text)) echo $text; 
 								?></textarea><br />
-								<input type="submit" name = "EnvoieText">
+								<input type="submit" name = "EnvoieText" value ="Envoyer les infos">
 							</form>							
 						</article>					
 				</section>

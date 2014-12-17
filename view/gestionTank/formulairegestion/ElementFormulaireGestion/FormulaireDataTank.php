@@ -10,9 +10,7 @@
 								
 								foreach(listeChampTank($bddWoT, 'tank') as $champ){
 								//On trace la liste des éléments à ajouter, modifier, ou, supprimer pour un char.
-								
-									if($indice >0){
-											if(isset($_POST['EnvoieText']))
+																			if(isset($_POST['EnvoieText']))
 											{
 												switch($champ->getNomField())
 												{
@@ -63,20 +61,31 @@
 													case 'prix':
 														$valeurDeCharAAfficher = $_SESSION['ficheTankprix'];
 													break;
-
-													default:
-														$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+													
+													case 'type_char':
+														$valeurDeCharAAfficher = $_SESSION['ficheTanktextTypeChar'];
 													break;
-												}
+
+													default:												
+														if($indice >0){
+															$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+														}
+														else{
+																$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
+														}
+															break;
+														}
 											}
 											else
 											{
-												$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+												if($indice >0){
+
+															$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+												}
+												else{
+														$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
+												}
 											}
-									}
-									else{
-											$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
-									}
 
 									//Affichage normal des éléments :
 									echo '
