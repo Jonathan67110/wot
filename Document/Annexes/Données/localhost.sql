@@ -555,7 +555,7 @@ CREATE TABLE IF NOT EXISTS `moteur` (
   `Type_moteur` varchar(9) DEFAULT NULL,
   `poids` smallint(5) unsigned DEFAULT NULL,
   `tier_latin` varchar(4) DEFAULT NULL,
-  `tier_chiffre` tinyint(3) unsigned DEFAULT NULL,
+  `tier_id` tinyint(3) unsigned DEFAULT NULL,
   `compatibilite` varchar(250) DEFAULT NULL,
   `prix` mediumint(8) unsigned DEFAULT NULL,
   `type_credit` varchar(6) DEFAULT NULL,
@@ -950,7 +950,7 @@ CREATE TABLE IF NOT EXISTS `radio` (
   `nom` varchar(50) NOT NULL,
   `portee_radio` smallint(5) unsigned NOT NULL,
   `poids` smallint(5) unsigned NOT NULL,
-  `tier` tinyint(3) unsigned NOT NULL,
+  `tier_id` tinyint(3) unsigned NOT NULL,
   `pays` varchar(15) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -2028,7 +2028,7 @@ CREATE TABLE IF NOT EXISTS `tourelle` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `nom` varchar(50) NOT NULL,
   `poids` smallint(5) unsigned NOT NULL,
-  `tier` tinyint(2) unsigned NOT NULL,
+  `tier_id` tinyint(2) unsigned NOT NULL,
   `pays_id` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -2073,7 +2073,15 @@ ALTER TABLE `canon`
 -- Contraintes pour la table `moteur`
 --
 ALTER TABLE `moteur`
-  ADD CONSTRAINT `fk_Moteur_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`);
+  ADD CONSTRAINT `fk_moteur_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+  ADD CONSTRAINT `fk_moteur_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
+
+--
+-- Contraintes pour la table `moteur`
+--
+ALTER TABLE `tourelle`
+  ADD CONSTRAINT `fk_tourelle_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+  ADD CONSTRAINT `fk_tourelle_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
 
 --
 -- Contraintes pour la table `tank`
