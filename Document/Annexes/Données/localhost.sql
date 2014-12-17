@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `vitesse_vise_moy` decimal(4,2) unsigned DEFAULT NULL,
   `poids` smallint(5) unsigned DEFAULT NULL,
   `tier_latin` varchar(4) DEFAULT NULL,
-  `tier_chiffre` tinyint(3) unsigned DEFAULT NULL,
+  `tier_id` tinyint(3) unsigned DEFAULT NULL,
   `compatibilite` varchar(250) DEFAULT NULL,
   `prix` mediumint(8) unsigned DEFAULT NULL,
   `type_credit` varchar(6) DEFAULT NULL,
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
 -- Contenu de la table `canon`
 --
 
-INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_total_obus_max`, `nombre_total_obus_moy`, `ratelier`, `nombre_obus_ratelier`, `cadence_tir_min`, `cadence_tir_max`, `cadence_tir_moy`, `temps_chargement_total`, `degat_moyen1`, `degat_moyen2`, `degat_moyen3`, `penetration1`, `penetration2`, `penetration3`, `dispersion_min`, `dispersion_max`, `dispersion_moyenne`, `vitesse_vise_min`, `vitesse_vise_max`, `vitesse_vise_moy`, `poids`, `tier_latin`, `tier_chiffre`, `compatibilite`, `prix`, `type_credit`, `experience`, `pays_id`) VALUES
+INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_total_obus_max`, `nombre_total_obus_moy`, `ratelier`, `nombre_obus_ratelier`, `cadence_tir_min`, `cadence_tir_max`, `cadence_tir_moy`, `temps_chargement_total`, `degat_moyen1`, `degat_moyen2`, `degat_moyen3`, `penetration1`, `penetration2`, `penetration3`, `dispersion_min`, `dispersion_max`, `dispersion_moyenne`, `vitesse_vise_min`, `vitesse_vise_max`, `vitesse_vise_moy`, `poids`, `tier_latin`, `tier_id`, `compatibilite`, `prix`, `type_credit`, `experience`, `pays_id`) VALUES
 (1, '10,5 cm Bordkanone L7A3', '105', 60, 0, 60, '', 0, '6.67', '6.67', '6.00', '0.00', 390, 390, 480, 268, 330, 53, '0.30', '0.00', '0.30', '1.90', '0.00', '1.90', 1, 'X', 10, 'Leopard 1', 290, '', NULL, 2),
 (2, '10,5 cm K 18 L/52', '105', 26, 0, 26, '', 0, '6.45', '0.00', '6.45', '0.00', 300, 300, 380, 169, 227, 53, '0.36', '0.00', '0.36', '2.30', '0.00', '2.30', 3, 'VIII', 8, 'Dicker Max', 0, '\r', NULL, 2),
 (3, '10,5 cm KwK 42 L/28', '105', 28, 60, 44, '', 0, '6.12', '7.50', '6.81', '0.00', 350, 350, 410, 64, 104, 53, '0.54', '0.55', '0.55', '1.70', '2.30', '2.00', 2, 'V', 5, 'Pz.Kpfw. IV', 28, '\r', NULL, 2),
@@ -562,14 +562,14 @@ CREATE TABLE IF NOT EXISTS `moteur` (
   `experience` mediumint(8) unsigned DEFAULT NULL,
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_Moteur_pays_id` (`pays_id`)
+  KEY `fk_moteur_pays_id` (`pays_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=341 ;
 
 --
 -- Contenu de la table `moteur`
 --
 
-INSERT INTO `moteur` (`id`, `nom`, `puissance`, `chance_incendie`, `Type_moteur`, `poids`, `tier_latin`, `tier_chiffre`, `compatibilite`, `prix`, `type_credit`, `experience`, `pays_id`) VALUES
+INSERT INTO `moteur` (`id`, `nom`, `puissance`, `chance_incendie`, `Type_moteur`, `poids`, `tier_latin`, `tier_id`, `compatibilite`, `prix`, `type_credit`, `experience`, `pays_id`) VALUES
 (1, 'Cunningham V-type', 110, '0.00', 'Gasoline', 200, 'I', 1, 'T1 Cunningham', 0, 'c', 0, 7),
 (2, 'Cunningham V8', 132, '0.00', 'Gasoline', 300, 'II', 2, 'T1 Cunningham', 650, 'c', 0, 7),
 (3, 'Liberty', 330, '0.00', 'Gasoline', 450, 'II', 2, 'T2 Medium Tank', 990, 'c', 0, 7),
