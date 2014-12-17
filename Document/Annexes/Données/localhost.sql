@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 17 Décembre 2014 à 16:36
+-- Généré le :  Mer 17 Décembre 2014 à 19:44
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -88,7 +88,8 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `experience` mediumint(8) unsigned DEFAULT NULL,
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_canon_pays_id` (`pays_id`)
+  KEY `fk_canon_pays_id` (`pays_id`),
+  KEY `fk_canon_tier_id` (`tier_chiffre`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=422 ;
 
 --
@@ -1005,7 +1006,8 @@ CREATE TABLE IF NOT EXISTS `tank` (
   `tier_chiffre` tinyint(3) unsigned DEFAULT NULL,
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_tank_pays_id` (`pays_id`)
+  KEY `fk_tank_pays_id` (`pays_id`),
+  KEY `fk_tank_tier_id` (`tier_chiffre`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=381 ;
 
 --
@@ -2064,7 +2066,8 @@ INSERT INTO `type_char` (`id`, `type`) VALUES
 -- Contraintes pour la table `canon`
 --
 ALTER TABLE `canon`
-  ADD CONSTRAINT `fk_canon_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`);
+  ADD CONSTRAINT `fk_canon_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+  ADD CONSTRAINT `fk_canon_tier_id` FOREIGN KEY (`tier_chiffre`) REFERENCES `tier` (`id`);
 
 --
 -- Contraintes pour la table `moteur`
@@ -2076,7 +2079,8 @@ ALTER TABLE `moteur`
 -- Contraintes pour la table `tank`
 --
 ALTER TABLE `tank`
-  ADD CONSTRAINT `fk_tank_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`);
+  ADD CONSTRAINT `fk_tank_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+  ADD CONSTRAINT `fk_tank_tier_id` FOREIGN KEY (`tier_chiffre`) REFERENCES `tier` (`id`);
 
 --
 -- Contraintes pour la table `tankcanonliaison`
