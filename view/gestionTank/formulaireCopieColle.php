@@ -24,7 +24,10 @@
 			
 			//Tronquage à partir description:
 			$textFinal = tronqueVariable($textFinal, 'Niveau	');
+			//tier latin :
 			$tierLatin = renvoieTier($textFinal);
+			//Copie dans variable de session :
+			$_SESSION['ficheTanktierLatin'] = $tierLatin;
 			
 			//Tronquage-Niveau:
 			$textFinal = tronqueVariable($textFinal, 'structure	');
@@ -32,10 +35,14 @@
 			$variable = ' HP';
 			$retour = stripos($textFinal,$variable);
 			$HP =  str_replace(' ', '', substr ($textFinal, 0, $retour));
+			//Copie dans variable de session :
+			$_SESSION['ficheTankHP'] = $HP;
 			
 			//Tronquage-HP:
 			$textFinal = tronqueVariable($textFinal, 'charge	');
 			$poids = renvoiePoids($textFinal);
+			//Copie dans variable de session :
+			$_SESSION['ficheTankpoids'] = $poids;
 			
 			//Tronquage-poids:
 			$textFinal = tronqueVariable($textFinal, '/ ');
@@ -43,6 +50,8 @@
 			$variable = ' t';
 			$retour = stripos($textFinal,$variable);
 			$charge = substr ($textFinal, 0, $retour);
+			//Copie dans variable de session :
+			$_SESSION['ficheTankcharge'] = $charge;
 			
 			//Tronquage-charge:
 			$textFinal = tronqueVariable($textFinal, 'Prix	');
@@ -50,6 +59,8 @@
 			$variable = 'Équipage';
 			$retour = stripos($textFinal,$variable)-2;
 			$prix = str_replace(' ', '', substr ($textFinal, 0, $retour));
+			//Copie dans variable de session :
+			$_SESSION['ficheTankprix'] = $prix;
 			
 			//Tronquage-prix:
 			$textFinal = tronqueVariable($textFinal, 'Équipage	');
@@ -65,6 +76,8 @@
 			$variable = ' ';
 			$retour = stripos($textFinal,$variable);
 			$vitesse = substr ($textFinal, 0, $retour);
+			//Copie dans variable de session :
+			$_SESSION['ficheTankvitesse'] = $vitesse;
 			
 			//Tronquage-vitesse:
 			$textFinal = tronqueVariable($textFinal, 'avant ');
@@ -72,6 +85,8 @@
 			$variable = 'flancs ';
 			$retour = stripos($textFinal,$variable) - 2 ;
 			$blindageAvant = substr ($textFinal, 0, $retour);
+			//Copie dans variable de session :
+			$_SESSION['ficheTankblindageAvant'] = $blindageAvant;
 			
 			//Tronquage-blindage-avant:
 			$textFinal = tronqueVariable($textFinal, 'flancs ');
@@ -79,6 +94,8 @@
 			$variable = 'arrière ';
 			$retour = stripos($textFinal,$variable) - 2;
 			$blindageFlanc = substr ($textFinal, 0, $retour);
+			//Copie dans variable de session :
+			$_SESSION['ficheTankblindageFlanc'] = $blindageFlanc;
 			
 			//Tronquage-blindage-flanc:	
 			$textFinal = tronqueVariable($textFinal, 'arrière ');
@@ -86,6 +103,8 @@
 			$variable = 'Blindage ';
 			$retour = stripos($textFinal,$variable) - 2;
 			$blindageArriere = substr ($textFinal, 0, $retour);
+			//Copie dans variable de session :
+			$_SESSION['ficheTankblindageArriere'] = $blindageArriere;
 			
 			//Tronquage-blindage-arrière:
 			//$textFinal = tronqueVariable($textFinal, 'charge	');
@@ -93,6 +112,12 @@
 			//$variable = ' t';
 			//$retour = stripos($textFinal,$variable);
 			//$blindageArriere = substr ($textFinal, 0, $retour);
+			//Copie dans variable de session :
+			//$_SESSION['ficheTankprix'] = $prix;
+			
+			
+			//retour gestionTank :
+			//header('location:../../.?page=gestionTank');
 		}
 	}
 
@@ -206,7 +231,7 @@ function retournePositionTypeChar($text)
 }
 
 function renvoieNomChar($text){
-	$variable = ' ';
+	$variable = CHR(13).CHR(10);
 	$debutBlanc = stripos($text,$variable);
 	
 	$nomCharEnPartie = substr ($text, 0, $debutBlanc);

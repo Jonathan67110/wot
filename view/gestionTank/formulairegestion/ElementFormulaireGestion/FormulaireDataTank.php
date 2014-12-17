@@ -12,7 +12,67 @@
 								//On trace la liste des éléments à ajouter, modifier, ou, supprimer pour un char.
 								
 									if($indice >0){
-											$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+											if(isset($_POST['EnvoieText']))
+											{
+												switch($champ->getNomField())
+												{
+													case 'tier_latin':
+														$valeurDeCharAAfficher = $_SESSION['ficheTanktierLatin'];
+													break;
+													
+													case 'tier_chiffre':
+														//Convertir le tier latin en chiffre
+													break;
+													
+													case 'nom':
+														$valeurDeCharAAfficher = $_SESSION['ficheTanknomChar'];
+													break;
+													
+													case 'Description':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankdescriptionChar'];
+													break;
+													
+													case 'poids_chassis':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankpoids'];
+													break;
+													
+													case 'limite_charge':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankcharge'];
+													break;
+													
+													case 'vitesse_max':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankvitesse'];
+													break;
+													
+													case 'hp_base':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankHP'];
+													break;
+													
+													case 'Blindage_avant':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankblindageAvant'];
+													break;
+													
+													case 'Blindage_flanc':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankblindageFlanc'];
+													break;
+													
+													case 'Blindage_arriere':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankblindageArriere'];
+													break;
+													
+													case 'prix':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankprix'];
+													break;
+
+													default:
+														$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+													break;
+												}
+											}
+											else
+											{
+												$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
+											}
 									}
 									else{
 											$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
