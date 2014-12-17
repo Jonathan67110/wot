@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `acces_char` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `type` varchar(8) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `pays` (`type`)
+  UNIQUE KEY `id` (`type`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
@@ -89,7 +89,7 @@ CREATE TABLE IF NOT EXISTS `canon` (
   `pays_id` tinyint(3) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_canon_pays_id` (`pays_id`),
-  KEY `fk_canon_tier_id` (`tier_chiffre`)
+  KEY `fk_canon_tier_id` (`tier_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=422 ;
 
 --
@@ -340,7 +340,7 @@ INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_to
 (242, '75 mm SA49 L48', '75', 36, 42, 39, '', 0, '15.59', '17.70', '16.65', '0.00', 110, 110, 175, 108, 148, 38, '0.42', '0.00', '0.42', '2.30', '2.50', '2.40', 1, 'V', 5, 'amx 12t', 35, '\r', NULL, 6),
 (243, '75 mm SA50', '75', 30, 48, 39, '', 0, '11.57', '13.85', '12.71', '0.00', 135, 135, 175, 144, 202, 38, '0.36', '0.00', '0.36', '2.30', '2.50', '2.40', 1, 'VI', 6, 'amx 12t', 64, '\r', NULL, 6),
 (244, '75 mm Vickers HV', '75', 61, 84, 72, '', 0, '12.50', '15.38', '13.94', '0.00', 135, 135, 175, 145, 202, 38, '0.34', '0.36', '0.35', '2.30', '0.00', '2.30', 591, 'VI', 6, 'Churchill I', 50, '\r', NULL, 5);
-INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_total_obus_max`, `nombre_total_obus_moy`, `ratelier`, `nombre_obus_ratelier`, `cadence_tir_min`, `cadence_tir_max`, `cadence_tir_moy`, `temps_chargement_total`, `degat_moyen1`, `degat_moyen2`, `degat_moyen3`, `penetration1`, `penetration2`, `penetration3`, `dispersion_min`, `dispersion_max`, `dispersion_moyenne`, `vitesse_vise_min`, `vitesse_vise_max`, `vitesse_vise_moy`, `poids`, `tier_latin`, `tier_chiffre`, `compatibilite`, `prix`, `type_credit`, `experience`, `pays_id`) VALUES
+INSERT INTO `canon` (`id`, `nom`, `calibre`, `nombre_total_obus_min`, `nombre_total_obus_max`, `nombre_total_obus_moy`, `ratelier`, `nombre_obus_ratelier`, `cadence_tir_min`, `cadence_tir_max`, `cadence_tir_moy`, `temps_chargement_total`, `degat_moyen1`, `degat_moyen2`, `degat_moyen3`, `penetration1`, `penetration2`, `penetration3`, `dispersion_min`, `dispersion_max`, `dispersion_moyenne`, `vitesse_vise_min`, `vitesse_vise_max`, `vitesse_vise_moy`, `poids`, `tier_latin`, `tier_id`, `compatibilite`, `prix`, `type_credit`, `experience`, `pays_id`) VALUES
 (245, '76 mm 54-76T', '76', 45, 0, 45, '', 0, '16.22', '17.65', '16.94', '0.00', 115, 115, 165, 85, 106, 38, '0.36', '0.00', '0.36', '2.30', '0.00', '2.30', 550, 'V', 5, '59-16', 49, '\r', NULL, 4),
 (246, '76 mm 54-76T (Autoloader)', '76', 45, 60, 52, '', 0, '19.57', '21.38', '20.48', '0.00', 115, 115, 165, 85, 106, 38, '0.36', '0.00', '0.36', '2.30', '0.00', '2.30', 1, 'VI', 6, '59-16', 69, '\r', NULL, 4),
 (247, '76 mm AT Gun M1918', '76', 98, 0, 98, '', 0, '16.22', '0.00', '16.22', '0.00', 110, 130, 170, 90, 100, 42, '0.43', '0.00', '0.43', '1.70', '0.00', '1.70', 900, 'IV', 4, 'T40', 27, '\r', NULL, 7),
@@ -951,8 +951,10 @@ CREATE TABLE IF NOT EXISTS `radio` (
   `portee_radio` smallint(5) unsigned NOT NULL,
   `poids` smallint(5) unsigned NOT NULL,
   `tier_id` tinyint(3) unsigned NOT NULL,
-  `pays` varchar(15) NOT NULL,
-  PRIMARY KEY (`id`)
+  `pays_id` tinyint(3) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_radio_pays_id` (`pays_id`),
+  KEY `fk_radio_tier_id` (`tier_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -968,9 +970,11 @@ CREATE TABLE IF NOT EXISTS `suspension` (
   `charge_max` smallint(5) unsigned NOT NULL,
   `vitesse_rotation` tinyint(3) unsigned NOT NULL,
   `poids` smallint(5) unsigned NOT NULL,
-  `tier` tinyint(3) unsigned NOT NULL,
-  `pays` varchar(15) NOT NULL,
-  PRIMARY KEY (`id`)
+  `tier_id` tinyint(3) unsigned NOT NULL,
+  `pays_id` tinyint(3) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_suspension_pays_id` (`pays_id`),
+  KEY `fk_suspension_tier_id` (`tier_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -1942,7 +1946,10 @@ INSERT INTO `tankcanonliaison` (`id_Tank`, `id_Canon`) VALUES
 DROP TABLE IF EXISTS `tankmoteurliaison`;
 CREATE TABLE IF NOT EXISTS `tankmoteurliaison` (
   `id_tank` smallint(5) unsigned NOT NULL,
-  `id_moteur` smallint(5) unsigned NOT NULL
+  `id_moteur` smallint(5) unsigned NOT NULL,
+  UNIQUE KEY `unique_link_tank_moteur` (`id_moteur`,`id_tank`),
+  KEY `id_tank` (`id_tank`),
+  KEY `id_moteur` (`id_moteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1969,7 +1976,10 @@ CREATE TABLE IF NOT EXISTS `tankradioliaison` (
 DROP TABLE IF EXISTS `tanksuspensionliaison`;
 CREATE TABLE IF NOT EXISTS `tanksuspensionliaison` (
   `id_tank` smallint(5) unsigned NOT NULL,
-  `id_suspension` smallint(5) unsigned NOT NULL
+  `id_suspension` smallint(5) unsigned NOT NULL,
+  UNIQUE KEY `unique_link_tank_suspension` (`id_suspension`,`id_tank`),
+  KEY `id_tank` (`id_tank`),
+  KEY `id_suspension` (`id_suspension`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1998,7 +2008,7 @@ CREATE TABLE IF NOT EXISTS `tier` (
   `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
   `tier_latin` varchar(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `pays` (`tier_latin`)
+  UNIQUE KEY `tier_latin` (`tier_latin`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
@@ -2029,8 +2039,10 @@ CREATE TABLE IF NOT EXISTS `tourelle` (
   `nom` varchar(50) NOT NULL,
   `poids` smallint(5) unsigned NOT NULL,
   `tier_id` tinyint(2) unsigned NOT NULL,
-  `pays_id` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
+  `pays_id` tinyint(3) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_tourelle_pays_id` (`pays_id`),
+  KEY `fk_tourelle_tier_id` (`tier_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -2067,7 +2079,7 @@ INSERT INTO `type_char` (`id`, `type`) VALUES
 --
 ALTER TABLE `canon`
   ADD CONSTRAINT `fk_canon_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
-  ADD CONSTRAINT `fk_canon_tier_id` FOREIGN KEY (`tier_chiffre`) REFERENCES `tier` (`id`);
+  ADD CONSTRAINT `fk_canon_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
 
 --
 -- Contraintes pour la table `moteur`
@@ -2077,11 +2089,18 @@ ALTER TABLE `moteur`
   ADD CONSTRAINT `fk_moteur_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
 
 --
--- Contraintes pour la table `moteur`
+-- Contraintes pour la table `radio`
 --
-ALTER TABLE `tourelle`
-  ADD CONSTRAINT `fk_tourelle_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
-  ADD CONSTRAINT `fk_tourelle_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
+ALTER TABLE `radio`
+  ADD CONSTRAINT `fk_radio_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+  ADD CONSTRAINT `fk_radio_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
+
+--
+-- Contraintes pour la table `suspension`
+--
+ALTER TABLE `suspension`
+  ADD CONSTRAINT `fk_suspension_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+  ADD CONSTRAINT `fk_suspension_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
 
 --
 -- Contraintes pour la table `tank`
@@ -2089,6 +2108,13 @@ ALTER TABLE `tourelle`
 ALTER TABLE `tank`
   ADD CONSTRAINT `fk_tank_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
   ADD CONSTRAINT `fk_tank_tier_id` FOREIGN KEY (`tier_chiffre`) REFERENCES `tier` (`id`);
+
+--
+-- Contraintes pour la table `tourelle`
+--
+ALTER TABLE `tourelle`
+   ADD CONSTRAINT `fk_tourelle_pays_id` FOREIGN KEY (`pays_id`) REFERENCES `nation` (`id`),
+   ADD CONSTRAINT `fk_tourelle_tier_id` FOREIGN KEY (`tier_id`) REFERENCES `tier` (`id`);
 
 --
 -- Contraintes pour la table `tankcanonliaison`
