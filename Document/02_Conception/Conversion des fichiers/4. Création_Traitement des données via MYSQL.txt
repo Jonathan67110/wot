@@ -1,7 +1,0 @@
-4. Traitement des données via MYSQL
-
-Si besoin de remodifier derrière, expliquer comment
-
-Table tank
-
-Ajouter un champs : dernière version jouée (permettra de voir si le char est joué dans la version actuelle ou non)
