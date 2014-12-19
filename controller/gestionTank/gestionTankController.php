@@ -102,12 +102,12 @@
 		/********************************************************************************
 		* Configuration du type de char affiché à l'écran :
 		*********************************************************************************/
-		if(isset($_POST['tierGestionTank']) && intval($_POST['tierGestionTank'])>= 0){
-			$tierSelection = intval($_POST['tierGestionTank']);
-			$_SESSION['tierGestionTank'] = $tierSelection;
+		if(isset($_POST['typeCharGestionTank']) && intval($_POST['typeCharGestionTank'])>= 0){
+			$typeCharSelection = intval($_POST['typeCharGestionTank']);
+			$_SESSION['typeCharGestionTank'] = $typeCharSelection;
 		}
-		elseif(isset($_SESSION['tierGestionTank']) && intval($_SESSION['tierGestionTank'])>= 0){
-			$tierSelection = $_SESSION['tierGestionTank'];
+		elseif(isset($_SESSION['typeCharGestionTank']) && intval($_SESSION['typeCharGestionTank'])>= 0){
+			$tierSelection = $_SESSION['typeCharGestionTank'];
 		}
 		else{
 			$tierSelection = 0;
