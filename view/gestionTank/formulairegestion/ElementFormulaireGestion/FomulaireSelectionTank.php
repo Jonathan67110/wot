@@ -199,7 +199,7 @@
 										foreach($tanks as $tank){
 											//On teste si le tank appartient à la nation choisit et, au tier choisit : 
 											
-											if(($indiceNation == 0 || $indiceNation == $tank->getPays()) && ($tierSelection == 0 || $tierSelection == $tank->getTier_chiffre()) && ($typeDeCharSelectionne == 0 || $typeDeCharSelectionne == $tank->getType_char())){
+											if(($indiceNation == 0 || $indiceNation == $tank->getPays()) && ($tierSelection == 0 || $tierSelection == $tank->getTier_chiffre()) && ($typeDeCharSelection == 0 || $typeDeCharSelection == $tank->getType_char())){
 												//On forme le nom des values des options pour faciliter le traitement qui suit:
 												$indiceValue  = 'gestion'.$tank->getId();
 												
