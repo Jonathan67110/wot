@@ -42,6 +42,22 @@
 														$valeurDeCharAAfficher = $_SESSION['ficheTankvitesse'];
 													break;
 													
+													case 'Nombre_pilote':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankPilote'];
+													break;
+													
+													case 'Nombre_tireur':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankTireur'];
+													break;
+													
+													case 'Nombre_chargeur':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankChargeur'];
+													break;
+													
+													case 'Nombre_operateur_radio':
+														$valeurDeCharAAfficher = $_SESSION['ficheTankRadio'];
+													break;
+													
 													case 'hp_base':
 														$valeurDeCharAAfficher = $_SESSION['ficheTankHP'];
 													break;
@@ -67,14 +83,15 @@
 													break;
 
 													default:												
-														if($indice >0){
+														if($indice >0)
+														{
 															$valeurDeCharAAfficher = $tanks[$indice]->getParametre($champ->getNomField());
 														}
 														else{
 																$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
 														}
-															break;
-														}
+													break;
+												}
 											}
 											else
 											{
