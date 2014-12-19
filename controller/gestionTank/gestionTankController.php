@@ -1,9 +1,9 @@
 <?php
 	/* 
-	 * Avant d'accéder à la page de modification, il faut s'être identifé avant
+	 * Avant d'accéder à la page de modification, il faut s'être identifé.
 	 */
 	
-	if(!isset($_SESSION['connexion']) || !$_SESSION['connexion']) header('location:.?page=connexion');
+	if(!isset($_SESSION['connexion']) || !$_SESSION['connexion']) header('location:.?page=connexion');//Renvoie à l'écran de connexion si non connecté.
 	/*
 	 * Accessible uniquement si connecté :
 	 */
@@ -33,7 +33,27 @@
 
 	//Configuration de la page web :
 	INCLUDE_ONCE('model/TypeChar/ListeTypeChar.php');
-	//A mettre dans une fonction : Permet de récupérer le type de nation à afficher.
+	
+	/************************************************************************************************
+	* Recherche des informations à afficher : 
+	*  - titre de la page, 
+	*  - tank à afficher, 
+	*  - liste des chars à afficher, 
+	*  - nation à afficher,
+	*  - tier à afficher,
+	*  - type de char à afficher
+	*************************************************************************************************/
+
+	/********************************************************************************
+	* Configuration valeur par défaut :
+	*********************************************************************************/
+	$titre = 'Nouveau char - Gestion des chars -';
+	$tierSelection = 0;
+	
+	/********************************************************************************
+	* Configuration de la nation affiché à l'écran :
+	*********************************************************************************/
+	
 	if(isset($_SESSION['nationGestionTank']) && intval($_SESSION['nationGestionTank'])>0 && !isset($_POST['RechercheBouton']) && !isset($_POST['RechercheSuivantBouton']) && !isset($_POST['RecherchePrecedentBouton'])){
 	
 		if(!isset($_POST['nationGestionTank']) || intval($_POST['nationGestionTank']) == 0){
@@ -51,10 +71,11 @@
 	else{
 		$indiceNation = 0;
 	}
-	//Recherche des informations à afficher : titre de la page, tank à afficher, liste des chars à afficher, nation à afficher, tier à afficher, type de char à afficher
-	if(isset($_POST['gestionTank'])){	
 	
-		//On récupère l'indice reçu via formulaire :
+	if(isset($_POST['gestionTank'])){
+		/**************************************************************************************************
+		* Configuration du char affiché à l'écran / déduction du titre à afficher, fonction du nom du char
+		***************************************************************************************************/
 		$indiceEnvoyeEnPost = intval(str_replace('gestion','', $_POST['gestionTank']));
 		
 		if($indiceEnvoyeEnPost > 0 && array_key_exists ($indiceEnvoyeEnPost, $tanks )) {//Double test pour vérifier que l'indice est bien dans le tableau des chars
@@ -63,6 +84,10 @@
 		else{
 			$titre = 'Nouveau char - Gestion des chars -';
 		}
+		
+		/********************************************************************************
+		* Configuration du tier affiché à l'écran :
+		*********************************************************************************/
 		if(isset($_POST['tierGestionTank']) && intval($_POST['tierGestionTank'])>= 0){
 			$tierSelection = intval($_POST['tierGestionTank']);
 			$_SESSION['tierGestionTank'] = $tierSelection;
@@ -73,10 +98,20 @@
 		else{
 			$tierSelection = 0;
 		}
-	}
-	else{
-		$titre = 'Nouveau char - Gestion des chars -';
-		$tierSelection = 0;
+		
+		/********************************************************************************
+		* Configuration du type de char affiché à l'écran :
+		*********************************************************************************/
+		if(isset($_POST['tierGestionTank']) && intval($_POST['tierGestionTank'])>= 0){
+			$tierSelection = intval($_POST['tierGestionTank']);
+			$_SESSION['tierGestionTank'] = $tierSelection;
+		}
+		elseif(isset($_SESSION['tierGestionTank']) && intval($_SESSION['tierGestionTank'])>= 0){
+			$tierSelection = $_SESSION['tierGestionTank'];
+		}
+		else{
+			$tierSelection = 0;
+		}
 	}
 	//Envoie de la page web :
 	include_once('view/gestionTank/gestionTank.php');
