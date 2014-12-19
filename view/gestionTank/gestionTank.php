@@ -67,11 +67,61 @@
 			
 			//Tronquage-prix:
 			$textFinal = tronqueVariable($textFinal, 'Équipage	');
+			$variable = CHR(10);
+			$textFinal = tronqueVariable($textFinal, $variable);
+			$textFinal = tronqueVariable($textFinal, $variable);
 			//Equipage :
-			//Faudra faire des tests plus poussée pour ça, car, on n'a pas beaucoup de truc pour s'y accrocher. Pour le moment, ce qu'on a là est déjà pas mal :)
-			//$variable = ' t';
-			//$retour = stripos($textFinal,$variable);
-			//$charge = substr ($textFinal, 0, $retour);
+			$valeurObtenue = 'XXXXXXXXXXXXXXXXX';
+			$_SESSION['ficheTankPilote'] =0;
+			$_SESSION['ficheTankTireur'] =0;
+			$_SESSION['ficheTankRadio'] =0;
+			$_SESSION['ficheTankChargeur'] =0;
+			$nombreTireur =0;
+			$nombreRadio =0;
+			$nombreChargeur =0;
+			$autre = '';
+			do
+			{
+				$variable = CHR(10);
+				$retour = stripos($textFinal,$variable)-1;
+				$valeurObtenue = str_replace(' ', '', substr ($textFinal, 0, $retour));
+				
+				$retour = stripos($textFinal,'(') - 1;
+				if($retour > 1) 
+				{
+					$valeurObtenue = substr ($valeurObtenue, 0, $retour);
+				}
+				
+				$variable = CHR(10);				
+				$textFinal = tronqueVariable($textFinal, $variable);
+				
+				switch($valeurObtenue)
+				{
+					case 'Pilote':
+						$_SESSION['ficheTankPilote'] ++;
+					break;
+					
+					case 'Tireur':
+						$_SESSION['ficheTankTireur'] ++;
+					
+					break;
+					
+					case 'Opérateurradio':
+						$_SESSION['ficheTankRadio'] ++;
+					
+					break;
+					
+					case 'Opérateurradio(':
+						$_SESSION['ficheTankRadio'] ++;
+					
+					break;
+					
+					case 'Chargeur':
+						$_SESSION['ficheTankChargeur'] ++;
+					
+					break;
+				}
+			}while($valeurObtenue != 'Mobilité');
 			
 			//Tronquage-équipage:
 			$textFinal = tronqueVariable($textFinal, 'maximale	');
@@ -108,19 +158,6 @@
 			$blindageArriere = substr ($textFinal, 0, $retour);
 			//Copie dans variable de session :
 			$_SESSION['ficheTankblindageArriere'] = $blindageArriere;
-			
-			//Tronquage-blindage-arrière:
-			//$textFinal = tronqueVariable($textFinal, 'charge	');
-			//Prix :
-			//$variable = ' t';
-			//$retour = stripos($textFinal,$variable);
-			//$blindageArriere = substr ($textFinal, 0, $retour);
-			//Copie dans variable de session :
-			//$_SESSION['ficheTankprix'] = $prix;
-			
-			
-			//retour gestionTank :
-			//header('location:../../.?page=gestionTank');
 		}
 	}
 function retourneTypeChar($text)

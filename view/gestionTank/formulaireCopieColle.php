@@ -64,11 +64,68 @@
 			
 			//Tronquage-prix:
 			$textFinal = tronqueVariable($textFinal, 'Équipage	');
+			$variable = CHR(10);
+			$textFinal = tronqueVariable($textFinal, $variable);
+			$textFinal = tronqueVariable($textFinal, $variable);
 			//Equipage :
-			//Faudra faire des tests plus poussée pour ça, car, on n'a pas beaucoup de truc pour s'y accrocher. Pour le moment, ce qu'on a là est déjà pas mal :)
-			//$variable = ' t';
-			//$retour = stripos($textFinal,$variable);
-			//$charge = substr ($textFinal, 0, $retour);
+			$valeurObtenue = 'XXXXXXXXXXXXXXXXX';
+			$nombrePilote =0;
+			$nombreTireur =0;
+			$nombreRadio =0;
+			$nombreChargeur =0;
+			$autre = '';
+			do
+			{
+				$variable = CHR(10);
+				$retour = stripos($textFinal,$variable)-1;
+				$valeurObtenue = str_replace(' ', '', substr ($textFinal, 0, $retour));
+				
+				$retour = stripos($textFinal,'(') - 1;
+				
+				if($retour > 1) 
+				{
+					$valeurObtenue = substr ($valeurObtenue, 0, $retour);
+				}
+				$variable = CHR(10);
+				
+				$textFinal = tronqueVariable($textFinal, $variable);
+				
+				switch($valeurObtenue)
+				{
+					case 'Pilote':
+						$nombrePilote ++;
+					break;
+					
+					case 'Tireur':
+						$nombreTireur ++;
+						$textIntermediaire = $textFinal;
+					
+					break;
+					
+					case 'Opérateurradio':
+						$nombreRadio ++;
+					
+					break;
+					
+					case 'Opérateurradio(':
+						$nombreRadio ++;
+					
+					break;
+					
+					case 'Chargeur':
+						$nombreChargeur ++;
+					
+					break;
+					
+					default:
+						$autre = ($valeurObtenue != 'Mobilité' )? $valeurObtenue : $autre;
+				
+					break;
+				}
+			}while($valeurObtenue != 'Mobilité');
+			
+			//Copie dans variable de session :
+			$_SESSION['ficheTankprix'] = $prix;
 			
 			//Tronquage-équipage:
 			$textFinal = tronqueVariable($textFinal, 'maximale	');
@@ -105,19 +162,6 @@
 			$blindageArriere = substr ($textFinal, 0, $retour);
 			//Copie dans variable de session :
 			$_SESSION['ficheTankblindageArriere'] = $blindageArriere;
-			
-			//Tronquage-blindage-arrière:
-			//$textFinal = tronqueVariable($textFinal, 'charge	');
-			//Prix :
-			//$variable = ' t';
-			//$retour = stripos($textFinal,$variable);
-			//$blindageArriere = substr ($textFinal, 0, $retour);
-			//Copie dans variable de session :
-			//$_SESSION['ficheTankprix'] = $prix;
-			
-			
-			//retour gestionTank :
-			//header('location:../../.?page=gestionTank');
 		}
 	}
 
@@ -141,7 +185,7 @@
 		<input type="submit" name = "EnvoieText">
 	</form>
 		<textarea rows="20" cols="50" name ="textWoT"><?php 
-		echo $textFinal ; 
+		echo $textIntermediaire ; 
 		?></textarea><br />
 	<h3>Résultat :</h3>
 		<textarea rows="20" cols="150">
@@ -159,6 +203,11 @@ Blindage_arriere : <?php echo $blindageArriere; ?>
 type_char : <?php echo $textTypeChar; ?> 
 prix : <?php echo $prix	; ?> 
 tier_latin : <?php echo $tierLatin; ?> 
+pilote : <?php echo $nombrePilote; ?> 
+Tireur : <?php echo $nombreTireur; ?> 
+Radio : <?php echo $nombreRadio; ?> 
+Chargeur : <?php echo $nombreChargeur; ?> 
+Autre : <?php echo $autre; ?> 
 		</textarea><br />
 
 </body>
