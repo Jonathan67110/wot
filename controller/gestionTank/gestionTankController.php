@@ -72,6 +72,27 @@
 		$indiceNation = 0;
 	}
 	
+	/********************************************************************************
+	* Configuration du type de char affiché à l'écran :
+	*********************************************************************************/
+	
+	if(isset($_SESSION['typeCharGestionTank']) && intval($_SESSION['typeCharGestionTank'])>0 && !isset($_POST['RechercheBouton']) && !isset($_POST['RechercheSuivantBouton']) && !isset($_POST['RecherchePrecedentBouton'])){
+		if(!isset($_POST['typeCharGestionTank']) || intval($_POST['typeCharGestionTank']) == 0){
+			$typeDeCharSelection = $_SESSION['typeCharGestionTank'];
+		}
+		else{
+			$typeDeCharSelection = intval($_POST['typeCharGestionTank']);
+			$_SESSION['typeCharGestionTank']= $typeDeCharSelection;
+		}
+	}
+	elseif(isset($_POST['typeCharGestionTank']) && intval($_POST['typeCharGestionTank']) >0){
+		$typeDeCharSelection = intval($_POST['typeCharGestionTank']);
+		$_SESSION['typeCharGestionTank']= $typeDeCharSelection;
+	}
+	else{
+		$typeDeCharSelection = 0;
+	}
+	
 	if(isset($_POST['gestionTank'])){
 		/**************************************************************************************************
 		* Configuration du char affiché à l'écran / déduction du titre à afficher, fonction du nom du char
@@ -94,20 +115,6 @@
 		}
 		elseif(isset($_SESSION['tierGestionTank']) && intval($_SESSION['tierGestionTank'])>= 0){
 			$tierSelection = $_SESSION['tierGestionTank'];
-		}
-		else{
-			$tierSelection = 0;
-		}
-		
-		/********************************************************************************
-		* Configuration du type de char affiché à l'écran :
-		*********************************************************************************/
-		if(isset($_POST['typeCharGestionTank']) && intval($_POST['typeCharGestionTank'])>= 0){
-			$typeCharSelection = intval($_POST['typeCharGestionTank']);
-			$_SESSION['typeCharGestionTank'] = $typeCharSelection;
-		}
-		elseif(isset($_SESSION['typeCharGestionTank']) && intval($_SESSION['typeCharGestionTank'])>= 0){
-			$tierSelection = $_SESSION['typeCharGestionTank'];
 		}
 		else{
 			$tierSelection = 0;

@@ -23,12 +23,12 @@
 								<?php/*
 									$typeCharSelection = isset($_POST['typeCharGestionTank'])?$_POST['typeCharGestionTank'] : 0 ;*/
 								?>
-									<option value="0" <?php if($typeCharSelection == 0){?> Selected = "selected" <?php }; ?>>Tous types de char</option>
-									<option value="1" <?php if($typeCharSelection == 1){?> Selected = "selected" <?php }; ?>>Char léger</option>
-									<option value="2" <?php if($typeCharSelection == 2){?> Selected = "selected" <?php }; ?>>Char moyen</option>
-									<option value="3" <?php if($typeCharSelection == 3){?> Selected = "selected" <?php }; ?>>Char lourd</option>
-									<option value="4" <?php if($typeCharSelection == 4){?> Selected = "selected" <?php }; ?>>Chasseur de char</option>
-									<option value="5" <?php if($typeCharSelection == 5){?> Selected = "selected" <?php }; ?>>Artillerie</option>
+									<option value="0" <?php if($typeDeCharSelection == 0){?> Selected = "selected" <?php }; ?>>Tous types de char</option>
+									<option value="1" <?php if($typeDeCharSelection == 1){?> Selected = "selected" <?php }; ?>>Char léger</option>
+									<option value="2" <?php if($typeDeCharSelection == 2){?> Selected = "selected" <?php }; ?>>Char moyen</option>
+									<option value="3" <?php if($typeDeCharSelection == 3){?> Selected = "selected" <?php }; ?>>Char lourd</option>
+									<option value="4" <?php if($typeDeCharSelection == 4){?> Selected = "selected" <?php }; ?>>Chasseur de char</option>
+									<option value="5" <?php if($typeDeCharSelection == 5){?> Selected = "selected" <?php }; ?>>Artillerie</option>
 								</select>
 								
 								<!-- Liste des différents tier -->
