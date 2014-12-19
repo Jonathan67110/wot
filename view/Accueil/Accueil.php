@@ -32,6 +32,8 @@
 						<article>
 							<p>
 								<ul>	
+									<li>Corriger l'affichage du tier chiffre qui est en latin, lors de l'envoi du copier-coller</li>
+									<li>Corriger la disparition du réglage "type de char"</li>
 									<li>Mettre à jour les canons et les membres d'équipage des chars français</li>
 									<li>Idem légers britannique</li>
 									<li>Ajouter le n° de version de la version du char affiché, voir, la date de première apparition</li>
