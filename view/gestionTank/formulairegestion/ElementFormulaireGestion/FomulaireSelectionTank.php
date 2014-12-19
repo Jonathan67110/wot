@@ -20,9 +20,6 @@
 								
 								<!-- Liste des différents type de chars existants -->
 								<select name="typeCharGestionTank">
-								<?php/*
-									$typeCharSelection = isset($_POST['typeCharGestionTank'])?$_POST['typeCharGestionTank'] : 0 ;*/
-								?>
 									<option value="0" <?php if($typeDeCharSelection == 0){?> Selected = "selected" <?php }; ?>>Tous types de char</option>
 									<option value="1" <?php if($typeDeCharSelection == 1){?> Selected = "selected" <?php }; ?>>Char léger</option>
 									<option value="2" <?php if($typeDeCharSelection == 2){?> Selected = "selected" <?php }; ?>>Char moyen</option>
