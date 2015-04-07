@@ -7,3 +7,4 @@
 		<script src="public/js/gestionTank.js"></script>
     </head>
     <body>
+		<img src="./Document/71_Autre/Image/Bande_RW.png" alt="" style="width:304px;height:228px">
