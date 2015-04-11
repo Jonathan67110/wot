@@ -64,6 +64,9 @@ class Tank{
 	//Tier du char en chiffre arabe:
 	private $tier_chiffre;
 	
+	//Raccourci de l'url
+	private $raccourci_url;
+	
 	//Boolean qui informe si l'id du char existe dans la base de donnée du char:
 	private $idExistante;//Paramètre de développement, inutile pour la suite a priori
 	
@@ -94,6 +97,7 @@ class Tank{
 		$this->tier_latin = 'I';
 		$this->tier_chiffre = 1;
 		$this->idExistante = 0;
+		$this->raccourci_url = "";
 		
 		$RequeteTankCorrespondantANouvId = $bdd->prepare('SELECT * FROM tank WHERE id=?');
 		$RequeteTankCorrespondantANouvId -> execute(array($nouvId));
@@ -121,6 +125,7 @@ class Tank{
 			$this->pays = $tableauReponse['pays_id'];
 			$this->prix = $tableauReponse['prix'];
 			$this->type_credit = $tableauReponse['type_credit'];
+			$this->raccourci_url = $tableauReponse['raccourci_url'];
 			
 			
 			/* La base de données n'étant pas fiable, il arrive que le tier en chiffre soit absent, ou le tier latin.
@@ -255,6 +260,10 @@ class Tank{
 	
 	public function getVitesse_max(){//Renvoie la vitesse
 		return $this->vitesse_max;
+	}
+	
+	public function getRaccourci_url(){//Renvoie la vitesse
+		return $this->raccourci_url;
 	}
 	
 	public function getTier_chiffre(){//Renvoie l'id du tier d'un tank

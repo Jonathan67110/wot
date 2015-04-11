@@ -1,15 +1,26 @@
 <?php
+		//Recherche du pays du char
+		$req = $bddWoT->prepare('SELECT NomUrl, pays FROM nation WHERE id=?');
+		$req -> execute(array($tanks[$tankADetailler]->getPays()));
+		
+		while($tableauReponse = $req->fetch()){
+			$urlNation = $tableauReponse['NomUrl'];
+			$Nation = $tableauReponse['pays'];
+		}
 
+		//Fermeture de la requête:
+		$req->closeCursor();
 	echo '
 			<section>	
 					<h3>Détail du char : </h3>	
 						<h4>'.$tanks[$tankADetailler]->getNom().'</h4>
 						<article id="infoGeneraleRecherche">
 							<h5>Informations générales</h5>
+							<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$tankADetailler]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$tankADetailler]->getNom().'</a></p>
 							<p>Accession du char  : Char de type '.$tanks[$tankADetailler]->getPremium().' accessible à partir de '.$tanks[$tankADetailler]->getPrix().' '.$tanks[$tankADetailler]->getType_credit().'</p>
 							<p>Point de vie de base (sans tourelle) : '.$tanks[$tankADetailler]->getHp_base().' hp</p>
 							<p>Catégorie de char : '.$tanks[$tankADetailler]->getType_char().'</p>
-							<p>Nationalité : '.$tanks[$tankADetailler]->getPays().'</p>
+							<p>Nationalité : '.$Nation.'</p>
 							<p>Tier : '.$tanks[$tankADetailler]->getTier_latin().'</p>
 						</article>
 						
