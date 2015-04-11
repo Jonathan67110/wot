@@ -130,7 +130,7 @@
 									<tr>
 										<td><label for="rechercheAjoutCanon">Canon à ajouter</label></td>
 										<td><select name="rechercheAjoutCanon">
-												<option value="0" selected = "selected">-- Ne pas ajouer de canon --</option>
+												<option value="0" selected = "selected">-- Ne pas ajouter de canon --</option>
 												<?php
 													foreach($Canons as $id=>$Canon){
 														echo '<option value="'.$id.'" >'.$Canon.'</option>';
