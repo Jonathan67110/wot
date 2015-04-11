@@ -6,7 +6,26 @@
 							?>
 							<table>
 							<?php
-								
+								if ($indice > 0)
+								{
+									//Requête de recherche de l'url pour la nation:
+									$req = $bddWoT->prepare('SELECT NomUrl, pays FROM nation WHERE id=?');
+									$req -> execute(array($tanks[$indice]->getPays()));
+									
+									while($tableauReponse = $req->fetch()){
+										$urlNation = $tableauReponse['NomUrl'];
+									}
+									
+									//Fermeture de la requête:
+									$req->closeCursor();
+									
+									//Test pour vérifier qu'une url existe pour ce char :
+									if ($tanks[$indice]->getRaccourci_url() <> "")
+									{
+									echo '<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$indice]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$indice]->getNom().'</a></p>';
+									
+									}
+								}
 								
 								foreach(listeChampTank($bddWoT, 'tank') as $champ){
 								//On trace la liste des éléments à ajouter, modifier, ou, supprimer pour un char.

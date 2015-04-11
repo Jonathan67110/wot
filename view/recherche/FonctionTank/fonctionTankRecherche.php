@@ -15,8 +15,14 @@
 					<h3>Détail du char : </h3>	
 						<h4>'.$tanks[$tankADetailler]->getNom().'</h4>
 						<article id="infoGeneraleRecherche">
-							<h5>Informations générales</h5>
-							<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$tankADetailler]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$tankADetailler]->getNom().'</a></p>
+							<h5>Informations générales</h5>';
+							
+							if ($tanks[$tankADetailler]->getRaccourci_url() <> "")
+							{
+	echo '
+								<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$tankADetailler]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$tankADetailler]->getNom().'</a></p>';
+							}
+	echo '
 							<p>Accession du char  : Char de type '.$tanks[$tankADetailler]->getPremium().' accessible à partir de '.$tanks[$tankADetailler]->getPrix().' '.$tanks[$tankADetailler]->getType_credit().'</p>
 							<p>Point de vie de base (sans tourelle) : '.$tanks[$tankADetailler]->getHp_base().' hp</p>
 							<p>Catégorie de char : '.$tanks[$tankADetailler]->getType_char().'</p>
@@ -45,4 +51,4 @@
 			
 			</section>
 			
-		</article>	';
+		</article>';
