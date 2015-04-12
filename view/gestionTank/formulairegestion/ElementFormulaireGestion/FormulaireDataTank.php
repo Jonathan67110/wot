@@ -38,7 +38,7 @@
 													break;
 													
 													case 'tier_chiffre':
-														//Convertir le tier latin en chiffre
+														$valeurDeCharAAfficher = conversionLatinToArabe(trim($_SESSION['ficheTanktierLatin']));
 													break;
 													
 													case 'nom':
@@ -165,6 +165,3 @@
 							?>
 								
 							</form>
-
-
-

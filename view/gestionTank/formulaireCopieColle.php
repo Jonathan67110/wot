@@ -23,42 +23,42 @@
 			$_SESSION['ficheTankdescriptionChar'] = $descriptionChar;
 			
 			//Tronquage à partir description:
-			$textFinal = tronqueVariable($textFinal, 'Niveau	');
+			$textFinal = tronqueVariable($textFinal, 'Niveau');
 			//tier latin :
 			$tierLatin = renvoieTier($textFinal);
 			//Copie dans variable de session :
 			$_SESSION['ficheTanktierLatin'] = $tierLatin;
 			
 			//Tronquage-Niveau:
-			$textFinal = tronqueVariable($textFinal, 'structure	');
+			$textFinal = tronqueVariable($textFinal, 'structure');
 			//HP :
 			$variable = ' HP';
 			$retour = stripos($textFinal,$variable);
-			$HP =  str_replace(' ', '', substr ($textFinal, 0, $retour));
+			$HP =  trim(str_replace(' ', '', substr ($textFinal, 0, $retour)));
 			//Copie dans variable de session :
 			$_SESSION['ficheTankHP'] = $HP;
 			
 			//Tronquage-HP:
-			$textFinal = tronqueVariable($textFinal, 'charge	');
+			$textFinal = tronqueVariable($textFinal, 'charge');
 			$poids = renvoiePoids($textFinal);
 			//Copie dans variable de session :
 			$_SESSION['ficheTankpoids'] = $poids;
 			
 			//Tronquage-poids:
-			$textFinal = tronqueVariable($textFinal, '/ ');
+			$textFinal = tronqueVariable($textFinal, '/');
 			//Charges limite :
 			$variable = ' t';
 			$retour = stripos($textFinal,$variable);
-			$charge = substr ($textFinal, 0, $retour);
+			$charge = trim(substr ($textFinal, 0, $retour));
 			//Copie dans variable de session :
 			$_SESSION['ficheTankcharge'] = $charge;
 			
 			//Tronquage-charge:
-			$textFinal = tronqueVariable($textFinal, 'Prix	');
+			$textFinal = tronqueVariable($textFinal, 'Prix');
 			//Prix :
 			$variable = 'Équipage';
 			$retour = stripos($textFinal,$variable)-2;
-			$prix = str_replace(' ', '', substr ($textFinal, 0, $retour));
+			$prix = trim(str_replace(' ', '', substr ($textFinal, 0, $retour)));
 			//Copie dans variable de session :
 			$_SESSION['ficheTankprix'] = $prix;
 			
@@ -78,7 +78,7 @@
 			{
 				$variable = CHR(10);
 				$retour = stripos($textFinal,$variable)-1;
-				$valeurObtenue = str_replace(' ', '', substr ($textFinal, 0, $retour));
+				$valeurObtenue = trim(substr ($textFinal, 0, $retour));
 				
 				$retour = stripos($textFinal,'(') - 1;
 				
@@ -128,16 +128,16 @@
 			$_SESSION['ficheTankprix'] = $prix;
 			
 			//Tronquage-équipage:
-			$textFinal = tronqueVariable($textFinal, 'maximale	');
+			$textFinal = tronqueVariable($textFinal, 'maximale');
 			//Vitesse :
-			$variable = ' ';
+			$variable = 'km';
 			$retour = stripos($textFinal,$variable);
-			$vitesse = substr ($textFinal, 0, $retour);
+			$vitesse = trim(substr ($textFinal, 0, $retour));
 			//Copie dans variable de session :
 			$_SESSION['ficheTankvitesse'] = $vitesse;
 			
 			//Tronquage-vitesse:
-			$textFinal = tronqueVariable($textFinal, 'avant ');
+			$textFinal = tronqueVariable($textFinal, 'avant');
 			//Blindage avant :
 			$variable = 'flancs ';
 			$retour = stripos($textFinal,$variable) - 2 ;
@@ -146,7 +146,7 @@
 			$_SESSION['ficheTankblindageAvant'] = $blindageAvant;
 			
 			//Tronquage-blindage-avant:
-			$textFinal = tronqueVariable($textFinal, 'flancs ');
+			$textFinal = tronqueVariable($textFinal, 'flancs');
 			//Blindage flanc :
 			$variable = 'arrière ';
 			$retour = stripos($textFinal,$variable) - 2;
@@ -155,9 +155,9 @@
 			$_SESSION['ficheTankblindageFlanc'] = $blindageFlanc;
 			
 			//Tronquage-blindage-flanc:	
-			$textFinal = tronqueVariable($textFinal, 'arrière ');
+			$textFinal = tronqueVariable($textFinal, 'arrière');
 			//Blindage arrière :
-			$variable = 'Blindage ';
+			$variable = 'Armement';
 			$retour = stripos($textFinal,$variable) - 2;
 			$blindageArriere = substr ($textFinal, 0, $retour);
 			//Copie dans variable de session :
@@ -192,7 +192,7 @@
 Résultat de l'étude :
 nom 		: <?php echo $nomChar; ?> 
 Description : <?php echo $descriptionChar; ?> 
-premium 	: <?php echo $HP; ?> 
+HP 	: <?php echo $HP; ?> 
 poids_chassis	        : <?php echo $poids; ?> 
 limite_charge	        : <?php echo $charge; ?> 
 vitesse_max	            : <?php echo $vitesse; ?> 
@@ -285,7 +285,7 @@ function renvoieNomChar($text){
 	
 	$nomCharEnPartie = substr ($text, 0, $debutBlanc);
 	$resteDuTextApresNom = substr ($text, $debutBlanc);
-	$finNomChar = stripos($resteDuTextApresNom,$nomCharEnPartie) + $debutBlanc - 4;//4 car, on a 2 fois un retour à la ligne qui s'écrit sur 2 caractère : \r
+	$finNomChar = stripos($resteDuTextApresNom,$nomCharEnPartie) + $debutBlanc - 2;//4 car, on a 2 fois un retour à la ligne qui s'écrit sur 2 caractère : \r
 	
 	return substr ($text, 0, $finNomChar);
 }
@@ -304,19 +304,26 @@ function renvoieDescription($text){
 }
 
 function renvoieTier($text){
-	$variable = ' ';
-	$debutRetour = stripos($text,$variable);
-	
 	//Renvoie la description:
-	return substr ($text, 0, $debutRetour - strlen('  Points'));
+	
+	$ChaineCaractereApresFiltre = substr ($text, 2, 6);//Restriction de la chaîne de caractère
+	if (stripos($text,'P') > 0){
+		$finText = stripos($text,'P');
+	}
+	else{
+		$finText  = 4;
+	}
+	$ChaineCaractereApresFiltre = trim(substr ($text, 0, $finText ));//Elimination des caractères inutiles
+		
+	return $ChaineCaractereApresFiltre; // 2 correspond à l'espace entre 'Niveau' et le tier et 6 est la longuer max du tier latin.
 	
 }
 function renvoiePoids($text){
-	$variable = ' ';
+	$variable = '/';
 	$retour = stripos($text,$variable);
 	
 	//Renvoie la description:
-	return substr ($text, 0, $retour);
+	return trim(substr ($text, 0, $retour));
 	
 }
 
