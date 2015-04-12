@@ -226,12 +226,13 @@ function retournePositionTypeChar($text)
 }
 
 function renvoieNomChar($text){
+	//Variable pour déterminer la fin des caractères à copier :
 	$variable = CHR(13).CHR(10);
 	$debutBlanc = stripos($text,$variable);
 	
 	$nomCharEnPartie = substr ($text, 0, $debutBlanc);
 	$resteDuTextApresNom = substr ($text, $debutBlanc);
-	$finNomChar = stripos($resteDuTextApresNom,$nomCharEnPartie) + $debutBlanc - 4;//4 car, on a 2 fois un retour à la ligne qui s'écrit sur 2 caractère : \r
+	$finNomChar = stripos($resteDuTextApresNom,$nomCharEnPartie) + $debutBlanc - 2;//4 car, on a 2 fois un retour à la ligne qui s'écrit sur 2 caractère : \r
 	
 	return substr ($text, 0, $finNomChar);
 }
