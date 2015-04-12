@@ -411,7 +411,7 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 			
 			//$req->execute($tablAjouter);
 				
-				$req->execute(array(
+			$req->execute(array(
 			$tablAjouter['recherchenom'],
 			$tablAjouter['recherchepremium'], 
 			$tablAjouter['rechercheDescription'],
@@ -515,12 +515,9 @@ function suppressionChar($bdd, $tablAjouter, $indiceTankSupprimer){//$bdd est la
 	
 	return $message;
 }
-
-
 /**************************************************************/
 /*****************Modification de char*************************/
 /**************************************************************/
-
 function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la base à requêter
 
 	//Vérification des paramètres d'entrée:
