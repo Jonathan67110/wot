@@ -33,11 +33,11 @@
 			$_SESSION['ficheTanktierLatin'] = $tierLatin;
 			
 			//Tronquage-Niveau:
-			$textFinal = tronqueVariable($textFinal, 'structure	');
+			$textFinal = tronqueVariable($textFinal, 'structure');
 			//HP :
 			$variable = ' HP';
 			$retour = stripos($textFinal,$variable);
-			$HP =  str_replace(' ', '', substr ($textFinal, 0, $retour));
+			$HP =  trim(str_replace(' ', '', substr ($textFinal, 0, $retour)));
 			//Copie dans variable de session :
 			$_SESSION['ficheTankHP'] = $HP;
 			
