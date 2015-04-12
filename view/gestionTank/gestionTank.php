@@ -18,7 +18,7 @@
 			//Copie dans variable de session :
 			$_SESSION['ficheTanknomChar'] = $nomChar;
 			
-			//Tronquage à partir description:
+			//Tronquage à partir du nom :
 			$textFinal = tronqueVariable($textFinal, $nomChar.'\r\r'.$nomChar.'\r');
 			//RDescription :
 			$descriptionChar = renvoieDescription($textFinal);
@@ -26,7 +26,7 @@
 			$_SESSION['ficheTankdescriptionChar'] = $descriptionChar;
 			
 			//Tronquage à partir description:
-			$textFinal = tronqueVariable($textFinal, 'Niveau	');
+			$textFinal = tronqueVariable($textFinal, 'Niveau');
 			//tier latin :
 			$tierLatin = renvoieTier($textFinal);
 			//Copie dans variable de session :
@@ -251,11 +251,18 @@ function renvoieDescription($text){
 }
 
 function renvoieTier($text){
-	$variable = ' ';
-	$debutRetour = stripos($text,$variable);
-	
 	//Renvoie la description:
-	return substr ($text, 0, $debutRetour - strlen('  Points'));
+	
+	$ChaineCaractereApresFiltre = substr ($text, 2, 6);//Restriction de la chaîne de caractère
+	if (stripos($text,' ') > 0){
+		$finText = stripos($text,' ');
+	}
+	else{
+		$finText  = 4;
+	}
+	$ChaineCaractereApresFiltre = trim(substr ($text, 0, $finText ));//Elimination des caractères inutiles
+		
+	return $ChaineCaractereApresFiltre; // 2 correspond à l'espace entre 'Niveau' et le tier et 6 est la longuer max du tier latin.
 	
 }
 function renvoiePoids($text){
