@@ -20,7 +20,7 @@
 									$req->closeCursor();
 									
 									//Test pour vérifier qu'une url existe pour ce char :
-									if ($tanks[$indice]->getRaccourci_url() <> "")
+									if ($tanks[$indice]->getRaccourci_url() <> "" && $tanks[$indice]->getRaccourci_url() <> "Pas de paramètre")
 									{
 									echo '<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$indice]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$indice]->getNom().'</a></p>';
 									

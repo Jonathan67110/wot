@@ -383,6 +383,10 @@ class Tank{
 			
 			case('idExistante'):
 				return $this->getIdExistante();
+			break;	
+			
+			case('raccourci_url'):
+				return $this->getRaccourci_url();
 			break;			
 			
 			default:

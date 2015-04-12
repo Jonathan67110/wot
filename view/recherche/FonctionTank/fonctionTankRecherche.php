@@ -17,7 +17,7 @@
 						<article id="infoGeneraleRecherche">
 							<h5>Informations générales</h5>';
 							
-							if ($tanks[$tankADetailler]->getRaccourci_url() <> "")
+							if ($tanks[$tankADetailler]->getRaccourci_url() <> "" && $tanks[$tankADetailler]->getRaccourci_url() <> "Pas de paramètre")
 							{
 	echo '
 								<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$tankADetailler]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$tankADetailler]->getNom().'</a></p>';
