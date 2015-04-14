@@ -4,6 +4,7 @@ include_once('model/TierFonction/TierToFunction.php');//Contient des fonctions p
 class Tank{
 	//Détermine l'id du tank:
 	private $id;
+	private $version_id;
 	
 	//Date de la mise à jour des données:
 	private $m_DateMiseAJour;
@@ -98,6 +99,8 @@ class Tank{
 		$this->tier_chiffre = 1;
 		$this->idExistante = 0;
 		$this->raccourci_url = "";
+		$this->version_id = "";
+		
 		
 		$RequeteTankCorrespondantANouvId = $bdd->prepare('SELECT * FROM tank WHERE id=?');
 		$RequeteTankCorrespondantANouvId -> execute(array($nouvId));
@@ -126,7 +129,7 @@ class Tank{
 			$this->prix = $tableauReponse['prix'];
 			$this->type_credit = $tableauReponse['type_credit'];
 			$this->raccourci_url = $tableauReponse['raccourci_url'];
-			
+			$this->version_id = $tableauReponse['version_id'];
 			
 			/* La base de données n'étant pas fiable, il arrive que le tier en chiffre soit absent, ou le tier latin.
 			En effet, les données collectées et insérer dans la base contiennent essentiellement 'tier' en chiffre latin.
@@ -270,6 +273,10 @@ class Tank{
 		return max(1,$this->tier_chiffre);
 	}
 	
+	public function getVersion_id(){//Renvoie l'id du tier d'un tank
+		return max(1,$this->version_id);
+	}
+	
 	public function getIdExistante(){
 	//Plus tard, renverra false SI l'id ne correspond à aucune entrée de la base de données, et, à true sinon.
 	//Pour le moment, renvoie false si id>10, pour les tests.
@@ -387,6 +394,10 @@ class Tank{
 			
 			case('raccourci_url'):
 				return $this->getRaccourci_url();
+			break;		
+			
+			case('version_id'):
+				return $this->getVersion_id();
 			break;			
 			
 			default:

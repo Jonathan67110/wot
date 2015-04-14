@@ -165,6 +165,25 @@ function listeChampTank($bdd, $tableName){
 				
 			break;
 			
+			case 'version_id':
+				$fieldNames = 'version_id';				
+				$reqtype_credit = $bdd->query('SELECT * FROM versionwot ORDER BY version');
+				$typeCredit = $reqtype_credit->fetchAll();
+				$reqtype_credit->closeCursor();			
+				$idTab = '';
+				$paysTab = '';
+				
+				foreach($typeCredit as $type){
+					$element[$type['id']] = $type['version'];
+				}
+					
+				$type = 'select';
+				$triggerScript = '';
+				$scriptFonction = '';
+				$attribut = '';				
+				
+			break;
+			
 			case 'tier_latin':
 				$fieldNames = 'tier_latin';
 				$reqtype_credit = $bdd->query('SELECT * FROM tier ORDER BY id');
