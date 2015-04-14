@@ -174,7 +174,7 @@ function listeChampTank($bdd, $tableName){
 				$paysTab = '';
 				
 				foreach($typeCredit as $type){
-					$element[$type['id']] = $type['version'];
+					$element[$type['id']] = floatval($type['version']);
 				}
 					
 				$type = 'select';
@@ -424,6 +424,7 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 																	pays_id,	
 																	prix,	
 																	type_credit,	
+																	raccourci_url,	
 																	tier_latin,	
 																	tier_chiffre) 
 			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
@@ -451,6 +452,7 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 			max(1,intval($tablAjouter['recherchepays'])),
 			intval($tablAjouter['rechercheprix']), 
 			$tablAjouter['recherchetype_credit'], 
+			$tablAjouter['raccourci_url'],
 			$tablAjouter['recherchetier_latin'],
 			conversionLatinToArabe($tablAjouter['recherchetier_latin'])
 			));
@@ -569,7 +571,8 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 											type_credit=?,	
 											tier_latin=?,	
 											tier_chiffre=?,
-											datemiseajour=?
+											datemiseajour=?,
+											raccourci_url=?
 											WHERE id = ?
 		');
 		
@@ -599,6 +602,7 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 		$tablAjouter['recherchetier_latin'],
 		conversionLatinToArabe($tablAjouter['recherchetier_latin']),
 		date("Y-m-d H:i:s"),
+		$tablAjouter['raccourci_url'],
 		$indiceTankModifier));
 		$req->closeCursor();
 			
