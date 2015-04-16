@@ -425,9 +425,10 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 																	prix,	
 																	type_credit,	
 																	raccourci_url,	
+																	version_id,	
 																	tier_latin,	
 																	tier_chiffre) 
-			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+			VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
 			
 			//$req->execute($tablAjouter);
 				
@@ -452,7 +453,8 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 			max(1,intval($tablAjouter['recherchepays'])),
 			intval($tablAjouter['rechercheprix']), 
 			$tablAjouter['recherchetype_credit'], 
-			$tablAjouter['raccourci_url'],
+			$tablAjouter['rechercheraccourci_url'],
+			$tablAjouter['rechercheversion_id'],
 			$tablAjouter['recherchetier_latin'],
 			conversionLatinToArabe($tablAjouter['recherchetier_latin'])
 			));
@@ -544,8 +546,8 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 	//Vérification des paramètres d'entrée:
 	$message =verificationParametre($tablAjouter);
 	
-	$indiceTankModifier = intval($indiceTankModifier);
 	
+	$indiceTankModifier = intval($indiceTankModifier);
 	try{
 		
 		$req = $bdd->prepare('	UPDATE  tank
@@ -572,7 +574,8 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 											tier_latin=?,	
 											tier_chiffre=?,
 											datemiseajour=?,
-											raccourci_url=?
+											raccourci_url=?,
+											version_id=?
 											WHERE id = ?
 		');
 		
@@ -602,7 +605,8 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 		$tablAjouter['recherchetier_latin'],
 		conversionLatinToArabe($tablAjouter['recherchetier_latin']),
 		date("Y-m-d H:i:s"),
-		$tablAjouter['raccourci_url'],
+		$tablAjouter['rechercheraccourci_url'],
+		$tablAjouter['rechercheversion_id'],
 		$indiceTankModifier));
 		$req->closeCursor();
 			
