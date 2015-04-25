@@ -163,20 +163,20 @@ class Tank{
 				$this->tier_latin = 'I';
 			}
 			
-			$urlTank = $this->raccourci_url;
-			if ($urlTank <> "" && $urlTank <> "Pas de paramètre"  && $this->pays <> "ussr")
-			{
-				//Requête de recherche de l'url pour la nation:
-				$req = $bdd->prepare('SELECT NomUrl, pays FROM nation WHERE id=?');
-				$req -> execute(array($this->pays));
-				
-				while($tableauReponse = $req->fetch()){
-					$urlNation = $tableauReponse['NomUrl'];
-				}
-				//Fermeture de la requête:
-				$req->closeCursor();
-				copy('http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$urlTank.'.png', 'image/'.$urlNation.'/'.$urlTank.'.png');
-			}
+			//$urlTank = $this->raccourci_url;
+			//if ($urlTank <> "" && $urlTank <> "Pas de paramètre"  && $this->pays <> "ussr")
+			//{
+			//	//Requête de recherche de l'url pour la nation:
+			//	$req = $bdd->prepare('SELECT NomUrl, pays FROM nation WHERE id=?');
+			//	$req -> execute(array($this->pays));
+			//	
+			//	while($tableauReponse = $req->fetch()){
+			//		$urlNation = $tableauReponse['NomUrl'];
+			//	}
+			//	//Fermeture de la requête:
+			//	$req->closeCursor();
+			//	copy('http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$urlTank.'.png', 'image/'.$urlNation.'/'.$urlTank.'.png');
+			//}
 			
 			//$this->idExistante = 1;
 		}
