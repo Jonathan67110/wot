@@ -14,6 +14,7 @@
 			<section>	
 					<h3>Détail du char : </h3>	
 						<h4>'.$tanks[$tankADetailler]->getNom().'</h4>
+						<img src ="http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$tanks[$tankADetailler]->getRaccourci_url().'.png" alt="'.$tanks[$tankADetailler]->getNom().'">
 						<article id="infoGeneraleRecherche">
 							<h5>Informations générales</h5>';
 							

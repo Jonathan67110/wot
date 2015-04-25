@@ -22,8 +22,8 @@
 									//Test pour vérifier qu'une url existe pour ce char :
 									if ($tanks[$indice]->getRaccourci_url() <> "" && $tanks[$indice]->getRaccourci_url() <> "Pas de paramètre")
 									{
-									echo '<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$indice]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$indice]->getNom().'</a></p>';
-									
+									echo '<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$indice]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$indice]->getNom().'</a></p>
+									<img src ="http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$tanks[$indice]->getRaccourci_url().'.png" alt="'.$tanks[$indice]->getNom().'">';
 									}
 								}
 								
@@ -122,7 +122,6 @@
 														$valeurDeCharAAfficher = ($champ->getNomField() == 'tier_chiffre') ? 1 : '';
 												}
 											}
-
 									//Affichage normal des éléments :
 									echo '
 									<tr>
@@ -136,6 +135,7 @@
 								
 								//print_r( $ListeCanonDuTank->getListeCanon());
 								if(sizeof($ListeCanonDuTank->getListeCanon())>0){
+									
 									foreach($ListeCanonDuTank->getListeCanon() as $idCanon=>$NomCanon){
 										echo '
 										<tr>
