@@ -24,12 +24,13 @@
 									{
 									echo '<p>Tankopédia : <a href="http://worldoftanks.eu/encyclopedia/vehicles/'.$urlNation.'/'.$tanks[$indice]->getRaccourci_url().'/" target="_blank">Lien vers la page du '.$tanks[$indice]->getNom().'</a></p>
 									<img src ="http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$tanks[$indice]->getRaccourci_url().'.png" alt="'.$tanks[$indice]->getNom().'">';
+									//copy('http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$tanks[$indice]->getRaccourci_url().'.png', 'image/'.$urlNation.'/'.$tanks[$indice]->getRaccourci_url().'.png');
 									}
 								}
 								
 								foreach(listeChampTank($bddWoT, 'tank') as $champ){
 								//On trace la liste des éléments à ajouter, modifier, ou, supprimer pour un char.
-																			if(isset($_POST['EnvoieText']))
+											if(isset($_POST['EnvoieText']))
 											{
 												switch($champ->getNomField())
 												{
