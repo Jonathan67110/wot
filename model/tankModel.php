@@ -472,6 +472,26 @@ function ajoutChar($bdd, $tablAjouter){//$bdd est la base à requêter
 		}
 		
 	}
+
+	
+	$urlTank = $tablAjouter['rechercheraccourci_url'];
+	$urlPays = $tablAjouter['recherchepays'];
+	
+	if ($urlTank <> "" && $urlTank <> "Pas de paramètre")
+	{
+		//Requête de recherche de l'url pour la nation:
+		$req = $bdd->prepare('SELECT NomUrl, pays FROM nation WHERE id=?');
+		$req -> execute(array($urlPays));
+		
+		while($tableauReponse = $req->fetch()){
+			$urlNation = $tableauReponse['NomUrl'];
+		}
+		//Fermeture de la requête:
+		$req->closeCursor();
+		copy('http://static-ptl-eu.gcdn.co/static/3.27.0.2/encyclopedia/tankopedia/vehicle/'.$urlNation.'-'.$urlTank.'.png', 'image/'.$urlNation.'/'.$urlTank.'.png');
+	}
+
+
 	
 	return $message;
 
@@ -634,7 +654,7 @@ function modificationChar($bdd, $tablAjouter, $indiceTankModifier){//$bdd est la
 	$urlTank = $tablAjouter['rechercheraccourci_url'];
 	$urlPays = $tablAjouter['recherchepays'];
 	
-	if ($urlTank <> "" && $urlTank <> "Pas de paramètre"  && $urlPays <> "ussr")
+	if ($urlTank <> "" && $urlTank <> "Pas de paramètre" )
 	{
 		//Requête de recherche de l'url pour la nation:
 		$req = $bdd->prepare('SELECT NomUrl, pays FROM nation WHERE id=?');
