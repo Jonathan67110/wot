@@ -13,10 +13,10 @@
 				<section>						
 					<h3>Reste à faire au <?php echo date('d.m.Y');?></h3>	
 						<p>
-							<?php 
-								$remarquesTotales = 18;
-								$remarqueEnCours = 14;
-							?>
+						<?php 
+							$remarquesTotales = 20;
+							$remarqueEnCours = 14;
+						?>
 								<ul>
 									<li><?php echo $remarquesTotales;?> remarques au total</li>
 									<li><?php echo $remarqueEnCours;?> remarques en cours</li>
@@ -31,6 +31,7 @@
 									<li>8) Faire qu'on puisse supprimer un canon / élément directement dans la page de gestion d'un char</li>
 									<li>15) Eviter l'écrasement des données d'un char par un autre, en partant de son nom : si nom pas identique, demander confirmation</li>
 									<li>16) Traiter les équipages dans le copier-coller de données</li>
+									<li>20) Ajouter les canons du SARL 42</li>
 								</ul>
 							</p>
 						</article>						
@@ -69,6 +70,12 @@
 						</article>			
 					<h3>Fait </h3>
 						<article>
+							<p>				
+								<h4>Fait le 29/04/2015: </h4>
+								<ul>			
+									<li>-) Sauvegarde de l'image du char, et, affichage de l'image du char depuis le site wot</li>
+								</ul>
+							</p>
 							<p>				
 								<h4>Fait le 12/04/2015: </h4>
 								<ul>			
