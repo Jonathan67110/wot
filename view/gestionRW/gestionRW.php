@@ -2,6 +2,7 @@
 /****************************************************************************/
 /************* feuille de gestion des évolution *****************************/
 /****************************************************************************/
+	$titre = 'Evolution et remarques';
 	/* Header */
 	include_once('view/header.php');
 	
@@ -14,7 +15,7 @@
 				<h3><!-- Iutile a priori --></h3>
 					<article>
 						<p>
-							<?php include_once('view/gestionTank/formulairegestion/FormulaireGestion.php'); ?>
+							<!--  -->
 						</p>
 							<table>
 								<tr>
