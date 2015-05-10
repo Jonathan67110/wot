@@ -31,7 +31,7 @@
 									<li>8) Faire qu'on puisse supprimer un canon / élément directement dans la page de gestion d'un char</li>
 									<li>15) Eviter l'écrasement des données d'un char par un autre, en partant de son nom : si nom pas identique, demander confirmation</li>
 									<li>16) Traiter les équipages dans le copier-coller de données</li>
-									<li>20) Ajouter les canons du SARL 42</li>
+									<li>20) Ajouter les canons du SARL 42 + les autres chars</li>
 								</ul>
 							</p>
 						</article>						
