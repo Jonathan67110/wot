@@ -69,6 +69,11 @@
 				
 			break;
 			
+			case 'gestionRW':
+				include_once('controller/gestionRW/gestionRWController.php');
+				
+			break;
+			
 			case 'modifierBaseTank':
 				if(isset($_POST['AjouterBouton'])){
 					//Redirige  vers la requête d'ajout: 
